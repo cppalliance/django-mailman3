@@ -20,6 +20,8 @@
 
 from __future__ import absolute_import, print_function, unicode_literals
 
+import os
+
 from django.test import RequestFactory
 from django.contrib.messages.storage.cookie import CookieStorage
 
@@ -36,3 +38,8 @@ def get_flash_messages(response, empty=True):
         del response.client.cookies["messages"]
     return msgs
 get_flash_messages.__test__ = False
+
+
+def get_test_file(*fileparts):
+    return os.path.join(os.path.dirname(__file__), "testdata", *fileparts)
+get_test_file.__test__ = False
