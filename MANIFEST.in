@@ -1,3 +1,4 @@
 include *.rst *.txt *.ini
 recursive-include django_mailman *.py *.html *.js *.txt
 graft django_mailman/static
+graft django_mailman/tests/testdata
