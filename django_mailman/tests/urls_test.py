@@ -16,23 +16,14 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
-#
 
-from __future__ import absolute_import, print_function, unicode_literals
+"""
+This file is the main URL config for a Django website including Django-Mailman.
+"""
 
-from django.test import RequestFactory
-from django.contrib.messages.storage.cookie import CookieStorage
+from django.conf.urls import include, url
 
-
-def get_flash_messages(response, empty=True):
-    if "messages" not in response.cookies:
-        return []
-    # A RequestFactory will not run the messages middleware, and thus will
-    # not delete the messages after retrieval.
-    dummy_request = RequestFactory().get("/")
-    dummy_request.COOKIES["messages"] = response.cookies["messages"].value
-    msgs = list(CookieStorage(dummy_request))
-    if empty:
-        del response.client.cookies["messages"]
-    return msgs
-get_flash_messages.__test__ = False
+urlpatterns = [
+    url(r'', include('django_mailman.urls')),
+    url(r'', include('django.contrib.auth.urls')),
+]
