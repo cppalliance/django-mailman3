@@ -19,14 +19,15 @@ from setuptools import setup, find_packages
 
 
 setup(
-    name="django-mailman",
+    name="django-mailman3",
     version='1.0.0',
     description="Django library to help interaction with Mailman",
     long_description=open('README.rst').read(),
     maintainer="Mailman Developers",
+    maintainer_email="mailman-developers@python.org",
     license='GPLv3',
     keywords='mailman django',
-    url="https://gitlab.com/mailman/django-mailman",
+    url="https://gitlab.com/mailman/django-mailman3",
     classifiers=[
         "Framework :: Django",
         "Development Status :: 4 - Beta",

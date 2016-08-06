@@ -30,7 +30,7 @@ from django.core.urlresolvers import (
     RegexURLPattern, RegexURLResolver, reverse)
 from django.test import override_settings, RequestFactory, TestCase
 
-from django_mailman.middleware.sslredirect import SSLRedirect
+from django_mailman3.middleware.sslredirect import SSLRedirect
 
 
 @override_settings(USE_SSL=True)
@@ -138,7 +138,7 @@ class SSLRedirectTestCase(TestCase):
     def test_populate_urlconf_with_ssl_urls(self):
         class URLConf:
             SSL_URLS = [
-                "django_mailman.urls",
+                "django_mailman3.urls",
             ]
         self.mw._protected_urls = []
         self.mw._walk_module(URLConf)

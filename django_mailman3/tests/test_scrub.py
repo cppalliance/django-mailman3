@@ -27,8 +27,8 @@ from email.message import Message
 from email import message_from_file
 from traceback import format_exc
 
-from django_mailman.lib.scrub import Scrubber
-from django_mailman.tests.utils import get_test_file
+from django_mailman3.lib.scrub import Scrubber
+from django_mailman3.tests.utils import get_test_file
 
 
 class TestScrubber(unittest.TestCase):

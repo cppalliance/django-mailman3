@@ -45,7 +45,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_mailman',
+    'django_mailman3',
 )
 
 
@@ -61,7 +61,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
-ROOT_URLCONF = 'django_mailman.tests.urls_test'
+ROOT_URLCONF = 'django_mailman3.tests.urls_test'
 
 TEMPLATES = [
     {
@@ -93,7 +93,7 @@ TEMPLATES = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/dummy/django_mailman.db',
+        'NAME': '/dummy/django_mailman3.db',
     }
 }
 
@@ -165,7 +165,7 @@ LOGGING = {
             'level': 'INFO',
             'propagate': True,
         },
-        'django_mailman': {
+        'django_mailman3': {
             'handlers': ['console'],
             'level': 'DEBUG',
             'propagate': True,
