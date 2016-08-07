@@ -84,7 +84,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'django_admin.example_project.wsgi.application'
+# WSGI_APPLICATION = 'django_mailman3.example_project.wsgi.application'
 
 
 # Database

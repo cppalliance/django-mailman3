@@ -20,17 +20,14 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+from __future__ import absolute_import, unicode_literals
 
-from django.contrib import admin
-
-
-urlpatterns = []
+from django.apps import AppConfig
 
 
-# See the django_mailman3.middleware.sslredirect.SSLRedirect class
+class DjangoMailman3Config(AppConfig):
+    name = 'django_mailman3'
+    verbose_name = "Django Mailman 3"
 
-SSL_URLS = (
-    "django.contrib.auth.views.login",
-    "django.contrib.auth.views.logout",
-    admin.site.urls,
-    )
+    def ready(self):
+        import django_mailman3.signals  # flake8: noqa
