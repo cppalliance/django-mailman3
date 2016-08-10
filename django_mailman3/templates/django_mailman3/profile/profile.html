@@ -1,6 +1,5 @@
 {% extends "django_mailman3/profile/base.html" %}
 {% load i18n %}
-{% load hk_generic %}
 {% load gravatar %}
 {% load staticfiles %}
 
@@ -16,11 +15,11 @@
             <p><a href="{{ gravatar_url }}">{% trans "Edit on" %} {{ gravatar_shortname }}</a></p>
         </div>
 
-        <div class="col-tn-12 col-sm-8 col-sm-pull-4 col-md-6 col-md-pull-6 col-lg-5 col-lg-pull-7">
+        <div class="col-sm-8 col-sm-pull-4 col-md-6 col-md-pull-6 col-lg-5 col-lg-pull-7">
             <table class="table user-data">
                 <tbody>
                     <tr>
-                        <th class="col-tn-6 col-sm-3">{% trans 'User name:' %}</th>
+                        <th class="col-sm-3">{% trans 'User name:' %}</th>
                         <td>
                             <div class="ellipsis-overflow">{{ user.username}}</div>
                         </td>
@@ -44,7 +43,7 @@
                                 {% if 'postorius' in INSTALLED_APPS %}
                                     <li>
                                         <i class="fa fa-link" aria-hidden="true"></i>
-                                        <a href="{% url ps_user_profile %}">
+                                        <a href="{% url 'ps_user_profile' %}">
                                             {% trans "Link another address" %}
                                         </a>
                                     </li>
@@ -66,7 +65,7 @@
             </table>
         </div>
 
-        <p class="buttons col-tn-12">
+        <p class="buttons col-sm-12">
             <button type="submit" class="submit btn btn-primary">{% trans "Update" %}</button>
             {% trans "or" %} <a href="#" class="cancel" onclick="document.forms[0].reset(); return false;">{% trans "cancel" %}</a>
         </p>

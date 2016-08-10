@@ -23,7 +23,8 @@
 from __future__ import absolute_import, unicode_literals
 
 from allauth.account.models import EmailAddress
-from allauth.account.signals import email_confirmed, user_signed_up, user_logged_in
+from allauth.account.signals import (
+    email_confirmed, user_signed_up, user_logged_in)
 from allauth.socialaccount.signals import social_account_added
 from django.conf import settings
 from django.db.models.signals import post_save
@@ -75,12 +76,12 @@ def on_user_signed_up(sender, **kwargs):
     #            add_address_to_mailman_user(sociallogin.user, address)
 
 
-# from allauth.account.signals import email_added
-# @receiver(email_added)
-# def on_email_added(sender, **kwargs):
-#     print("ON_EMAIL_ADDED", kwargs.keys())
-#     # Sent when a new email address has been added.
-#     # Do nothing, wait for confirmation
+# from allauth.account.signals import email_removed
+# @receiver(email_removed)
+# def on_email_removed(sender, **kwargs):
+#     print("ON_EMAIL_REMOVED", kwargs.keys())
+#     # Sent when an email address has been removed.
+#     # Remove it from Mailman
 #     pass
 
 

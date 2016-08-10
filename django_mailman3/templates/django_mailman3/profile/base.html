@@ -18,6 +18,9 @@
         <li role="presentation" {% if form.password2 %} class="active" {% endif %}>
             <a href="{% url "account_change_password" %}">{% trans "Change Password" %}</a>
         </li>
+        <li role="presentation" {% if form.email %} class="active" {% endif %}>
+            <a href="{% url "account_email" %}">{% trans "E-mail Addresses" %}</a>
+        </li>
         <li role="presentation" {% if form.accounts %} class="active" {% endif %}>
             <a href="{% url "socialaccount_connections" %}">{% trans "Account Connections" %}</a>
         </li>
