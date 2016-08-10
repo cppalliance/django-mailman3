@@ -21,6 +21,25 @@
 #
 
 
+# https://docs.djangoproject.com/en/dev/topics/i18n/timezones/
+
+from django.utils import timezone
+from django.core.exceptions import ObjectDoesNotExist
+
+
+class TimezoneMiddleware(object):
+
+    def process_request(self, request):
+        if not request.user.is_authenticated():
+            return
+        try:
+            profile = request.user.mailman_profile
+        except ObjectDoesNotExist:
+            return
+        if profile.timezone:
+            timezone.activate(profile.timezone)
+
+
 class PaginationMiddleware(object):
     """
     Inserts a variable representing the current page onto the request object if
