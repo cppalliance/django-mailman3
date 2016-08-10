@@ -20,22 +20,15 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import url
-from django.contrib import admin
+from django import forms
 
-from django_mailman3.views.profile import user_profile
-
-
-urlpatterns = [
-    url(r'^user-profile/', user_profile, name='mm_user_profile'),
-    ]
+from django_mailman3.models import Profile
 
 
-# See the django_mailman3.middleware.sslredirect.SSLRedirect class
-
-SSL_URLS = (
-    "django.contrib.auth.views.login",
-    "django.contrib.auth.views.logout",
-    admin.site.urls,
-    )
+class UserProfileForm(forms.Form):
+    first_name = forms.CharField()
+    last_name = forms.CharField()
+    timezone = forms.ChoiceField(
+        label="Time zone", choices=Profile.TIMEZONES)

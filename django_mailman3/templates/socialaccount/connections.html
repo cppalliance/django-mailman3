@@ -1,12 +1,9 @@
-{% extends "socialaccount/base.html" %}
+{% extends "django_mailman3/profile/base.html" %}
 
 {% load i18n %}
 {% load staticfiles %}
 
-{% block head_title %}{% trans "Account Connections" %}{% endblock %}
-
-{% block content %}
-<h1>{% trans "Account Connections" %}</h1>
+{% block user_profile_content %}
 
 {% if form.accounts %}
 <p>{% blocktrans %}You can sign in to your account using any of the following third party accounts:{% endblocktrans %}</p>

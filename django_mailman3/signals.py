@@ -22,32 +22,57 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from django.dispatch import receiver
 from allauth.account.models import EmailAddress
-from allauth.account.signals import email_confirmed, user_signed_up
+from allauth.account.signals import email_confirmed, user_signed_up, user_logged_in
 from allauth.socialaccount.signals import social_account_added
+from django.conf import settings
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+
 from django_mailman3.lib.mailman import add_address_to_mailman_user
+from django_mailman3.models import Profile
+
 
 import logging
 logger = logging.getLogger(__name__)
 
 
-# from allauth.account.signals import user_logged_in
-# @receiver(user_logged_in)
-# def on_user_logged_in(sender, **kwargs):
-#     # Sent when a user logs in.
-#     print("ON_USER_LOGGED_IN", kwargs.keys())
+# Create a Profile when a User is created
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_profile(sender, **kwargs):
+    user = kwargs["instance"]
+    if not Profile.objects.filter(user=user).exists():
+        Profile.objects.create(user=user)
+
+
+# Allauth
+
+
+@receiver(user_logged_in)
+def on_user_logged_in(sender, **kwargs):
+    # Sent when a user logs in.
+    user = kwargs["user"]
+    if not Profile.objects.filter(user=user).exists():
+        Profile.objects.create(user=user)
 
 
 @receiver(user_signed_up)
 def on_user_signed_up(sender, **kwargs):
     # Sent when a user signs up for an account.
+    user = kwargs["user"]
+    if not Profile.objects.filter(user=user).exists():
+        Profile.objects.create(user=user)
     # We want to add the user to Mailman with all its verified email addresses.
-    if "sociallogin" in kwargs:
-        sociallogin = kwargs["sociallogin"]
-        for address in sociallogin.email_addresses:
-            if address.verified:
-                add_address_to_mailman_user(sociallogin.user, address)
+    for address in EmailAddress.objects.filter(user=user):
+        if address.verified:
+            logger.debug("Adding email address % to user %s",
+                         address.email, user.username)
+            add_address_to_mailman_user(user, address)
+    #if "sociallogin" in kwargs:
+    #    sociallogin = kwargs["sociallogin"]
+    #    for address in sociallogin.email_addresses:
+    #        if address.verified:
+    #            add_address_to_mailman_user(sociallogin.user, address)
 
 
 # from allauth.account.signals import email_added
