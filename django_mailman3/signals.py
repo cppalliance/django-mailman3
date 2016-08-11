@@ -24,13 +24,14 @@ from __future__ import absolute_import, unicode_literals
 
 from allauth.account.models import EmailAddress
 from allauth.account.signals import (
-    email_confirmed, user_signed_up, user_logged_in)
+    email_confirmed, user_signed_up, user_logged_in, email_removed)
 from allauth.socialaccount.signals import social_account_added
 from django.conf import settings
 from django.db.models.signals import post_save
 from django.dispatch import receiver
 
-from django_mailman3.lib.mailman import add_address_to_mailman_user
+from django_mailman3.lib.mailman import (
+    add_address_to_mailman_user, sync_email_addresses)
 from django_mailman3.models import Profile
 
 
@@ -55,6 +56,7 @@ def on_user_logged_in(sender, **kwargs):
     user = kwargs["user"]
     if not Profile.objects.filter(user=user).exists():
         Profile.objects.create(user=user)
+    sync_email_addresses(user)
 
 
 @receiver(user_signed_up)
@@ -69,20 +71,21 @@ def on_user_signed_up(sender, **kwargs):
             logger.debug("Adding email address % to user %s",
                          address.email, user.username)
             add_address_to_mailman_user(user, address)
-    #if "sociallogin" in kwargs:
-    #    sociallogin = kwargs["sociallogin"]
-    #    for address in sociallogin.email_addresses:
-    #        if address.verified:
-    #            add_address_to_mailman_user(sociallogin.user, address)
 
 
-# from allauth.account.signals import email_removed
-# @receiver(email_removed)
-# def on_email_removed(sender, **kwargs):
-#     print("ON_EMAIL_REMOVED", kwargs.keys())
-#     # Sent when an email address has been removed.
-#     # Remove it from Mailman
-#     pass
+@receiver(email_removed)
+def on_email_removed(sender, **kwargs):
+    # Sent when an email address has been removed.
+    # Remove it from Mailman.
+    user = kwargs["user"]
+    email_address = kwargs["email_address"]
+    mm_user = get_mailman_user(user)
+    if mm_user is None:
+        return  # Could not get the user from Mailman.
+    try:
+        mm_user.addresses.remove(email_address.email)
+    except ValueError:
+        pass  # not in Mailman's addresses
 
 
 @receiver(email_confirmed)

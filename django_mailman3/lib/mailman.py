@@ -24,6 +24,7 @@ from __future__ import absolute_import, unicode_literals
 
 from urllib2 import HTTPError
 
+from allauth.account.models import EmailAddress
 from django.conf import settings
 from django.core.cache import cache
 from mailmanclient import Client as MailmanClient, MailmanConnectionError
@@ -106,3 +107,39 @@ def add_address_to_mailman_user(user, address):
         mm_address = get_mailman_client().get_address(address)
         if mm_address.verified_on is None:
             mm_address.verify()
+
+
+def sync_email_addresses(user):
+    # Synchronize email addresses for the user in Mailman and in Django. When
+    # an address is missing, it is added, no deletion is performed here.
+    # For deletion, use the appropriate view/form. The 'verified' bit is also
+    # sychronized.
+    logger.debug("Synchronizing email addresses for user %s", user.username)
+    mm_user = get_mailman_user(user)
+    if mm_user is None:
+        logger.info("Could not find or create a Mailman user for %s",
+                    user.username)
+        return
+
+    def check_verified(django_address, mm_address):
+        if mm_address.verified and not django_address.verified:
+            django_address.verified = True
+            django_address.save()
+        if django_address.verified and not mm_address.verified:
+            mm_address.verify()
+
+    django_addresses = EmailAddress.objects.filter(user=user).all()
+    mailman_addresses = mm_user.addresses
+    # Django
+    for django_address in django_addresses:
+        mm_address = mailman_addresses.find_by_email(django_address.email)
+        if mm_address is not None:
+            check_verified(django_address, mm_address)
+        elif django_address.verified:  # only add if verified
+            mm_address = mm_user.add_address(django_address.email, absorb_existing=True)
+            mm_address.verify()
+    # Mailman
+    for mm_address in mailman_addresses:
+        django_address, _created = EmailAddress.objects.get_or_create(
+            user=user, email=mm_address.email)
+        check_verified(django_address, mm_address)
