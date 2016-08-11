@@ -25,6 +25,7 @@ from __future__ import absolute_import, unicode_literals, division
 from django.http import Http404
 from django.core.paginator import (
     Paginator, EmptyPage, PageNotAnInteger, InvalidPage)
+from django.utils.functional import cached_property
 
 
 class MailmanPaginator(Paginator):
@@ -38,7 +39,6 @@ class MailmanPaginator(Paginator):
 
     def __init__(self, function, per_page, **kwargs):
         self.function = function
-        self._count = None
         super(MailmanPaginator, self).__init__(None, per_page, **kwargs)
 
     def page(self, number):
@@ -51,17 +51,14 @@ class MailmanPaginator(Paginator):
             self._count = result.total_size
         return self._get_page(result, number, self)
 
-    def _get_count(self):
+    @cached_property
+    def count(self):
         """
         Returns the total number of objects, across all pages.
         """
-        if self._count is None:
-            # For now we need to get the first page to have the total_size.
-            # Mitigate the price of this call by using count=1.
-            result = self.function(count=1, page=1)
-            self._count = result.total_size
-        return self._count
-    count = property(_get_count)
+        # For now we need to get the first page to have the total_size.
+        # Mitigate the price of this call by using count=1.
+        return self.function(count=1, page=1).total_size
 
 
 def paginate(objects=None, page_num=1, results_per_page=None,
