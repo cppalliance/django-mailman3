@@ -136,7 +136,8 @@ def sync_email_addresses(user):
         if mm_address is not None:
             check_verified(django_address, mm_address)
         elif django_address.verified:  # only add if verified
-            mm_address = mm_user.add_address(django_address.email, absorb_existing=True)
+            mm_address = mm_user.add_address(
+                django_address.email, absorb_existing=True)
             mm_address.verify()
     # Mailman
     for mm_address in mailman_addresses:

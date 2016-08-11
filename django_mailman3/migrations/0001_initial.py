@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
+
+# flake8: noqa
+
 from __future__ import unicode_literals
 
 from django.db import migrations, models
 from django.conf import settings
 import pytz
-TIMEZONES = sorted([ (tz, tz) for tz in pytz.common_timezones ])
+TIMEZONES = sorted([(tz, tz) for tz in pytz.common_timezones])
 
 
 class Migration(migrations.Migration):

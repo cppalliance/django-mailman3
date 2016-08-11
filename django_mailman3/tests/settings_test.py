@@ -46,6 +46,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_mailman3',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django_gravatar',
 )
 
 

@@ -31,7 +31,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_mailman3.lib.mailman import (
-    add_address_to_mailman_user, sync_email_addresses)
+    add_address_to_mailman_user, get_mailman_user, sync_email_addresses)
 from django_mailman3.models import Profile
 
 
