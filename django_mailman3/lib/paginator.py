@@ -47,8 +47,6 @@ class MailmanPaginator(Paginator):
         """
         number = self.validate_number(number)
         result = self.function(count=self.per_page, page=number)
-        if self._count is None:
-            self._count = result.total_size
         return self._get_page(result, number, self)
 
     @cached_property
