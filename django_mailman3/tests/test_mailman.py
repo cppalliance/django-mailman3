@@ -23,16 +23,12 @@
 from __future__ import absolute_import, print_function, unicode_literals
 
 from django.contrib.auth.models import User
-from django.test import override_settings
 from mock import Mock
 
 from django_mailman3.lib import mailman
 from django_mailman3.tests.utils import FakeMMList, TestCase
 
 
-@override_settings(CACHES={
-    'default': {'BACKEND': 'django.core.cache.backends.dummy.DummyCache'}
-})
 class AddUserToMailmanTestCase(TestCase):
 
     def setUp(self):
