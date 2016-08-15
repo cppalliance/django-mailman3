@@ -18,7 +18,16 @@
 }
 
 .user-profile div.gravatar {
+    display: inline-block;
+    text-align: center;
     font-size: 95%;
+}
+.user-profile img.gravatar {
+    height: auto !important;
+    width: auto !important;
+}
+.user-profile .form-control-static img.gravatar {
+    vertical-align: middle;
 }
 
 .user-profile .user-profile-content {
