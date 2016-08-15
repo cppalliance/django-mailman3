@@ -99,7 +99,7 @@ class FakeMMAddress:
         self.verified = verified
 
     def __str__(self):
-        return email
+        return self.email
 
     def verify(self):
         self.verified = True

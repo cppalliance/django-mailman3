@@ -28,7 +28,7 @@ from django.core.urlresolvers import reverse
 from mock import Mock
 
 from django_mailman3.models import Profile
-from django_mailman3.tests.utils import FakeMMList, TestCase
+from django_mailman3.tests.utils import TestCase
 
 
 class ProfileViewTestCase(TestCase):
