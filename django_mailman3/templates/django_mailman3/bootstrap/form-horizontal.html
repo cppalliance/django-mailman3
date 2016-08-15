@@ -12,13 +12,13 @@
 
 {% for field in form.visible_fields %}
     <div class="form-group {% if field.errors %}has-errors{% endif %}">
-        <label class="control-label col-md-{{ size_left }}"
+        <label class="control-label col-{{ fold_class }}-{{ size_left }}"
                for="{{ field.id_for_label }}">
             {% if field|fieldtype != 'CheckboxInput' %}
                 {{ field.label }}
             {% endif %}
         </label>
-        <div class="col-md-{{ size_right }}">
+        <div class="col-{{ fold_class }}-{{ size_right }}">
             {% if field|fieldtype == 'RadioSelect' %}
                 {% for choice in field %}
                     <label class="radio-inline">
@@ -49,7 +49,7 @@
         </div>
         {% if field.help_text %}
         <p id="help-{{ field.id_for_label }}"
-           class="col-md-offset-{{ size_left }} col-md-{{ size_right }} help-block">
+           class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }} help-block">
             {{ field.help_text|safe|linebreaksbr }}
         </p>
         {% endif %}
@@ -57,7 +57,7 @@
 {% endfor %}
 {% if button %}
     <div class="form-group">
-        <div class="col-md-offset-{{ size_left }} col-md-{{ size_right }}">
+        <div class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }}">
             <button class="btn btn-primary" type="submit">{% trans button %}</button>
         </div>
     </div>

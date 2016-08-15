@@ -50,10 +50,12 @@ def bootstrap_form(context, form, button=None):
 @register.inclusion_tag('django_mailman3/bootstrap/form-horizontal.html',
                         takes_context=True)
 def bootstrap_form_horizontal(
-        context, form, size_left=2, size_right=8, button=None):
+        context, form, size_left=2, size_right=8, button=None,
+        fold_class='sm'):
     return dict(
         form=form,
         size_left=size_left,
         size_right=size_right,
         button=button,
+        fold_class=fold_class,
         )
