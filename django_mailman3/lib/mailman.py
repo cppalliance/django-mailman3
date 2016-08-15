@@ -27,6 +27,7 @@ from urllib2 import HTTPError
 from allauth.account.models import EmailAddress
 from django.conf import settings
 from django.core.cache import cache
+from django.db import IntegrityError
 from mailmanclient import Client as MailmanClient, MailmanConnectionError
 
 import logging
@@ -141,6 +142,9 @@ def sync_email_addresses(user):
             mm_address.verify()
     # Mailman
     for mm_address in mailman_addresses:
-        django_address, _created = EmailAddress.objects.get_or_create(
-            user=user, email=mm_address.email)
+        try:
+            django_address, _created = EmailAddress.objects.get_or_create(
+                user=user, email=mm_address.email)
+        except IntegrityError:
+            continue  # Email exists and belongs to another user.
         check_verified(django_address, mm_address)

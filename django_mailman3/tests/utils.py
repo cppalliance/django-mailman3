@@ -92,6 +92,29 @@ class FakeMMPage():
         return self._count * self._page < len(self.entries)
 
 
+class FakeMMAddress:
+
+    def __init__(self, email, verified=False):
+        self.email = email
+        self.verified = verified
+
+    def __str__(self):
+        return email
+
+    def verify(self):
+        self.verified = True
+
+
+class FakeMMAddressList(list):
+
+    def find_by_email(self, email):
+        try:
+            index = [a.email for a in self].index(email)
+        except ValueError:
+            return None
+        return self[index]
+
+
 def setup_logging(extra_apps=[]):
     formatter = logging.Formatter(fmt="%(message)s")
     levels = ["debug", "info", "warning", "error"]

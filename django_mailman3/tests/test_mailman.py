@@ -22,11 +22,14 @@
 
 from __future__ import absolute_import, print_function, unicode_literals
 
+from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
+from django.db import IntegrityError
 from mock import Mock
 
 from django_mailman3.lib import mailman
-from django_mailman3.tests.utils import FakeMMList, TestCase
+from django_mailman3.tests.utils import (
+    FakeMMList, FakeMMAddress, FakeMMAddressList, TestCase)
 
 
 class AddUserToMailmanTestCase(TestCase):
@@ -80,3 +83,39 @@ class AddUserToMailmanTestCase(TestCase):
         # The secondary address must only have been verified.
         self.assertFalse(self.mm_user.add_address.called)
         secondary_address.verify.assert_called_with()
+
+
+class SyncEmailAddressesTestCase(TestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_user(
+            'testuser', 'test@example.com', 'testPass')
+        EmailAddress.objects.create(
+            user=self.user, email=self.user.email, verified=True)
+        self.mm_user = Mock()
+        self.mm_user.addresses = FakeMMAddressList()
+        self.mailman_client.get_user.side_effect = lambda e: self.mm_user
+
+    def test_user_conflict(self):
+        # A user with two email addresses in Mailman is split in two Django
+        # users.
+        user2 = User.objects.create_user(
+            'testuser2', 'another@example.com', 'testPass')
+        EmailAddress.objects.create(
+            user=user2, email=user2.email, verified=True)
+        self.mm_user.addresses.extend([
+            FakeMMAddress('test@example.com', verified=True),
+            FakeMMAddress('another@example.com', verified=True),
+            ])
+        try:
+            mailman.sync_email_addresses(self.user)
+        except IntegrityError as e:
+            self.fail(e)
+        self.assertEqual(
+            list(EmailAddress.objects.filter(
+                user=self.user).values_list("email", flat=True)),
+            [self.user.email])
+        self.assertEqual(
+            list(EmailAddress.objects.filter(
+                user=user2).values_list("email", flat=True)),
+            [user2.email])
