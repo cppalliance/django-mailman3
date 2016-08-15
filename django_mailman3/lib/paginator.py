@@ -59,8 +59,12 @@ class MailmanPaginator(Paginator):
         return self.function(count=1, page=1).total_size
 
 
-def paginate(objects=None, page_num=1, results_per_page=None,
+def paginate(objects=None, page_num=None, results_per_page=None,
              max_page_range=10, paginator_class=Paginator):
+    try:
+        page_num = int(page_num)
+    except (ValueError, TypeError):
+        page_num = 1
     try:
         results_per_page = int(results_per_page)
     except (ValueError, TypeError):

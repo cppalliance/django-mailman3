@@ -80,3 +80,9 @@ class PaginateTestCase(TestCase):
 
     def test_last_page(self):
         self.assertEqual(paginate(range(100), 1000).number, 5)
+
+    def test_page_str(self):
+        try:
+            self.assertEqual(paginate(range(1000), "2").number, 2)
+        except TypeError as e:
+            self.fail(e)
