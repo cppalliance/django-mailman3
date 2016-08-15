@@ -40,14 +40,12 @@
                                 {% empty %}
                                     <li>{% trans "(no other email)" %}</li>
                                 {% endfor %}
-                                {% if 'postorius' in INSTALLED_APPS %}
                                     <li>
                                         <i class="fa fa-link" aria-hidden="true"></i>
-                                        <a href="{% url 'ps_user_profile' %}">
+                                        <a href="{% url 'account_email' %}">
                                             {% trans "Link another address" %}
                                         </a>
                                     </li>
-                                {% endif %}
                                 </ul>
                             </div>
                         </td>
