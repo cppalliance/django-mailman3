@@ -39,8 +39,6 @@ class GetMailmanUserTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(
             'testuser', 'test@example.com', 'testPass')
-        #EmailAddress.objects.create(
-        #    user=self.user, email=self.user.email, verified=True)
         self.mm_user = Mock()
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 

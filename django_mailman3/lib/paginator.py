@@ -24,7 +24,7 @@ from __future__ import absolute_import, unicode_literals, division
 
 from django.http import Http404
 from django.core.paginator import (
-    Paginator, EmptyPage, PageNotAnInteger, InvalidPage)
+    Paginator, EmptyPage, InvalidPage)
 from django.utils.functional import cached_property
 
 

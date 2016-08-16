@@ -23,7 +23,6 @@
 from __future__ import absolute_import, print_function, unicode_literals
 
 from unittest import TestCase
-from django.http import Http404
 from django.test import RequestFactory
 from django_mailman3.lib.paginator import paginate
 from django_mailman3.templatetags.pagination import add_to_query_string

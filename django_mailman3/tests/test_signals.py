@@ -30,10 +30,8 @@ from allauth.socialaccount.signals import social_account_added
 from django.contrib.auth.models import User
 from mock import Mock, call, patch
 
-from django_mailman3 import signals
 from django_mailman3.models import Profile
-from django_mailman3.tests.utils import (
-    FakeMMAddress, FakeMMAddressList, FakeMMList, FakeMMMember, TestCase)
+from django_mailman3.tests.utils import TestCase
 
 
 class SignalsTestCase(TestCase):
@@ -41,10 +39,6 @@ class SignalsTestCase(TestCase):
     def setUp(self):
         self.user = User.objects.create_user(
             'testuser', 'test@example.com', 'testPass')
-        #EmailAddress.objects.create(
-        #    user=self.user, email=self.user.email, verified=True)
-        #self.mm_user = Mock()
-        #self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 
     def test_user_logged_in(self):
         Profile.objects.get(user=self.user).delete()
@@ -80,7 +74,6 @@ class SignalsTestCase(TestCase):
     def test_email_removed_no_mailman_user(self):
         address = EmailAddress.objects.create(
             user=self.user, email=self.user.email, verified=True)
-        mm_user = Mock()
         with patch('django_mailman3.signals.get_mailman_user') as gmu:
             gmu.return_value = None
             email_removed.send(
