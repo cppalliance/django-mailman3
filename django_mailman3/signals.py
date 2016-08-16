@@ -68,9 +68,9 @@ def on_user_signed_up(sender, **kwargs):
     # We want to add the user to Mailman with all its verified email addresses.
     for address in EmailAddress.objects.filter(user=user):
         if address.verified:
-            logger.debug("Adding email address % to user %s",
+            logger.debug("Adding email address %s to user %s",
                          address.email, user.username)
-            add_address_to_mailman_user(user, address)
+            add_address_to_mailman_user(user, address.email)
 
 
 @receiver(email_removed)
