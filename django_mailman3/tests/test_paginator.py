@@ -24,7 +24,9 @@ from __future__ import absolute_import, print_function, unicode_literals
 
 from unittest import TestCase
 from django.http import Http404
+from django.test import RequestFactory
 from django_mailman3.lib.paginator import paginate
+from django_mailman3.templatetags.pagination import add_to_query_string
 
 
 class PaginateTestCase(TestCase):
@@ -90,3 +92,11 @@ class PaginateTestCase(TestCase):
 
     def test_page_not_an_int(self):
         self.assertEqual(paginate(range(100), "dummy").number, 1)
+
+    def test_add_to_query_string(self):
+        request = RequestFactory().get("/url", {"key1": "value1"})
+        result = add_to_query_string(
+            {"request": request}, "key2", "value2", key3="value3")
+        self.assertEqual(
+            set(result.split("&amp;")),
+            set(["key1=value1", "key2=value2", "key3=value3"]))

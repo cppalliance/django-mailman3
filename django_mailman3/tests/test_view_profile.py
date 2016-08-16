@@ -42,6 +42,11 @@ class ProfileViewTestCase(TestCase):
             )
         self.client.login(username='testuser', password='testPass')
 
+    def test_get_page(self):
+        response = self.client.get(reverse('mm_user_profile'))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(list(response.context['other_addresses']), [])
+
     def test_change_display_name(self):
         # We create a Mailman user, from the django user object.
         self.client.post(
