@@ -28,9 +28,6 @@ from django.conf import settings
 from django.contrib import admin
 from django.db import models
 
-from django_mailman3.lib.cache import cache
-from django_mailman3.lib.mailman import get_mailman_user
-
 
 class Profile(models.Model):
     user = models.OneToOneField(settings.AUTH_USER_MODEL,
@@ -40,23 +37,6 @@ class Profile(models.Model):
 
     def __unicode__(self):
         return '<Mailman profile for %s>' % (unicode(self.user.username))
-
-    def get_subscriptions(self):
-        def _get_value():
-            mm_user = get_mailman_user(self.user)
-            if mm_user is None:
-                return {}
-            subscriptions = dict([
-                (member.list_id, member.address)
-                for member in mm_user.subscriptions
-                ])
-            return subscriptions
-        # TODO: how should this be invalidated? Subscribe to a signal in
-        # mailman when a new subscription occurs? Or store in the session?
-        return cache.get_or_set(
-            "User:%s:subscriptions" % self.user.id,
-            _get_value, 60, version=2)  # 1 minute
-        # TODO: increase the cache duration when we have Mailman signals
 
 
 admin.site.register(Profile)

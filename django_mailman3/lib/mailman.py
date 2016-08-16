@@ -26,7 +26,7 @@ from urllib2 import HTTPError
 
 from allauth.account.models import EmailAddress
 from django.conf import settings
-from django.core.cache import cache
+from django_mailman3.lib.cache import cache
 from django.db import IntegrityError
 from mailmanclient import Client as MailmanClient, MailmanConnectionError
 
@@ -81,6 +81,25 @@ def get_mailman_user_id(user):
     if mm_user is None:
         return None
     return unicode(mm_user.user_id)
+
+
+def get_subscriptions(user):
+    # Get subscriptions for the provided Django user.
+    def _get_value():
+        mm_user = get_mailman_user(user)
+        if mm_user is None:
+            return {}
+        subscriptions = dict([
+            (member.list_id, member.address)
+            for member in mm_user.subscriptions
+            ])
+        return subscriptions
+    # TODO: how should this be invalidated? Subscribe to a signal in
+    # mailman when a new subscription occurs? Or store in the session?
+    return cache.get_or_set(
+        "User:%s:subscriptions" % user.id,
+        _get_value, 60, version=2)  # 1 minute
+    # TODO: increase the cache duration when we have Mailman signals
 
 
 def add_address_to_mailman_user(user, address):

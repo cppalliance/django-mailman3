@@ -189,3 +189,26 @@ class SyncEmailAddressesTestCase(TestCase):
             list(EmailAddress.objects.filter(
                 user=user2).values_list("email", flat=True)),
             [user2.email])
+
+
+class GetSubscriptionsTestCase(TestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_user(
+            'testuser', 'test@example.com', 'testPass')
+        EmailAddress.objects.create(
+            user=self.user, email=self.user.email, verified=True)
+        self.mm_user = Mock()
+        self.mailman_client.get_user.side_effect = lambda e: self.mm_user
+
+    def test_get_subscriptions(self):
+        fake_member = FakeMMMember("list.example.com", "test@example.com")
+        self.mm_user.subscriptions = [fake_member]
+        self.assertEqual(
+            mailman.get_subscriptions(self.user),
+            {"list.example.com": "test@example.com"})
+
+    def test_get_subscriptions_no_user(self):
+        with patch('django_mailman3.lib.mailman.get_mailman_user') as gmu:
+            gmu.return_value = None
+            self.assertEqual(mailman.get_subscriptions(self.user), {})
