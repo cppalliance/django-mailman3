@@ -22,14 +22,53 @@
 
 from __future__ import absolute_import, print_function, unicode_literals
 
+from urllib2 import HTTPError
+
 from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
 from django.db import IntegrityError
-from mock import Mock
+from mock import Mock, call, patch
 
 from django_mailman3.lib import mailman
 from django_mailman3.tests.utils import (
-    FakeMMList, FakeMMAddress, FakeMMAddressList, TestCase)
+    FakeMMAddress, FakeMMAddressList, FakeMMList, FakeMMMember, TestCase)
+
+
+class GetMailmanUserTestCase(TestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_user(
+            'testuser', 'test@example.com', 'testPass')
+        #EmailAddress.objects.create(
+        #    user=self.user, email=self.user.email, verified=True)
+        self.mm_user = Mock()
+        self.mailman_client.get_user.side_effect = lambda e: self.mm_user
+
+    def test_get_user(self):
+        mm_user = mailman.get_mailman_user(self.user)
+        self.assertIs(mm_user, self.mm_user)
+
+    def test_create_user(self):
+        self.mailman_client.get_user.side_effect = \
+            HTTPError(None, 404, None, None, None)
+        new_mm_user = Mock()
+        self.mailman_client.create_user.side_effect = lambda e, n: new_mm_user
+        mm_user = mailman.get_mailman_user(self.user)
+        self.assertEqual(
+            self.mailman_client.create_user.call_args_list,
+            [call(self.user.email, self.user.get_full_name())])
+        self.assertIs(mm_user, new_mm_user)
+
+    def test_connection_failed(self):
+        self.mailman_client.get_user.side_effect = \
+            HTTPError(None, 500, None, None, None)
+        mm_user = mailman.get_mailman_user(self.user)
+        self.assertIsNone(mm_user)
+
+    def test_get_user_id(self):
+        self.mm_user.user_id = "dummy"
+        mm_user_id = mailman.get_mailman_user_id(self.user)
+        self.assertEqual(mm_user_id, "dummy")
 
 
 class AddUserToMailmanTestCase(TestCase):
@@ -95,6 +134,37 @@ class SyncEmailAddressesTestCase(TestCase):
         self.mm_user = Mock()
         self.mm_user.addresses = FakeMMAddressList()
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
+
+    def test_sync_django(self):
+        # Addresses in Django are pushed to Mailman, verified bits are synced.
+        EmailAddress.objects.create(
+            user=self.user, email='another@example.com', verified=True)
+        not_verified = FakeMMAddress('another@example.com', verified=False)
+        self.mm_user.addresses.append(not_verified)
+        mailman.sync_email_addresses(self.user)
+        # The missing address must have been added
+        self.assertEqual(
+            self.mm_user.add_address.call_args_list,
+            [call('test@example.com', absorb_existing=True)])
+        # The unverified address must have been set verified
+        self.assertTrue(not_verified.verified)
+
+    def test_sync_mailman(self):
+        # Addresses in Mailman are pushed to Django, verified bits are synced.
+        self.mm_user.addresses.extend([
+            FakeMMAddress('another@example.com', verified=True),
+            FakeMMAddress('not-verified@example.com', verified=False),
+            FakeMMAddress('yet-another@example.com', verified=True),
+            ])
+        EmailAddress.objects.create(
+            user=self.user, email='yet-another@example.com', verified=False)
+        mailman.sync_email_addresses(self.user)
+        self.assertEqual(
+            list(EmailAddress.objects.filter(
+                 user=self.user, verified=True).order_by("email").values_list(
+                 "email", flat=True)),
+            ['another@example.com', self.user.email,
+             'yet-another@example.com'])
 
     def test_user_conflict(self):
         # A user with two email addresses in Mailman is split in two Django

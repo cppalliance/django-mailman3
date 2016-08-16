@@ -23,6 +23,7 @@
 from __future__ import absolute_import, print_function, unicode_literals
 
 from unittest import TestCase
+from django.http import Http404
 from django_mailman3.lib.paginator import paginate
 
 
@@ -86,3 +87,6 @@ class PaginateTestCase(TestCase):
             self.assertEqual(paginate(range(1000), "2").number, 2)
         except TypeError as e:
             self.fail(e)
+
+    def test_page_not_an_int(self):
+        self.assertEqual(paginate(range(100), "dummy").number, 1)

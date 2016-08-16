@@ -142,6 +142,8 @@ def sync_email_addresses(user):
             mm_address.verify()
     # Mailman
     for mm_address in mailman_addresses:
+        if not mm_address.verified:
+            continue
         try:
             django_address, _created = EmailAddress.objects.get_or_create(
                 user=user, email=mm_address.email)

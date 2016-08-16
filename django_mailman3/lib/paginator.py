@@ -72,14 +72,11 @@ def paginate(objects=None, page_num=None, results_per_page=None,
     paginator = paginator_class(objects, results_per_page)
     try:
         objects = paginator.page(page_num)
-    except PageNotAnInteger:
-        # If page is not an integer, deliver first page.
-        page_num = 1
-        objects = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         objects = paginator.page(paginator.num_pages)
     except InvalidPage:
+        # This never happens with Django's Paginator, but just in case.
         raise Http404("No such page of results!")
     # Calculate the displayed page range
     if paginator.num_pages > max_page_range:
