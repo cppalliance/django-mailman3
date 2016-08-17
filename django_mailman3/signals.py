@@ -103,7 +103,7 @@ def on_email_confirmed(sender, **kwargs):
 # def on_email_changed(sender, **kwargs):
 #     # Sent when a primary email address has been changed.
 #     user = get_mailman_client().get_user(kwargs['user'].email)
-#     # TODO: do something?
+#     # TODO: propagate to Mailman
 
 
 @receiver(social_account_added)

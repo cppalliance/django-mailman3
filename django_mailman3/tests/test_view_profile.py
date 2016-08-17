@@ -49,11 +49,13 @@ class ProfileViewTestCase(TestCase):
 
     def test_change_display_name(self):
         # We create a Mailman user, from the django user object.
-        self.client.post(
+        response = self.client.post(
             reverse('mm_user_profile'), {
+                'username': self.user.username,
                 'first_name': 'test-first-name',
                 'last_name': 'test-last-name',
                 'timezone': 'Europe/Paris'})
+        self.assertRedirects(response, reverse('mm_user_profile'))
         # The user's first and last name must be updated.
         user = User.objects.get(username='testuser')
         self.assertEqual(user.first_name, 'test-first-name')
@@ -65,3 +67,17 @@ class ProfileViewTestCase(TestCase):
         # The Mailman user's display name must have been updated.
         self.assertEqual(
             self.mm_user.display_name, 'test-first-name test-last-name')
+
+    def test_username_unique(self):
+        # Usernames should be unique.
+        otheruser = User.objects.create_user(
+            'otheruser', 'other@example.com', 'testPass',
+            )
+        response = self.client.post(
+            reverse('mm_user_profile'), {
+                'username': 'otheruser',
+                'first_name': 'first-name',
+                'last_name': 'last-name',
+                'timezone': 'Europe/Paris'})
+        self.assertEqual(response.status_code, 200)
+        self.assertIn('username', response.context["form"].errors)

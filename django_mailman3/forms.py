@@ -23,12 +23,22 @@
 from __future__ import absolute_import, unicode_literals
 
 from django import forms
-
+from django.contrib.auth.models import User
+from django.utils.translation import ugettext_lazy as _
 from django_mailman3.models import Profile
 
 
 class UserProfileForm(forms.Form):
+    username = forms.CharField(required=True)
     first_name = forms.CharField()
     last_name = forms.CharField()
     timezone = forms.ChoiceField(
         label="Time zone", choices=Profile.TIMEZONES)
+
+    def clean_username(self):
+        username = self.cleaned_data.get("username")
+        if username != self.initial.get("username"):
+            if User.objects.filter(username=username).exists():
+                raise forms.ValidationError(
+                    _("A user with that username already exists."))
+        return username

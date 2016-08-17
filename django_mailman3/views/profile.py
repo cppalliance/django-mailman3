@@ -45,28 +45,34 @@ def user_profile(request):
         # existing Django project with existing users.
         profile = Profile.objects.create(user=request.user)
     mm_user = get_mailman_user(request.user)
+    initial_data = {
+        "username": request.user.username,
+        "first_name": request.user.first_name,
+        "last_name": request.user.last_name,
+        "timezone": get_current_timezone().zone,
+        }
 
     if request.method == 'POST':
-        form = UserProfileForm(request.POST)
+        form = UserProfileForm(request.POST, initial=initial_data)
         if form.is_valid():
-            request.user.first_name = form.cleaned_data["first_name"]
-            request.user.last_name = form.cleaned_data["last_name"]
-            profile.timezone = form.cleaned_data["timezone"]
-            request.user.save()
-            profile.save()
-            # Now update the display name in Mailman
-            if mm_user is not None:
-                mm_user.display_name = "%s %s" % (
-                        request.user.first_name, request.user.last_name)
-                mm_user.save()
-            messages.success(request, "The profile was successfully updated.")
+            if form.has_changed():
+                request.user.username = form.cleaned_data["username"]
+                request.user.first_name = form.cleaned_data["first_name"]
+                request.user.last_name = form.cleaned_data["last_name"]
+                profile.timezone = form.cleaned_data["timezone"]
+                request.user.save()
+                profile.save()
+                # Now update the display name in Mailman
+                if mm_user is not None:
+                    mm_user.display_name = "%s %s" % (
+                            request.user.first_name, request.user.last_name)
+                    mm_user.save()
+                messages.success(request, "The profile was successfully updated.")
+            else:
+                messages.success(request, "No change detected.")
             return redirect(reverse('mm_user_profile'))
     else:
-        form = UserProfileForm(initial={
-                "first_name": request.user.first_name,
-                "last_name": request.user.last_name,
-                "timezone": get_current_timezone(),
-                })
+        form = UserProfileForm(initial=initial_data)
 
     # Emails
     other_addresses = EmailAddress.objects.filter(
