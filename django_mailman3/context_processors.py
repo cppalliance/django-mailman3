@@ -16,15 +16,19 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Author: Aurelien Bompard <abompard@fedoraproject.org>
+#
 
-"""
-This file is the main URL config for a Django website including Django-Mailman.
-"""
+from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import include, url
+from django.conf import settings
+from django.contrib.sites.shortcuts import get_current_site
 
-urlpatterns = [
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
-    url(r'', include('django.contrib.auth.urls')),
-]
+
+def common(request):
+    context = {}
+    for name in ('LOGIN_URL', 'LOGOUT_URL', 'INSTALLED_APPS'):
+        context[name] = getattr(settings, name, None)
+    context["site_name"] = get_current_site(request).name
+    return context

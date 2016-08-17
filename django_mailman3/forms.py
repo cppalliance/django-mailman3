@@ -16,15 +16,19 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Author: Aurelien Bompard <abompard@fedoraproject.org>
+#
 
-"""
-This file is the main URL config for a Django website including Django-Mailman.
-"""
+from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import include, url
+from django import forms
 
-urlpatterns = [
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
-    url(r'', include('django.contrib.auth.urls')),
-]
+from django_mailman3.models import Profile
+
+
+class UserProfileForm(forms.Form):
+    first_name = forms.CharField()
+    last_name = forms.CharField()
+    timezone = forms.ChoiceField(
+        label="Time zone", choices=Profile.TIMEZONES)

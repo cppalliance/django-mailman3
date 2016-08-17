@@ -16,15 +16,18 @@
 #
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
+#
+# Author: Aurelien Bompard <abompard@fedoraproject.org>
+#
 
-"""
-This file is the main URL config for a Django website including Django-Mailman.
-"""
+from __future__ import absolute_import, unicode_literals
 
-from django.conf.urls import include, url
+from django.apps import AppConfig
 
-urlpatterns = [
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
-    url(r'', include('django.contrib.auth.urls')),
-]
+
+class DjangoMailman3Config(AppConfig):
+    name = 'django_mailman3'
+    verbose_name = "Django Mailman 3"
+
+    def ready(self):
+        import django_mailman3.signals  # flake8: noqa

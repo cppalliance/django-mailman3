@@ -38,7 +38,10 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Django>=1.8',
+        'Django >= 1.8',
         'mailmanclient',
+        'django-allauth',
+        'django-gravatar2 >= 1.0.6',
+        'pytz',
     ],
 )

@@ -17,18 +17,22 @@
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Author: Aamir Khan <syst3m.w0rm@gmail.com>
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
 
+from django.conf.urls import url
 from django.contrib import admin
 
+from django_mailman3.views.profile import user_profile
 
-urlpatterns = []
+
+urlpatterns = [
+    url(r'^user-profile/', user_profile, name='mm_user_profile'),
+    ]
 
 
-# See the django_admin.middleware.sslredirect.SSLRedirect class
+# See the django_mailman3.middleware.sslredirect.SSLRedirect class
 
 SSL_URLS = (
     "django.contrib.auth.views.login",

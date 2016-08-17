@@ -46,6 +46,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_mailman3',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'django_gravatar',
 )
 
 
@@ -84,7 +88,7 @@ TEMPLATES = [
     },
 ]
 
-# WSGI_APPLICATION = 'django_admin.example_project.wsgi.application'
+# WSGI_APPLICATION = 'django_mailman3.example_project.wsgi.application'
 
 
 # Database
@@ -186,3 +190,10 @@ LOGGING = {
 # Use SSL when logged in. You need to enable the SSLRedirect middleware for
 # this feature to work.
 # USE_SSL = True
+
+# Disable caching
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+    }
+}
