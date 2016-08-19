@@ -33,3 +33,19 @@
 .user-profile .user-profile-content {
     padding-top: 2em;
 }
+
+
+/* Paginator */
+
+.paginator {
+    text-align: center;
+}
+.paginator form {
+    margin: 0 auto;
+}
+.paginator form label {
+    font-weight: normal;
+}
+.paginator form.jump-to-page {
+    display: none;
+}

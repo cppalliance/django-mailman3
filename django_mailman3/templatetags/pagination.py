@@ -17,6 +17,7 @@
 
 from django import template
 from django.utils.html import conditional_escape
+from django.utils.translation import ugettext_lazy as _
 
 
 register = template.Library()
@@ -33,3 +34,23 @@ def add_to_query_string(context, *args, **kwargs):
     for key, value in new_qs_elements.iteritems():
         qs[key] = value
     return conditional_escape(qs.urlencode())
+
+
+@register.inclusion_tag('django_mailman3/paginator/pagination.html',
+                        takes_context=True)
+def paginator(context, page, qsprefix='', bydate=False):
+    if bydate:
+        label_previous = _("Newer")
+        label_next = _("Older")
+    else:
+        label_previous = _("Previous")
+        label_next = _("Next")
+    context.update(dict(
+        page=page,
+        label_previous=label_previous,
+        label_next=label_next,
+        page_key="{}page".format(qsprefix),
+        count_key="{}count".format(qsprefix),
+        per_page_options=[10, 50, 100, 200],  # move to settings?
+        ))
+    return context

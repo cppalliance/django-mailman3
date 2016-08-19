@@ -30,51 +30,51 @@ from django_mailman3.templatetags.pagination import add_to_query_string
 
 class PaginateTestCase(TestCase):
 
-    def test_page_range(self):
+    def test_page_range_ellipsis(self):
         objects = range(1000)
-        self.assertEqual(paginate(objects, 1).page_range,
+        self.assertEqual(paginate(objects, 1).paginator.page_range_ellipsis,
                          [1, 2, 3, 4, '...', 50])
-        self.assertEqual(paginate(objects, 2).page_range,
+        self.assertEqual(paginate(objects, 2).paginator.page_range_ellipsis,
                          [1, 2, 3, 4, 5, '...', 50])
-        self.assertEqual(paginate(objects, 3).page_range,
+        self.assertEqual(paginate(objects, 3).paginator.page_range_ellipsis,
                          [1, 2, 3, 4, 5, 6, '...', 50])
-        self.assertEqual(paginate(objects, 4).page_range,
+        self.assertEqual(paginate(objects, 4).paginator.page_range_ellipsis,
                          [1, 2, 3, 4, 5, 6, 7, '...', 50])
-        self.assertEqual(paginate(objects, 5).page_range,
+        self.assertEqual(paginate(objects, 5).paginator.page_range_ellipsis,
                          [1, 2, 3, 4, 5, 6, 7, 8, '...', 50])
-        self.assertEqual(paginate(objects, 6).page_range,
+        self.assertEqual(paginate(objects, 6).paginator.page_range_ellipsis,
                          [1, 2, 3, 4, 5, 6, 7, 8, 9, '...', 50])
-        self.assertEqual(paginate(objects, 7).page_range,
+        self.assertEqual(paginate(objects, 7).paginator.page_range_ellipsis,
                          [1, '...', 4, 5, 6, 7, 8, 9, 10, '...', 50])
-        self.assertEqual(paginate(objects, 8).page_range,
+        self.assertEqual(paginate(objects, 8).paginator.page_range_ellipsis,
                          [1, '...', 5, 6, 7, 8, 9, 10, 11, '...', 50])
-        self.assertEqual(paginate(objects, 9).page_range,
+        self.assertEqual(paginate(objects, 9).paginator.page_range_ellipsis,
                          [1, '...', 6, 7, 8, 9, 10, 11, 12, '...', 50])
-        self.assertEqual(paginate(objects, 10).page_range,
+        self.assertEqual(paginate(objects, 10).paginator.page_range_ellipsis,
                          [1, '...', 7, 8, 9, 10, 11, 12, 13, '...', 50])
-        self.assertEqual(paginate(objects, 30).page_range,
+        self.assertEqual(paginate(objects, 30).paginator.page_range_ellipsis,
                          [1, '...', 27, 28, 29, 30, 31, 32, 33, '...', 50])
-        self.assertEqual(paginate(objects, 40).page_range,
+        self.assertEqual(paginate(objects, 40).paginator.page_range_ellipsis,
                          [1, '...', 37, 38, 39, 40, 41, 42, 43, '...', 50])
-        self.assertEqual(paginate(objects, 41).page_range,
+        self.assertEqual(paginate(objects, 41).paginator.page_range_ellipsis,
                          [1, '...', 38, 39, 40, 41, 42, 43, 44, '...', 50])
-        self.assertEqual(paginate(objects, 42).page_range,
+        self.assertEqual(paginate(objects, 42).paginator.page_range_ellipsis,
                          [1, '...', 39, 40, 41, 42, 43, 44, 45, '...', 50])
-        self.assertEqual(paginate(objects, 43).page_range,
+        self.assertEqual(paginate(objects, 43).paginator.page_range_ellipsis,
                          [1, '...', 40, 41, 42, 43, 44, 45, 46, '...', 50])
-        self.assertEqual(paginate(objects, 44).page_range,
+        self.assertEqual(paginate(objects, 44).paginator.page_range_ellipsis,
                          [1, '...', 41, 42, 43, 44, 45, 46, 47, '...', 50])
-        self.assertEqual(paginate(objects, 45).page_range,
+        self.assertEqual(paginate(objects, 45).paginator.page_range_ellipsis,
                          [1, '...', 42, 43, 44, 45, 46, 47, 48, 49, 50])
-        self.assertEqual(paginate(objects, 46).page_range,
+        self.assertEqual(paginate(objects, 46).paginator.page_range_ellipsis,
                          [1, '...', 43, 44, 45, 46, 47, 48, 49, 50])
-        self.assertEqual(paginate(objects, 47).page_range,
+        self.assertEqual(paginate(objects, 47).paginator.page_range_ellipsis,
                          [1, '...', 44, 45, 46, 47, 48, 49, 50])
-        self.assertEqual(paginate(objects, 48).page_range,
+        self.assertEqual(paginate(objects, 48).paginator.page_range_ellipsis,
                          [1, '...', 45, 46, 47, 48, 49, 50])
-        self.assertEqual(paginate(objects, 49).page_range,
+        self.assertEqual(paginate(objects, 49).paginator.page_range_ellipsis,
                          [1, '...', 46, 47, 48, 49, 50])
-        self.assertEqual(paginate(objects, 50).page_range,
+        self.assertEqual(paginate(objects, 50).paginator.page_range_ellipsis,
                          [1, '...', 47, 48, 49, 50])
 
     def test_default_page(self):

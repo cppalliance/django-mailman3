@@ -80,22 +80,23 @@ def paginate(objects=None, page_num=None, results_per_page=None,
         raise Http404("No such page of results!")
     # Calculate the displayed page range
     if paginator.num_pages > max_page_range:
-        objects.page_range = [1]
+        paginator.page_range_ellipsis = [1]
         subrange_lower = page_num - int(max_page_range / 2 - 2)
         if subrange_lower > 3:
-            objects.page_range.append("...")
+            paginator.page_range_ellipsis.append("...")
         else:
             subrange_lower = 2
-        objects.page_range.extend(range(subrange_lower, page_num))
+        paginator.page_range_ellipsis.extend(range(subrange_lower, page_num))
         if page_num != 1 and page_num != paginator.num_pages:
-            objects.page_range.append(page_num)
+            paginator.page_range_ellipsis.append(page_num)
         subrange_upper = page_num + int(max_page_range / 2 - 2)
         if subrange_upper >= paginator.num_pages - 2:
             subrange_upper = paginator.num_pages - 1
-        objects.page_range.extend(range(page_num+1, subrange_upper+1))
+        paginator.page_range_ellipsis.extend(
+            range(page_num+1, subrange_upper+1))
         if subrange_upper < paginator.num_pages - 2:
-            objects.page_range.append("...")
-        objects.page_range.append(paginator.num_pages)
+            paginator.page_range_ellipsis.append("...")
+        paginator.page_range_ellipsis.append(paginator.num_pages)
     else:
-        objects.page_range = [p+1 for p in range(paginator.num_pages)]
+        paginator.page_range_ellipsis = paginator.page_range
     return objects
