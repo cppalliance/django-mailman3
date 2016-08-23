@@ -70,7 +70,7 @@ class ProfileViewTestCase(TestCase):
 
     def test_username_unique(self):
         # Usernames should be unique.
-        otheruser = User.objects.create_user(
+        User.objects.create_user(
             'otheruser', 'other@example.com', 'testPass',
             )
         response = self.client.post(

@@ -67,7 +67,8 @@ def user_profile(request):
                     mm_user.display_name = "%s %s" % (
                             request.user.first_name, request.user.last_name)
                     mm_user.save()
-                messages.success(request, "The profile was successfully updated.")
+                messages.success(
+                    request, "The profile was successfully updated.")
             else:
                 messages.success(request, "No change detected.")
             return redirect(reverse('mm_user_profile'))
