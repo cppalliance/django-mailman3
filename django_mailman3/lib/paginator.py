@@ -54,9 +54,8 @@ class MailmanPaginator(Paginator):
         """
         Returns the total number of objects, across all pages.
         """
-        # For now we need to get the first page to have the total_size.
-        # Mitigate the price of this call by using count=1.
-        return self.function(count=1, page=1).total_size
+        # See the rest/docs/collections.rst in the Mailman source tree.
+        return self.function(count=0, page=1).total_size
 
 
 def paginate(objects=None, page_num=None, results_per_page=None,
