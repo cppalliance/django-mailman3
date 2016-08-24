@@ -18,7 +18,6 @@
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-from __future__ import absolute_import, unicode_literals
 
 from django.contrib import admin
 from django_mailman3.models import Profile, MailDomain

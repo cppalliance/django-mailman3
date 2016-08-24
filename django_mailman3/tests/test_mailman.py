@@ -20,9 +20,7 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from __future__ import absolute_import, print_function, unicode_literals
-
-from urllib2 import HTTPError
+from urllib.error import HTTPError
 
 from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
@@ -127,7 +125,7 @@ class AddUserToMailmanTestCase(TestCase):
         secondary_address = Mock()
         secondary_address.email = "secondary@example.com"
         secondary_address.verified_on = None
-        secondary_address.__unicode__ = lambda self: self.email
+        secondary_address.__str__ = lambda self: self.email
         self.mm_user.addresses.append(secondary_address)
         self.mm_addresses["secondary@example.com"] = secondary_address
         mailman.add_address_to_mailman_user(self.user, "secondary@example.com")

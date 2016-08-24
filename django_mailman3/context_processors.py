@@ -20,7 +20,6 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from __future__ import absolute_import, unicode_literals
 
 from django.conf import settings
 from django.contrib.sites.shortcuts import get_current_site

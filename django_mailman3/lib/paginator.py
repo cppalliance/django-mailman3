@@ -20,7 +20,6 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from __future__ import absolute_import, unicode_literals, division
 
 from django.http import Http404
 from django.core.paginator import (
@@ -85,14 +84,15 @@ def paginate(objects=None, page_num=None, results_per_page=None,
             paginator.page_range_ellipsis.append("...")
         else:
             subrange_lower = 2
-        paginator.page_range_ellipsis.extend(range(subrange_lower, page_num))
+        paginator.page_range_ellipsis.extend(
+            list(range(subrange_lower, page_num)))
         if page_num != 1 and page_num != paginator.num_pages:
             paginator.page_range_ellipsis.append(page_num)
         subrange_upper = page_num + int(max_page_range / 2 - 2)
         if subrange_upper >= paginator.num_pages - 2:
             subrange_upper = paginator.num_pages - 1
         paginator.page_range_ellipsis.extend(
-            range(page_num+1, subrange_upper+1))
+            list(range(page_num+1, subrange_upper+1)))
         if subrange_upper < paginator.num_pages - 2:
             paginator.page_range_ellipsis.append("...")
         paginator.page_range_ellipsis.append(paginator.num_pages)

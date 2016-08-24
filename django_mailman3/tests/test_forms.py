@@ -18,8 +18,6 @@
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from __future__ import absolute_import, unicode_literals
-
 from django.test import TestCase
 from django.contrib.auth.models import User
 from django_mailman3.forms import UserProfileForm

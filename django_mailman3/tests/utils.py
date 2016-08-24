@@ -18,19 +18,18 @@
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-from __future__ import absolute_import, print_function, unicode_literals
 
-import logging
 import os
 import sys
-from StringIO import StringIO
-
+import logging
 import mailmanclient
+
 from contextlib import contextmanager
 from django.contrib.messages.storage.cookie import CookieStorage
 from django.core.cache import cache
 from django.utils.timezone import now
 from django.test import RequestFactory, TestCase as DjangoTestCase
+from io import StringIO
 from mock import Mock, patch
 
 

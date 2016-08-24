@@ -19,22 +19,18 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from __future__ import absolute_import, unicode_literals
-
-try:
-    from urllib.parse import urlparse
-except ImportError:
-    from urlparse import urlparse
-from django.core.urlresolvers import reverse
-from django.utils.http import urlencode
-
 from allauth.account.models import EmailAddress
 from allauth.socialaccount import providers
 from allauth.socialaccount.providers.openid.provider import (
     OpenIDAccount, OpenIDProvider)
-
 from allauth.socialaccount.providers.openid.utils import (
     get_email_from_response)
+try:
+    from django.core.urlresolvers import reverse
+except ImportError:
+    from django.urls import reverse
+from django.utils.http import urlencode
+from urllib.parse import urlparse
 
 
 def extract_username(url):

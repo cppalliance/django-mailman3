@@ -20,7 +20,6 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from __future__ import absolute_import, print_function, unicode_literals
 
 from allauth.account.models import EmailAddress
 from allauth.account.signals import (
