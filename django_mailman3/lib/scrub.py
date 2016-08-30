@@ -24,7 +24,8 @@ from __future__ import absolute_import, unicode_literals
 import os
 import re
 import binascii
-from types import IntType
+
+from django.utils.six import integer_types
 from mimetypes import guess_all_extensions
 from email.header import decode_header, make_header
 from email.errors import HeaderParseError
@@ -119,7 +120,7 @@ class Scrubber(object):
                     # part is attached
                     attachments.append(self.parse_attachment(part, part_num))
                     part.set_payload('')
-            elif ctype == 'text/html' and isinstance(sanitize, IntType):
+            elif ctype == 'text/html' and isinstance(sanitize, integer_types):
                 if sanitize == 1:
                     # Don't HTML-escape it, this is the frontend's job
                     attachments.append(self.parse_attachment(
