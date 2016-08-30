@@ -26,6 +26,7 @@ import pytz
 
 from django.conf import settings
 from django.contrib import admin
+from django.contrib.sites.models import Site
 from django.db import models
 
 
@@ -40,3 +41,14 @@ class Profile(models.Model):
 
 
 admin.site.register(Profile)
+
+
+class MailDomain(models.Model):
+    site = models.ForeignKey(Site, related_name="mailman_domains")
+    mail_domain = models.CharField(max_length=255, db_index=True, unique=True)
+
+    def __unicode__(self):
+        return '<Mailman domain %s>' % (unicode(self.mail_domain))
+
+
+admin.site.register(MailDomain)
