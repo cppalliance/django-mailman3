@@ -22,26 +22,9 @@
 
 from __future__ import absolute_import, unicode_literals
 
-import pytz
-
-from django.conf import settings
-from django.contrib.sites.models import Site
-from django.db import models
+from django.contrib import admin
+from django_mailman3.models import Profile, MailDomain
 
 
-class Profile(models.Model):
-    user = models.OneToOneField(settings.AUTH_USER_MODEL,
-                                related_name="mailman_profile")
-    TIMEZONES = sorted([(tz, tz) for tz in pytz.common_timezones])
-    timezone = models.CharField(max_length=100, choices=TIMEZONES, default="")
-
-    def __unicode__(self):
-        return '<Mailman profile for %s>' % (unicode(self.user.username))
-
-
-class MailDomain(models.Model):
-    site = models.ForeignKey(Site, related_name="mailman_domains")
-    mail_domain = models.CharField(max_length=255, db_index=True, unique=True)
-
-    def __unicode__(self):
-        return '<Mailman domain %s>' % (unicode(self.mail_domain))
+admin.site.register(Profile)
+admin.site.register(MailDomain)
