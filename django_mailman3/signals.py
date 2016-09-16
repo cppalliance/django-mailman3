@@ -121,6 +121,7 @@ def on_social_account_added(sender, **kwargs):
         logger.debug("Adding email address %s to user %s",
                      address.email, sociallogin.user.username)
         address.user = sociallogin.user
+        address.primary = False  # There already is a primary address.
         address.save()
         if address.verified:
             add_address_to_mailman_user(sociallogin.user, address.email)
