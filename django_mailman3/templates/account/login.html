@@ -10,6 +10,8 @@
 
 <h1>{% trans "Sign In" %}</h1>
 
+{% include "django_mailman3/login_extra_top.html" %}
+
 {% get_providers as socialaccount_providers %}
 
 {% if socialaccount_providers %}
@@ -22,6 +24,8 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <ul class="socialaccount_providers list-inline">
     {% include "socialaccount/snippets/provider_list.html" with process="login" %}
   </ul>
+
+  {% include "django_mailman3/login_extra_post_providers.html" %}
 
   <div class="login-or">{% trans 'or' %}</div>
 
