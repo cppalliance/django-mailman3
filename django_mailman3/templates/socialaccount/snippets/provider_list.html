@@ -7,8 +7,8 @@
 {% if provider.id == "openid" %}
 {% for brand in provider.get_brands %}
 <li>
-  <a title="{{brand.name}}" 
-     class="socialaccount_provider {{provider.id}} {{brand.id}} btn btn-lg btn-default"
+  <a title="{{brand.name}}"
+     class="socialaccount_provider {{provider.id}} {{brand.id}} btn btn-default"
      href="{% provider_login_url provider.id openid=brand.openid_url process=process %}">
     <img alt="" src="{% static 'django-mailman3/img/login/' %}{{ brand.id }}.png" />
     {{brand.name}}
@@ -17,7 +17,7 @@
 {% endfor %}
 {% endif %}
 <li>
-  <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}} btn btn-lg btn-default"
+  <a title="{{provider.name}}" class="socialaccount_provider {{provider.id}} btn btn-default"
      href="{% provider_login_url provider.id process=process scope=scope auth_params=auth_params %}">
     <img alt="" src="{% static 'django-mailman3/img/login/' %}{{ provider.id }}.png" />
     {{provider.name}}
