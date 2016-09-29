@@ -67,7 +67,7 @@ def paginate(objects=None, page_num=None, results_per_page=None,
     try:
         results_per_page = int(results_per_page)
     except (ValueError, TypeError):
-        results_per_page = 20
+        results_per_page = 10
     paginator = paginator_class(objects, results_per_page)
     try:
         objects = paginator.page(page_num)
