@@ -14,25 +14,25 @@
     <div class="form-group {% if field.errors %}has-errors{% endif %}">
         <label class="control-label col-{{ fold_class }}-{{ size_left }}"
                for="{{ field.id_for_label }}">
-            {% if field|fieldtype != 'CheckboxInput' %}
+            {% if not field|fieldtype_is:'CheckboxInput' %}
                 {{ field.label }}
             {% endif %}
         </label>
         <div class="col-{{ fold_class }}-{{ size_right }}">
-            {% if field|fieldtype == 'RadioSelect' %}
+            {% if field|fieldtype_is:'RadioSelect' %}
                 {% for choice in field %}
                     <label class="radio-inline">
                         {{ choice.tag }}
                         {{ choice.choice_label }}
                     </label>
                 {% endfor %}
-            {% elif field|fieldtype == 'CheckboxInput' %}
+            {% elif field|fieldtype_is:'CheckboxInput' %}
                 <div class="checkbox">
                     <label>
                         {{ field }} {{ field.label }}
                     </label>
                 </div>
-            {% elif field|fieldtype == 'CheckboxSelectMultiple' %}
+            {% elif field|fieldtype_is:'CheckboxSelectMultiple' %}
                 {% for choice in field %}
                     <div class="checkbox">
                         <label>

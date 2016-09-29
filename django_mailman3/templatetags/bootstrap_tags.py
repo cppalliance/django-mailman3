@@ -32,6 +32,13 @@ def fieldtype(field):
     return field.field.widget.__class__.__name__
 
 
+@register.filter('fieldtype_is')
+def fieldtype_is(field, widget_class):
+    return widget_class in [
+        parent.__name__ for parent in
+        field.field.widget.__class__.__mro__]
+
+
 @register.filter('is_checkbox')
 def is_checkbox(field):
     return field.field.widget.__class__.__name__ in (

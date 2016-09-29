@@ -13,20 +13,20 @@
 {% for field in form.visible_fields %}
     <div class="form-group {% if field.errors %}has-errors{% endif %}">
 
-        {% if field|fieldtype == 'RadioSelect' %}
+        {% if field|fieldtype_is:'RadioSelect' %}
             {% for choice in field %}
                 <label class="radio-inline">
                     {{ choice.tag }}
                     {{ choice.choice_label }}
                 </label>
             {% endfor %}
-        {% elif field|fieldtype == 'CheckboxInput' %}
+        {% elif field|fieldtype_is:'CheckboxInput' %}
             <div class="checkbox">
                 <label>
                     {{ field }} {{ field.label }}
                 </label>
             </div>
-        {% elif field|fieldtype == 'CheckboxSelectMultiple' %}
+        {% elif field|fieldtype_is:'CheckboxSelectMultiple' %}
             {% for choice in field %}
                 <div class="checkbox">
                     <label>
