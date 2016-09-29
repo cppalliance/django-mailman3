@@ -53,6 +53,8 @@ get_test_file.__test__ = False
 
 class FakeMMList:
     def __init__(self, name):
+        if '@' not in name:
+            name = name.replace('.', '@', 1)
         self.fqdn_listname = name
         self.display_name = name.partition("@")[0]
         self.list_id = name.replace("@", ".")
