@@ -46,4 +46,5 @@ class CacheProxy:
                 self.backend.set(key, value, timeout, **kw)
         return value
 
+
 cache = CacheProxy()

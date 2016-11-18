@@ -43,12 +43,12 @@ def get_flash_messages(response, empty=True):
     if empty:
         del response.client.cookies["messages"]
     return msgs
-get_flash_messages.__test__ = False
+get_flash_messages.__test__ = False  # noqa: E305
 
 
 def get_test_file(*fileparts):
     return os.path.join(os.path.dirname(__file__), "testdata", *fileparts)
-get_test_file.__test__ = False
+get_test_file.__test__ = False  # noqa: E305
 
 
 class FakeMMList:
