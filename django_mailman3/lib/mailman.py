@@ -92,6 +92,7 @@ def get_subscriptions(user):
         subscriptions = dict([
             (member.list_id, member.address)
             for member in mm_user.subscriptions
+            if member.role != "nonmember"
             ])
         return subscriptions
     # TODO: how should this be invalidated? Subscribe to a signal in

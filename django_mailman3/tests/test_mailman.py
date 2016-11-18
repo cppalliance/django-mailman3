@@ -210,3 +210,9 @@ class GetSubscriptionsTestCase(TestCase):
         with patch('django_mailman3.lib.mailman.get_mailman_user') as gmu:
             gmu.return_value = None
             self.assertEqual(mailman.get_subscriptions(self.user), {})
+
+    def test_get_subscriptions_nonmember(self):
+        fake_member = FakeMMMember(
+            "list.example.com", "test@example.com", role="nonmember")
+        self.mm_user.subscriptions = [fake_member]
+        self.assertEqual(mailman.get_subscriptions(self.user), {})

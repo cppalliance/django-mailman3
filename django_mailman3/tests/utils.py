@@ -67,9 +67,10 @@ class FakeMMList:
 
 
 class FakeMMMember:
-    def __init__(self, list_id, address):
+    def __init__(self, list_id, address, role="member"):
         self.list_id = list_id
         self.address = address
+        self.role = role
 
 
 class FakeMMPage():
