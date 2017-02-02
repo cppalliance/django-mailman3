@@ -191,9 +191,9 @@ LOGGING = {
 # this feature to work.
 # USE_SSL = True
 
-# Disable caching
+# Enable caching to make sure the unit tests run when it's on.
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.dummy.DummyCache',
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
     }
 }

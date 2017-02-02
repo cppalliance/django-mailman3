@@ -40,6 +40,7 @@ class GetMailmanUserTestCase(TestCase):
         self.user = User.objects.create_user(
             'testuser', 'test@example.com', 'testPass')
         self.mm_user = Mock()
+        self.mm_user.user_id = "dummy"
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 
     def test_get_user(self):
@@ -50,6 +51,7 @@ class GetMailmanUserTestCase(TestCase):
         self.mailman_client.get_user.side_effect = \
             HTTPError(None, 404, None, None, None)
         new_mm_user = Mock()
+        new_mm_user.user_id = "dummy2"
         self.mailman_client.create_user.side_effect = lambda e, n: new_mm_user
         mm_user = mailman.get_mailman_user(self.user)
         self.assertEqual(
@@ -64,7 +66,6 @@ class GetMailmanUserTestCase(TestCase):
         self.assertIsNone(mm_user)
 
     def test_get_user_id(self):
-        self.mm_user.user_id = "dummy"
         mm_user_id = mailman.get_mailman_user_id(self.user)
         self.assertEqual(mm_user_id, "dummy")
 
@@ -79,6 +80,7 @@ class AddUserToMailmanTestCase(TestCase):
         self.user = User.objects.create_user(
             'testuser', 'test@example.com', 'testPass')
         self.mm_user = Mock()
+        self.mm_user.user_id = "dummy"
         self.mm_user.addresses = []
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
         self.mm_addresses = {}
@@ -130,6 +132,7 @@ class SyncEmailAddressesTestCase(TestCase):
         EmailAddress.objects.create(
             user=self.user, email=self.user.email, verified=True)
         self.mm_user = Mock()
+        self.mm_user.user_id = "dummy"
         self.mm_user.addresses = FakeMMAddressList()
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 
@@ -197,6 +200,7 @@ class GetSubscriptionsTestCase(TestCase):
         EmailAddress.objects.create(
             user=self.user, email=self.user.email, verified=True)
         self.mm_user = Mock()
+        self.mm_user.user_id = "dummy"
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 
     def test_get_subscriptions(self):
