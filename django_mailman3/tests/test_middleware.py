@@ -33,7 +33,12 @@ from django.test import override_settings, RequestFactory, TestCase
 from django_mailman3.middleware.sslredirect import SSLRedirect
 
 
-@override_settings(USE_SSL=True)
+@override_settings(
+    USE_SSL=True,
+    LOGIN_URL='login',
+    LOGOUT_URL='logout',
+    ROOT_URLCONF='django_mailman3.tests.urls_test',
+    )
 class SSLRedirectTestCase(TestCase):
 
     def setUp(self):
