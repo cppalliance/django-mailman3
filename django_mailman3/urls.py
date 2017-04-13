@@ -30,12 +30,3 @@ from django_mailman3.views.profile import user_profile
 urlpatterns = [
     url(r'^user-profile/', user_profile, name='mm_user_profile'),
     ]
-
-
-# See the django_mailman3.middleware.sslredirect.SSLRedirect class
-
-SSL_URLS = (
-    "django.contrib.auth.views.login",
-    "django.contrib.auth.views.logout",
-    admin.site.urls,
-    )
