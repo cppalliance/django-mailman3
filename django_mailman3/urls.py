@@ -22,7 +22,6 @@
 
 
 from django.conf.urls import url
-from django.contrib import admin
 
 from django_mailman3.views.profile import user_profile
 
