@@ -28,7 +28,7 @@ from allauth.account.signals import (
 from allauth.socialaccount.signals import social_account_added
 from django.conf import settings
 from django.db.models.signals import post_save
-from django.dispatch import receiver
+from django.dispatch import receiver, Signal
 
 from django_mailman3.lib.mailman import (
     add_address_to_mailman_user, get_mailman_user, sync_email_addresses)
@@ -37,6 +37,20 @@ from django_mailman3.models import Profile
 
 import logging
 logger = logging.getLogger(__name__)
+
+
+#
+# Defined signals
+#
+
+
+domain_created = Signal(providing_args=["mail_host"])
+domain_deleted = Signal(providing_args=["mail_host"])
+mailinglist_created = Signal(providing_args=["list_id"])
+mailinglist_modified = Signal(providing_args=["list_id"])
+mailinglist_deleted = Signal(providing_args=["list_id"])
+user_subscribed = Signal(providing_args=["list_id", "user_email", "role"])
+user_unsubscribed = Signal(providing_args=["list_id", "user_email", "role"])
 
 
 # Create a Profile when a User is created
