@@ -31,6 +31,7 @@ from django.contrib.auth.models import User
 from mock import Mock, call, patch
 
 from django_mailman3.models import Profile
+from django_mailman3.signals import user_subscribed, user_unsubscribed
 from django_mailman3.tests.utils import TestCase
 
 
@@ -103,3 +104,23 @@ class SignalsTestCase(TestCase):
         self.assertEqual(
             [e.user for e in EmailAddress.objects.all()],
             [self.user, self.user])
+
+    def test_user_subscribed(self):
+        with patch('django_mailman3.signals.get_subscriptions') as gs:
+            user_subscribed.send(
+                sender="Postorius", user_email="test@example.com")
+            self.assertEqual(gs.call_count, 1)
+            user_unsubscribed.send(
+                sender="Postorius", user_email="test@example.com")
+            self.assertEqual(gs.call_count, 2)
+
+    def test_user_subscribed_secondary_address(self):
+        EmailAddress.objects.create(
+            user=self.user, email="test-2@example.com", verified=True)
+        with patch('django_mailman3.signals.get_subscriptions') as gs:
+            user_subscribed.send(
+                sender="Postorius", user_email="test-2@example.com")
+            self.assertEqual(gs.call_count, 1)
+            user_unsubscribed.send(
+                sender="Postorius", user_email="test-2@example.com")
+            self.assertEqual(gs.call_count, 2)
