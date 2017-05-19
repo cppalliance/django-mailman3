@@ -27,16 +27,55 @@ from allauth.account.signals import (
     email_confirmed, user_signed_up, user_logged_in, email_removed)
 from allauth.socialaccount.signals import social_account_added
 from django.conf import settings
+from django.contrib.auth import get_user_model
 from django.db.models.signals import post_save
-from django.dispatch import receiver
+from django.dispatch import receiver, Signal
 
+from django_mailman3.lib.cache import cache
 from django_mailman3.lib.mailman import (
-    add_address_to_mailman_user, get_mailman_user, sync_email_addresses)
+    add_address_to_mailman_user, get_mailman_user, get_subscriptions,
+    sync_email_addresses)
 from django_mailman3.models import Profile
 
 
 import logging
 logger = logging.getLogger(__name__)
+
+
+#
+# Defined signals
+#
+
+
+domain_created = Signal(providing_args=["mail_host"])
+domain_deleted = Signal(providing_args=["mail_host"])
+mailinglist_created = Signal(providing_args=["list_id"])
+mailinglist_modified = Signal(providing_args=["list_id"])
+mailinglist_deleted = Signal(providing_args=["list_id"])
+user_subscribed = Signal(providing_args=["list_id", "user_email", "role"])
+user_unsubscribed = Signal(providing_args=["list_id", "user_email", "role"])
+
+
+#
+# Signals listened to
+#
+
+
+# Clear the subscriptions cache when a user is subscribed or unsubscribed.
+@receiver([user_subscribed, user_unsubscribed])
+def on_user_subscribed(sender, **kwargs):
+    user_email = kwargs["user_email"]
+    User = get_user_model()
+    try:
+        user = User.objects.get(email=user_email)
+    except User.DoesNotExist:
+        try:
+            emailaddress = EmailAddress.objects.get(email=user_email)
+        except EmailAddress.DoesNotExist:
+            return  # No such user
+        user = emailaddress.user
+    cache.delete("User:%s:subscriptions" % user.id, version=2)
+    get_subscriptions(user)
 
 
 # Create a Profile when a User is created
