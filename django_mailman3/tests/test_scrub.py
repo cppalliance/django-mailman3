@@ -146,7 +146,7 @@ class TestScrubber(unittest.TestCase):
         scrubber = Scrubber(msg)
         try:
             contents = scrubber.scrub()[0]
-        except LookupError, e:
+        except LookupError as e:
             import traceback
             print(traceback.format_exc())
             self.fail(e)  # codec not found
