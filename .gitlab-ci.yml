@@ -12,6 +12,14 @@ django-1.10:
   script:
   - tox -e py27-django110-head
 
+django-1.11:
+  script:
+  - tox -e py27-django111-head
+
+coverage:
+  script:
+  - tox -e py27-django111-coverage
+
 lint:
   script:
   - tox -e lint

@@ -28,7 +28,8 @@ class TestContextProcessors(TestCase):
     def setUp(self):
         self.factory = RequestFactory()
 
-    @override_settings(LOGIN_URL='/login', LOGOUT_URL='/logout')
+    @override_settings(LOGIN_URL='/login', LOGOUT_URL='/logout',
+                       ALLOWED_HOSTS=['example.com'])
     def test_common_with_all_vars(self, *args, **kwargs):
         request = self.factory.get('/', HTTP_HOST='example.com')
         context = common(request)
