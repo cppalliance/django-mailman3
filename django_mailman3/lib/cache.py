@@ -28,6 +28,8 @@ from django.core.cache import cache as django_cache
 MISSING = object()
 
 
+# TODO: New versions of Django, starting 1.9 have get_or_set included.
+# Remove the proxy below when we drop support for 1.9
 class CacheProxy:
 
     def __init__(self):
