@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
 #
-# This file is part of HyperKitty.
+# This file is part of Django-Mailman.
 #
 # HyperKitty is free software: you can redistribute it and/or modify it under
 # the terms of the GNU General Public License as published by the Free
@@ -15,7 +15,6 @@
 # more details.
 #
 # You should have received a copy of the GNU General Public License along with
-# HyperKitty.  If not, see <http://www.gnu.org/licenses/>.
+# Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 #
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
-#

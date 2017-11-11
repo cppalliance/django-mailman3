@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Copyright (C) 2012-2017 by the Free Software Foundation, Inc.
+# Copyright (C) 2017 by the Free Software Foundation, Inc.
 #
 # This file is part of Django-Mailman.
 #
@@ -16,18 +16,3 @@
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Author: Aurelien Bompard <abompard@fedoraproject.org>
-#
-
-from __future__ import absolute_import, unicode_literals
-
-from django.conf.urls import url
-
-from . import views
-
-urlpatterns = [
-    url('^fedora/login/$', views.LoginView.as_view(),
-        name="fedora_login"),
-    url('^fedora/callback/$', views.CallbackView.as_view(),
-        name='fedora_callback'),
-]
