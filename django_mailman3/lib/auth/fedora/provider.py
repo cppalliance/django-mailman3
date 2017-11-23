@@ -64,6 +64,12 @@ class FedoraProvider(OpenIDProvider):
         return url
 
     def extract_username(self, data):
+        """
+        https://fedoraproject.org/wiki/OpenID
+        For fedoraproject.org, the identity_url looks like:
+
+        https://username.id.fedoraproject.org
+        """
         return extract_username(data.identity_url)
 
     def extract_common_fields(self, data):

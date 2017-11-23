@@ -22,13 +22,38 @@
 
 from __future__ import absolute_import, print_function, unicode_literals
 
-from unittest import TestCase
-from django.test import RequestFactory
-from django_mailman3.lib.paginator import paginate
-from django_mailman3.templatetags.pagination import add_to_query_string
+from django.template import Context
+from django.test import RequestFactory, SimpleTestCase
+
+from django_mailman3.lib.paginator import paginate, MailmanPaginator
+from django_mailman3.templatetags.pagination import (
+    add_to_query_string, paginator)
+from django_mailman3.tests.utils import TestCase, FakeMMPage
 
 
-class PaginateTestCase(TestCase):
+class TestMailmanPaginator(TestCase):
+
+    def setUp(self):
+        super(TestMailmanPaginator, self)._pre_setup()
+        # Create a user pagination based on just list of numbers instead of
+        # list of users. This is a mocked page and thus doesn't really care.
+        self.mailman_client.get_user_page.return_value = FakeMMPage(
+            count=5, entries=range(100))
+        self.user_pages = MailmanPaginator(
+            function=self.mailman_client.get_user_page, per_page=5)
+
+    def test_get_page_one(self):
+        user_page_1 = self.user_pages.page(1)
+        self.assertIsNotNone(user_page_1)
+        # The number of entries in this list should be 5.
+        self.assertEqual(len(list(user_page_1)), 5)
+
+    def test_get_count(self):
+        # Total number of elements in this paginator class should be 100
+        self.assertEqual(self.user_pages.count, 100)
+
+
+class PaginateTestCase(SimpleTestCase):
 
     def test_page_range_ellipsis(self):
         objects = range(1000)
@@ -121,3 +146,16 @@ class PaginateTestCase(TestCase):
         self.assertEqual(
             set(result.split("&amp;")),
             set(["key1=value1", "key2=value2", "key3=value3"]))
+
+    def test_paginator_tag(self):
+        objects = paginate(range(100), 1, 20)
+        context = Context({'title': 'My Title'})
+        updated_context = paginator(context, objects)
+        self.assertEqual(updated_context['label_previous'], 'Previous')
+        self.assertEqual(updated_context['label_next'], 'Next')
+        self.assertEqual(updated_context['page'], objects)
+        self.assertEqual(updated_context['per_page_options'],
+                         [10, 50, 100, 200])
+        dated_pages_ctxt = paginator(context, objects, bydate=True)
+        self.assertEqual(dated_pages_ctxt['label_previous'], 'Newer')
+        self.assertEqual(dated_pages_ctxt['label_next'], 'Older')

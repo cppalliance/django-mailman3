@@ -2,30 +2,30 @@ image: maxking/mailman-ci-runner
 
 django-1.8:
   script:
-  - tox -e py27-django18-head
-
-django-1.9:
-  script:
-  - tox -e py27-django19-head
-
+    - tox -e py27-django18
+    
 django-1.10:
   script:
-  - tox -e py27-django110-head
+    - tox -e py27-django110
 
 django-1.11:
   script:
-  - tox -e py27-django111-head
+    - tox -e py27-django111
 
+head:
+  script:
+    - tox -e py27-django111-head
+  
 coverage:
   script:
-  - tox -e py27-django111-coverage
+    - tox -e py27-django111-coverage
 
 lint:
   script:
-  - tox -e lint
+    - tox -e lint
 
 django-latest:
   script:
-  - tox -e py27-django-latest-head
+    - tox -e py27-django-latest-head
   allow_failure: true
 
