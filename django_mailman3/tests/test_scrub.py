@@ -27,8 +27,19 @@ from email.message import Message
 from email import message_from_file
 from traceback import format_exc
 
-from django_mailman3.lib.scrub import Scrubber
+from django_mailman3.lib.scrub import Scrubber, guess_extension
 from django_mailman3.tests.utils import get_test_file
+
+
+class TestGuessExtension(unittest.TestCase):
+
+    def test_guess_extension_common_type(self):
+        # The given extension is one of the corresponding mimetype.
+        mimetype = guess_extension('text/plain', '.txt')
+        self.assertEqual(mimetype, '.txt')
+        # The given is not one of the corresponding mimetypes.
+        mimetype = guess_extension('text/plain', '.random')
+        self.assertNotEqual(mimetype, '.random')
 
 
 class TestScrubber(unittest.TestCase):

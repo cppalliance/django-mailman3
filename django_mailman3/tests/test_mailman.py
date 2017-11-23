@@ -47,6 +47,14 @@ class GetMailmanUserTestCase(TestCase):
         mm_user = mailman.get_mailman_user(self.user)
         self.assertIs(mm_user, self.mm_user)
 
+    @patch('django_mailman3.lib.mailman.get_mailman_user',
+           return_value=None)
+    def test_get_nonexistent_user(self, mock_method):
+        # Test create user fails and get_mailman_user returns None.
+        mm_user = mailman.get_mailman_user(self.mm_user)
+        self.assertIsNone(mm_user)
+        mock_method.assert_called_with(self.mm_user)
+
     def test_create_user(self):
         self.mailman_client.get_user.side_effect = \
             HTTPError(None, 404, None, None, None)
@@ -62,8 +70,12 @@ class GetMailmanUserTestCase(TestCase):
     def test_connection_failed(self):
         self.mailman_client.get_user.side_effect = \
             HTTPError(None, 500, None, None, None)
-        mm_user = mailman.get_mailman_user(self.user)
+        with patch('django_mailman3.lib.mailman.logger') as mock_logging:
+            mm_user = mailman.get_mailman_user(self.user)
+        # Make sure that the returned user is None.
         self.assertIsNone(mm_user)
+        # Make sure the failure is logged.
+        mock_logging.warning.assert_called()
 
     def test_get_user_id(self):
         mm_user_id = mailman.get_mailman_user_id(self.user)
@@ -122,6 +134,16 @@ class AddUserToMailmanTestCase(TestCase):
         # The secondary address must only have been verified.
         self.assertFalse(self.mm_user.add_address.called)
         secondary_address.verify.assert_called_with()
+
+    @patch('django_mailman3.lib.mailman.logger')
+    def test_add_new_address(self, mock_log):
+        secondary_address = Mock()
+        secondary_address.email = "secondary@example.com"
+        with patch('django_mailman3.lib.mailman.get_mailman_user',
+                   return_value=None):
+            # If the user does not exist, function return and logs the result.
+            mailman.add_address_to_mailman_user(self.user, secondary_address)
+            mock_log.info.assert_called()
 
 
 class SyncEmailAddressesTestCase(TestCase):
