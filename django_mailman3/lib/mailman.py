@@ -22,7 +22,7 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from urllib2 import HTTPError
+from django.utils.six.moves.urllib.error import HTTPError
 
 from allauth.account.models import EmailAddress
 from django.conf import settings
