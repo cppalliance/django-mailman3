@@ -155,7 +155,7 @@ class PaginateTestCase(SimpleTestCase):
         self.assertEqual(updated_context['label_next'], 'Next')
         self.assertEqual(updated_context['page'], objects)
         self.assertEqual(updated_context['per_page_options'],
-                         [10, 50, 100, 200])
+                         [10, 25, 50, 100, 200])
         dated_pages_ctxt = paginator(context, objects, bydate=True)
         self.assertEqual(dated_pages_ctxt['label_previous'], 'Newer')
         self.assertEqual(dated_pages_ctxt['label_next'], 'Older')
