@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import django
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -51,20 +52,25 @@ INSTALLED_APPS = (
     'allauth.socialaccount',
     'allauth.socialaccount.providers.openid',
     'django_gravatar',
+    'compressor',
 )
 
 
-MIDDLEWARE_CLASSES = (
+TEMP_MIDDLWARE = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django.middleware.security.SecurityMiddleware',
 )
+
+if django.get_version() >= '1.9':
+    MIDDLEWARE = TEMP_MIDDLWARE
+else:
+    MIDDLEWARE_CLASSES = TEMP_MIDDLWARE
+
 
 ROOT_URLCONF = 'django_mailman3.tests.urls_test'
 

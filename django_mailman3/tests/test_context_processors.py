@@ -17,7 +17,6 @@
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 
-from __future__ import absolute_import, unicode_literals
 
 from django.test import TestCase, RequestFactory, override_settings
 from django_mailman3.context_processors import common

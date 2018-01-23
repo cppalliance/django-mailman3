@@ -27,5 +27,5 @@ from django_mailman3.views.profile import user_profile
 
 
 urlpatterns = [
-    url(r'^user-profile/', user_profile, name='mm_user_profile'),
+    url(r'^user-profile/$', user_profile, name='mm_user_profile'),
     ]

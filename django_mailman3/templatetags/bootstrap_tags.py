@@ -21,7 +21,7 @@ try:
     from django.forms.boundfield import BoundField
 except ImportError:
     # For Django <=1.9
-    from django.forms.forms import BoundField
+    from django.forms.forms import BoundField             # pragma: nocover
 
 register = template.Library()
 

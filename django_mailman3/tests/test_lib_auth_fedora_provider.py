@@ -16,7 +16,10 @@
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman3.  If not, see <http://www.gnu.org/licenses/>.
 
-from django.core.urlresolvers import reverse
+try:
+    from django.core.urlresolvers import reverse
+except ImportError:
+    from django.urls import reverse
 from django.test import TestCase, RequestFactory
 from mock import Mock, patch
 from openid.consumer import consumer
@@ -78,7 +81,7 @@ class TestFedoraProvider(TestCase):
         mock_parent = Mock()
         mock_parent.extract_common_fields.return_value = {}
         # To patch the superclass, we patch the super() builtin.
-        with patch('__builtin__.super') as super_mock:
+        with patch('builtins.super') as super_mock:
             super_mock.return_value = mock_parent
             req = self.factory.get('/')
             provider = FedoraProvider(req)

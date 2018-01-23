@@ -20,7 +20,6 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-from __future__ import absolute_import, print_function, unicode_literals
 
 from django.template import Context
 from django.test import RequestFactory, SimpleTestCase
@@ -38,7 +37,7 @@ class TestMailmanPaginator(TestCase):
         # Create a user pagination based on just list of numbers instead of
         # list of users. This is a mocked page and thus doesn't really care.
         self.mailman_client.get_user_page.return_value = FakeMMPage(
-            count=5, entries=range(100))
+            count=5, entries=list(range(100)))
         self.user_pages = MailmanPaginator(
             function=self.mailman_client.get_user_page, per_page=5)
 
@@ -56,7 +55,7 @@ class TestMailmanPaginator(TestCase):
 class PaginateTestCase(SimpleTestCase):
 
     def test_page_range_ellipsis(self):
-        objects = range(1000)
+        objects = list(range(1000))
         self.assertEqual(
             paginate(objects, 1, 20).paginator.page_range_ellipsis,
             [1, 2, 3, 4, '...', 50])
@@ -125,19 +124,19 @@ class PaginateTestCase(SimpleTestCase):
             [1, '...', 47, 48, 49, 50])
 
     def test_default_page(self):
-        self.assertEqual(paginate(range(100), None).number, 1)
+        self.assertEqual(paginate(list(range(100)), None).number, 1)
 
     def test_last_page(self):
-        self.assertEqual(paginate(range(100), 1000).number, 10)
+        self.assertEqual(paginate(list(range(100)), 1000).number, 10)
 
     def test_page_str(self):
         try:
-            self.assertEqual(paginate(range(1000), "2").number, 2)
+            self.assertEqual(paginate(list(range(1000)), "2").number, 2)
         except TypeError as e:
             self.fail(e)
 
     def test_page_not_an_int(self):
-        self.assertEqual(paginate(range(100), "dummy").number, 1)
+        self.assertEqual(paginate(list(range(100)), "dummy").number, 1)
 
     def test_add_to_query_string(self):
         request = RequestFactory().get("/url", {"key1": "value1"})
@@ -148,7 +147,7 @@ class PaginateTestCase(SimpleTestCase):
             set(["key1=value1", "key2=value2", "key3=value3"]))
 
     def test_paginator_tag(self):
-        objects = paginate(range(100), 1, 20)
+        objects = paginate(list(range(100)), 1, 20)
         context = Context({'title': 'My Title'})
         updated_context = paginator(context, objects)
         self.assertEqual(updated_context['label_previous'], 'Previous')
