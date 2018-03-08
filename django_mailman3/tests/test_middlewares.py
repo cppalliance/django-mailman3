@@ -31,24 +31,27 @@ from django_mailman3.middleware import PaginationMiddleware, TimezoneMiddleware
 class TestPaginatorMiddleware(TestCase):
 
     def setUp(self):
-        self.middleware = PaginationMiddleware()
+        self.get_response = Mock()
+        self.middleware = PaginationMiddleware(self.get_response)
         self.request = Mock()
 
     def test_request_with_page_value(self):
         data = {'page': 100}
         self.request.REQUEST = data
-        self.assertEqual(self.middleware.process_request(self.request), None)
+        self.middleware(self.request)
         self.assertEqual(self.request.page, 100)
+        self.get_response.assert_called_once()
 
     def test_request_without_page_value(self):
-        self.assertEqual(self.middleware.process_request(self.request), None)
+        self.middleware(self.request)
         self.assertEqual(self.request.page, 1)
 
 
 class TestTimezoneMiddleware(TestCase):
 
     def setUp(self):
-        self.middleware = TimezoneMiddleware()
+        self.get_response = Mock()
+        self.middleware = TimezoneMiddleware(self.get_response)
         self.request = Mock()
 
     def tearDown(self):
@@ -56,10 +59,11 @@ class TestTimezoneMiddleware(TestCase):
 
     def test_non_logged_in_user(self):
         self.request.user.is_authenticated = lambda: False
-        self.assertIsNone(self.middleware.process_request(self.request))
+        self.middleware(self.request)
         # If the user is not logged in, his timezone is the default timezone.
         self.assertEqual(settings.TIME_ZONE,
                          timezone.get_current_timezone_name())
+        self.get_response.assert_called_once()
 
     def test_logged_in_user_without_mailman_profile(self):
 
@@ -74,9 +78,10 @@ class TestTimezoneMiddleware(TestCase):
         self.request.user = MockUser()
         # If the mailman profile does not exist for the user, it still does not
         # have a personalized timezone.
-        self.assertIsNone(self.middleware.process_request(self.request))
+        self.middleware(self.request)
         self.assertEqual(settings.TIME_ZONE,
                          timezone.get_current_timezone_name())
+        self.get_response.assert_called_once()
 
     def test_logged_in_user_with_mailman_profile(self):
         self.request.user.is_authenticated = lambda: True
@@ -84,6 +89,7 @@ class TestTimezoneMiddleware(TestCase):
         # self.assertTrue(self.request.user.mailman_profile.called)
         # If the user has a timezone set in their profile, it should be set as
         # current timezone.
-        self.assertIsNone(self.middleware.process_request(self.request))
+        self.middleware(self.request)
         self.assertEqual('US/Central',
                          timezone.get_current_timezone_name())
+        self.get_response.assert_called_once()
