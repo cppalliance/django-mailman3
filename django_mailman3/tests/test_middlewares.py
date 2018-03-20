@@ -58,7 +58,7 @@ class TestTimezoneMiddleware(TestCase):
         timezone.deactivate()
 
     def test_non_logged_in_user(self):
-        self.request.user.is_authenticated = lambda: False
+        self.request.user.is_authenticated = False
         self.middleware(self.request)
         # If the user is not logged in, his timezone is the default timezone.
         self.assertEqual(settings.TIME_ZONE,
@@ -72,6 +72,7 @@ class TestTimezoneMiddleware(TestCase):
             def mailman_profile(self):
                 raise ObjectDoesNotExist
 
+            @property
             def is_authenticated(self):
                 return True
 
