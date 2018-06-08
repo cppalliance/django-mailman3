@@ -20,7 +20,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="django-mailman3",
-    version='1.2.0a2',
+    version='1.2.0',
     description="Django library to help interaction with Mailman",
     long_description=open('README.rst').read(),
     maintainer="Mailman Developers",
