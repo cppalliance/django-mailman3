@@ -29,6 +29,7 @@ try:
     from django.core.urlresolvers import reverse
 except ImportError:
     from django.urls import reverse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from django.utils.timezone import get_current_timezone
 
@@ -96,3 +97,16 @@ def user_profile(request):
         'gravatar_shortname': gravatar_shortname,
     }
     return render(request, "django_mailman3/profile/profile.html", context)
+
+
+@login_required
+def delete_account(request):
+    if request.method == 'POST':
+        mm_user = get_mailman_user(request.user)
+        if mm_user:
+            mm_user.delete()
+        request.user.delete()
+        messages.success(request, "Successfully deleted account")
+        return HttpResponseRedirect('/')
+    return render(request, 'django_mailman3/profile/delete_profile.html',
+                  {'delete_page': True})
