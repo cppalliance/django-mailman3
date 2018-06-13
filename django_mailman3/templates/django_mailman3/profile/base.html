@@ -24,6 +24,9 @@
         <li role="presentation" {% if form.accounts %} class="active" {% endif %}>
             <a href="{% url "socialaccount_connections" %}">{% trans "Account Connections" %}</a>
         </li>
+        <li role="presentation" {% if delete_page %}class="active"{% endif%}">
+            <a href="{% url "mm_user_account_delete" %}">{% trans "Delete Account" %}</a>
+        </li>
     </ul>
 
     <div class="user-profile-content">
