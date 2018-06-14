@@ -42,7 +42,6 @@ setup(
         'mailmanclient',
         'django-allauth',
         'django-gravatar2 >= 1.0.6',
-        'pytz',
-        'django-compressor'
+        'pytz'
     ],
 )
