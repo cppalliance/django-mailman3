@@ -64,6 +64,7 @@ class FakeMMList:
             "subject_prefix": "[%s] " % self.display_name,
             "created_at": now().isoformat(),
             "archive_policy": "public",
+            "advertised": False,
             }
 
 
