@@ -21,7 +21,6 @@
 #
 
 
-
 from django.apps import AppConfig
 
 
@@ -30,4 +29,4 @@ class DjangoMailman3Config(AppConfig):
     verbose_name = "Django Mailman 3"
 
     def ready(self):
-        import django_mailman3.signals  # flake8: noqa
+        import django_mailman3.signals  # noqa F401
