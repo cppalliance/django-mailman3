@@ -40,10 +40,6 @@ py35-django-1.11:
   script:
     - tox -e py35-django111
 
-py34-django-1.11:
-  script:
-    - tox -e py34-django111
-
 sast:
   image: docker:stable
   variables:
