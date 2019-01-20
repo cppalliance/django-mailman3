@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2016-2018 by the Free Software Foundation, Inc.
+# Copyright (C) 2016-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Django-Mailman.
 #
@@ -64,6 +64,7 @@ class FakeMMList:
             "subject_prefix": "[%s] " % self.display_name,
             "created_at": now().isoformat(),
             "archive_policy": "public",
+            "advertised": False,
             }
 
 

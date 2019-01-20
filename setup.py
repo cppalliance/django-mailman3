@@ -1,4 +1,4 @@
-# Copyright (C) 2016-2018 by the Free Software Foundation, Inc.
+# Copyright (C) 2016-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Django-Mailman.
 #
@@ -38,7 +38,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Django >= 1.11',
+        'Django>=1.11,<2.2',
         'mailmanclient',
         'django-allauth',
         'django-gravatar2 >= 1.0.6',

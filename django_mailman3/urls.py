@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# Copyright (C) 2016-2018 by the Free Software Foundation, Inc.
+# Copyright (C) 2016-2019 by the Free Software Foundation, Inc.
 #
 # This file is part of Django-Mailman.
 #
@@ -23,9 +23,11 @@
 
 from django.conf.urls import url
 
-from django_mailman3.views.profile import user_profile
+from django_mailman3.views.profile import delete_account, user_profile
 
 
 urlpatterns = [
+    url(r'^user-profile/delete$', delete_account,
+        name='mm_user_account_delete'),
     url(r'^user-profile/$', user_profile, name='mm_user_profile'),
     ]
