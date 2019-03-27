@@ -21,17 +21,15 @@
 #
 
 
-from allauth.account.models import EmailAddress
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-try:
-    from django.core.urlresolvers import reverse
-except ImportError:
-    from django.urls import reverse
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import redirect, render
+from django.urls import reverse
 from django.utils.timezone import get_current_timezone
+
+from allauth.account.models import EmailAddress
 
 from django_mailman3.forms import UserProfileForm
 from django_mailman3.lib.mailman import get_mailman_user

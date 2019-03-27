@@ -21,12 +21,13 @@
 #
 
 
+from django.contrib.auth.models import User
+
 from allauth.account.models import EmailAddress
 from allauth.account.signals import (
-    email_confirmed, user_signed_up, user_logged_in, email_removed)
+    email_confirmed, email_removed, user_logged_in, user_signed_up)
 from allauth.socialaccount.models import SocialLogin
 from allauth.socialaccount.signals import social_account_added
-from django.contrib.auth.models import User
 from mock import Mock, call, patch
 
 from django_mailman3.models import Profile

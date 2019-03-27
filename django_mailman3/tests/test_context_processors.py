@@ -18,7 +18,8 @@
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from django.test import TestCase, RequestFactory, override_settings
+from django.test import RequestFactory, TestCase, override_settings
+
 from django_mailman3.context_processors import common
 
 

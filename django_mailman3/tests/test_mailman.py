@@ -22,9 +22,10 @@
 
 from urllib.error import HTTPError
 
-from allauth.account.models import EmailAddress
 from django.contrib.auth.models import User
 from django.db import IntegrityError
+
+from allauth.account.models import EmailAddress
 from mock import Mock, call, patch
 
 from django_mailman3.lib import mailman

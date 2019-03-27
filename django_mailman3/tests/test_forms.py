@@ -18,8 +18,9 @@
 # Django-Mailman.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from django.test import TestCase
 from django.contrib.auth.models import User
+from django.test import TestCase
+
 from django_mailman3.forms import UserProfileForm
 
 

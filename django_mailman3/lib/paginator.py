@@ -21,9 +21,8 @@
 #
 
 
+from django.core.paginator import EmptyPage, InvalidPage, Paginator
 from django.http import Http404
-from django.core.paginator import (
-    Paginator, EmptyPage, InvalidPage)
 from django.utils.functional import cached_property
 
 

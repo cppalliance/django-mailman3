@@ -20,7 +20,8 @@
 
 
 from django.contrib import admin
-from django_mailman3.models import Profile, MailDomain
+
+from django_mailman3.models import MailDomain, Profile
 
 
 admin.site.register(Profile)

@@ -16,17 +16,15 @@
 # You should have received a copy of the GNU General Public License along with
 # Django-Mailman3.  If not, see <http://www.gnu.org/licenses/>.
 
-try:
-    from django.core.urlresolvers import reverse
-except ImportError:
-    from django.urls import reverse
-from django.test import TestCase, RequestFactory
+
+from django.test import RequestFactory, TestCase
+from django.urls import reverse
+
 from mock import Mock, patch
 from openid.consumer import consumer
 
-
 from django_mailman3.lib.auth.fedora.provider import (
-    FedoraProvider, FedoraAccount)
+    FedoraAccount, FedoraProvider)
 
 
 class TestFedoraAccount(TestCase):

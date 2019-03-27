@@ -21,6 +21,7 @@
 import time
 
 from django.test import TestCase
+
 from django_mailman3.lib.cache import CacheProxy
 
 
