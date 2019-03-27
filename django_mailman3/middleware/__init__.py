@@ -23,8 +23,8 @@
 
 # https://docs.djangoproject.com/en/dev/topics/i18n/timezones/
 
-from django.utils import timezone
 from django.core.exceptions import ObjectDoesNotExist
+from django.utils import timezone
 
 
 class TimezoneMiddleware(object):

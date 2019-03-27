@@ -23,6 +23,7 @@ This file is the main URL config for a Django website including Django-Mailman.
 
 from django.conf.urls import include, url
 
+
 urlpatterns = [
     url(r'', include('django_mailman3.urls')),
     url(r'^accounts/', include('allauth.urls')),

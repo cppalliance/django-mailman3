@@ -20,15 +20,19 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+import logging
 from urllib.error import HTTPError
 
-from allauth.account.models import EmailAddress
 from django.conf import settings
-from django_mailman3.lib.cache import cache
 from django.db import IntegrityError
-from mailmanclient import Client as MailmanClient, MailmanConnectionError
 
-import logging
+from allauth.account.models import EmailAddress
+from mailmanclient import Client as MailmanClient
+from mailmanclient import MailmanConnectionError
+
+from django_mailman3.lib.cache import cache
+
+
 logger = logging.getLogger(__name__)
 
 

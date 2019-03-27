@@ -19,34 +19,29 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
-
-from django.shortcuts import render
-try:
-    from django.core.urlresolvers import reverse
-except ImportError:
-    from django.urls import reverse
 from django.http import HttpResponseRedirect
+from django.shortcuts import render
+from django.urls import reverse
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
 from django.views.generic import View
 
-from openid.consumer.discover import DiscoveryFailure
-from openid.consumer import consumer
-from openid.extensions.sreg import SRegRequest
-from openid.extensions.ax import FetchRequest, AttrInfo
-
-from allauth.socialaccount.app_settings import QUERY_EMAIL
-from allauth.socialaccount.models import SocialLogin
-from allauth.socialaccount.helpers import render_authentication_error
-from allauth.socialaccount.helpers import complete_social_login
 from allauth.socialaccount import providers
-
-from allauth.socialaccount.providers.openid.views import _openid_consumer
-from allauth.socialaccount.providers.openid.utils import (
-    SRegFields, AXAttributes)
-from allauth.socialaccount.providers.openid.forms import LoginForm
-from .provider import FedoraProvider
+from allauth.socialaccount.app_settings import QUERY_EMAIL
+from allauth.socialaccount.helpers import (
+    complete_social_login, render_authentication_error)
+from allauth.socialaccount.models import SocialLogin
 from allauth.socialaccount.providers.base import AuthError
+from allauth.socialaccount.providers.openid.forms import LoginForm
+from allauth.socialaccount.providers.openid.utils import (
+    AXAttributes, SRegFields)
+from allauth.socialaccount.providers.openid.views import _openid_consumer
+from openid.consumer import consumer
+from openid.consumer.discover import DiscoveryFailure
+from openid.extensions.ax import AttrInfo, FetchRequest
+from openid.extensions.sreg import SRegRequest
+
+from .provider import FedoraProvider
 
 
 class LoginView(View):

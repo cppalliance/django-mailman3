@@ -1,9 +1,12 @@
 # -*- coding: utf-8 -*-
 #
 
-from django.db import migrations, models
 from django.conf import settings
+from django.db import migrations, models
+
 import pytz
+
+
 TIMEZONES = sorted([(tz, tz) for tz in pytz.common_timezones])
 
 

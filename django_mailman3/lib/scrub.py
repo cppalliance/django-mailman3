@@ -18,12 +18,12 @@
 
 import os
 import re
-
+from email.errors import HeaderParseError
+from email.header import decode_header, make_header
+from email.message import EmailMessage
 from enum import Enum
 from mimetypes import guess_all_extensions
-from email.errors import HeaderParseError
-from email.header import make_header, decode_header
-from email.message import EmailMessage
+
 
 # Path characters for common platforms
 PRE = re.compile(r'[/\\:]')

@@ -21,6 +21,7 @@
 
 from django.contrib.auth.models import User
 from django.urls import reverse
+
 from mock import Mock
 
 from django_mailman3.models import Profile

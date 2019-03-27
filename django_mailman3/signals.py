@@ -21,14 +21,17 @@
 #
 
 
-from allauth.account.models import EmailAddress
-from allauth.account.signals import (
-    email_confirmed, user_signed_up, user_logged_in, email_removed)
-from allauth.socialaccount.signals import social_account_added
+import logging
+
 from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db.models.signals import post_save
-from django.dispatch import receiver, Signal
+from django.dispatch import Signal, receiver
+
+from allauth.account.models import EmailAddress
+from allauth.account.signals import (
+    email_confirmed, email_removed, user_logged_in, user_signed_up)
+from allauth.socialaccount.signals import social_account_added
 
 from django_mailman3.lib.cache import cache
 from django_mailman3.lib.mailman import (
@@ -37,7 +40,6 @@ from django_mailman3.lib.mailman import (
 from django_mailman3.models import Profile
 
 
-import logging
 logger = logging.getLogger(__name__)
 
 
