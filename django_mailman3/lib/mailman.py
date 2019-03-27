@@ -24,23 +24,27 @@ import logging
 from urllib.error import HTTPError
 
 from django.conf import settings
+from django.core.cache import cache
 from django.db import IntegrityError
 
 from allauth.account.models import EmailAddress
 from mailmanclient import Client as MailmanClient
 from mailmanclient import MailmanConnectionError
 
-from django_mailman3.lib.cache import cache
-
 
 logger = logging.getLogger(__name__)
 
 
-def get_mailman_client():
+def get_mailman_client(api_version='3.0'):
+    """Return an instance of Mailman Client.
+
+    :param api_version: The API version for Mailman Core to use.
+    :type api_version: string
+    :returns: An instance of :class:`mailmanclient.Client`
+    """
     # easier to patch during unit tests
     client = MailmanClient(
-        '%s/3.0' %
-        settings.MAILMAN_REST_API_URL,
+        '{}/{}'.format(settings.MAILMAN_REST_API_URL, api_version),
         settings.MAILMAN_REST_API_USER,
         settings.MAILMAN_REST_API_PASS)
     return client
