@@ -17,13 +17,8 @@
 # Postorius.  If not, see <http://www.gnu.org/licenses/>.
 
 from django import template
+from django.forms.boundfield import BoundField
 
-
-try:
-    from django.forms.boundfield import BoundField
-except ImportError:
-    # For Django <=1.9
-    from django.forms.forms import BoundField             # pragma: nocover
 
 register = template.Library()
 

@@ -25,7 +25,7 @@ from django import forms
 from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 
-from django_mailman3.models import Profile
+from django_mailman3.models import TIMEZONES
 
 
 class UserProfileForm(forms.Form):
@@ -33,7 +33,7 @@ class UserProfileForm(forms.Form):
     first_name = forms.CharField()
     last_name = forms.CharField()
     timezone = forms.ChoiceField(
-        label="Time zone", choices=Profile.TIMEZONES)
+        label="Time zone", choices=TIMEZONES)
 
     def clean_username(self):
         username = self.cleaned_data.get("username")
