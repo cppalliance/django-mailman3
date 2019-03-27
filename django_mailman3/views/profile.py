@@ -28,6 +28,7 @@ from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
 from django.utils.timezone import get_current_timezone
+from django.utils.translation import gettext as _
 
 from allauth.account.models import EmailAddress
 
@@ -69,9 +70,9 @@ def user_profile(request):
                             request.user.first_name, request.user.last_name)
                     mm_user.save()
                 messages.success(
-                    request, "The profile was successfully updated.")
+                    request, _("The profile was successfully updated."))
             else:
-                messages.success(request, "No change detected.")
+                messages.success(request, _("No change detected."))
             return redirect(reverse('mm_user_profile'))
     else:
         form = UserProfileForm(initial=initial_data)
@@ -104,7 +105,7 @@ def delete_account(request):
         if mm_user:
             mm_user.delete()
         request.user.delete()
-        messages.success(request, "Successfully deleted account")
+        messages.success(request, _("Successfully deleted account"))
         return HttpResponseRedirect('/')
     return render(request, 'django_mailman3/profile/delete_profile.html',
                   {'delete_page': True})
