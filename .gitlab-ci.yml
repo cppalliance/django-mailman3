@@ -14,7 +14,11 @@ lint:
 
 django-latest:
   script:
-    - tox -e py36-django-latest
+    - tox -e py36-djangolatest
+
+py35-django-1.11:
+  script:
+    - tox -e py35-django111
 
 py36-django-20:
   script:
@@ -23,6 +27,10 @@ py36-django-20:
 py36-django-21:
   script:
     - tox -e py36-django21
+  
+py36-django-1.11:
+  script:
+    - tox -e py36-django111
 
 py37-django-20:
   script:
@@ -31,14 +39,23 @@ py37-django-20:
 py37-django21:
   script:
     - tox -e py37-django21
-  
-py36-django-1.11:
-  script:
-    - tox -e py36-django111
 
-py35-django-1.11:
+py36-django21:
   script:
-    - tox -e py35-django111
+    - tox -e py36-django21
+
+py36-django22:
+  script:
+    - tox -e py36-django22
+
+py37-django21:
+  script:
+    - tox -e py37-django21
+
+py37-django22:
+  script:
+    - tox -e py37-django22
+
 
 sast:
   image: docker:stable
@@ -57,3 +74,4 @@ sast:
   artifacts:
     reports:
       sast: gl-sast-report.json
+
