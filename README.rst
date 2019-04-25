@@ -5,8 +5,8 @@ Django library for Mailman UIs
 This package contains libraries and templates for Django-based interfaces
 interacting with Mailman.
 
-To use this application, add it to the ``INSTALLED_APPS`` list in your Django
-server's settings file.
+To use this application, add ``django_mailman3`` to the ``INSTALLED_APPS`` list
+in your Django server's settings file.
 
 
 License
