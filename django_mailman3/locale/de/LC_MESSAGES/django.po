@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2018-04-26 20:05+0200\n"
-"PO-Revision-Date: 2019-05-06 12:35+0000\n"
+"PO-Revision-Date: 2019-05-07 12:48+0000\n"
 "Last-Translator: Daniel <daniel-other+weblate@dadosch.de>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/de/>\n"
@@ -79,7 +79,7 @@ msgstr "E-Mail hinzufügen"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr "Möchten Sie die ausgewählte E-Mail-Adresse wirklich entfernen?"
+msgstr "Möchtest du die ausgewählte E-Mail-Adresse wirklich entfernen?"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
