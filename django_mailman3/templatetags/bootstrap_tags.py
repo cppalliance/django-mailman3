@@ -85,7 +85,7 @@ def bootstrap_form(context, form, button=None):
                         takes_context=True)
 def bootstrap_form_horizontal(
         context, form, size_left=2, size_right=8, button=None,
-        fold_class='sm'):
+        fold_class='md'):
     """
     Given a form object, renders the form horizontally using the bootstrap
     template.
