@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2018-04-26 20:54+0200\n"
+"POT-Creation-Date: 2019-06-22 22:35+0200\n"
+"PO-Revision-Date: 2019-06-22 22:36+0200\n"
 "Last-Translator: Daniel\n"
 "Language-Team: \n"
 "Language: de\n"
@@ -16,7 +16,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 2.2.1\n"
+
+#: forms.py:32
+msgid "Username"
+msgstr "Benutzername"
+
+#: forms.py:33
+msgid "First name"
+msgstr "Vorname"
+
+#: forms.py:34
+msgid "Last name"
+msgstr "Nachname"
+
+#: forms.py:36
+msgid "Time zone"
+msgstr "Zeitzone"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -58,7 +74,7 @@ msgstr "Entfernen"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr "Warnung"
+msgstr "Warnung:"
 
 #: templates/account/email.html:44
 msgid ""
@@ -67,7 +83,7 @@ msgid ""
 msgstr ""
 "Du hast aktuell keine E-Mail-Adressen eingestellt. Du solltest wirklich eine "
 "E-Mail-Adresse hinzufügen, sodass du Benachrichtigungen empfangen, dein "
-"Passwort zurücksetzten kannst, etc."
+"Passwort zurücksetzten kannst, usw."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
@@ -79,7 +95,7 @@ msgstr "E-Mail hinzufügen"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr "Möchtest du wirklich die ausgewählte E-Mail-Adresse entfernen="
+msgstr "Möchtest du wirklich die ausgewählte E-Mail-Adresse entfernen?"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
@@ -124,7 +140,7 @@ msgstr ""
 "Bitte melde dich mit einem\n"
 "deiner bestehenden Konto einer Drittpartei an. Oder <a href=\"%(signup_url)s"
 "\">registriere</a>\n"
-"ein %(site_name)s-Konot und melde dich unten an."
+"ein %(site_name)s-Konto und melde dich unten an:"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
@@ -186,7 +202,7 @@ msgstr ""
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr "Mangelhaftes Token"
+msgstr "Falsches Token"
 
 #: templates/account/password_reset_from_key.html:13
 #, python-format
@@ -243,11 +259,11 @@ msgstr "Aktualisieren"
 
 #: templates/django_mailman3/profile/base.html:5
 msgid "User Profile"
-msgstr "Benutzerpofil"
+msgstr "Benutzerprofil"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "User profile"
-msgstr "Benutzerpofil"
+msgstr "Benutzerprofil"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "for"
@@ -266,16 +282,16 @@ msgstr "Kontoverbindungen"
 #: templates/django_mailman3/profile/base.html:33
 #: templates/django_mailman3/profile/base.html:34
 #: templates/django_mailman3/profile/delete_profile.html:18
-#, fuzzy
-#| msgid "Account"
 msgid "Delete Account"
-msgstr "Konto"
+msgstr "Konto löschen"
 
 #: templates/django_mailman3/profile/delete_profile.html:13
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
+"Bist du dir sicher, dass du dein Konto löschen möchtest? Dies wird dein "
+"Konto mitsamt all deiner Mitgliedschaften entfernen."
 
 #: templates/django_mailman3/profile/profile.html:18
 #: templates/django_mailman3/profile/profile.html:53
@@ -283,10 +299,8 @@ msgid "Edit on"
 msgstr "Bearbeiten auf"
 
 #: templates/django_mailman3/profile/profile.html:25
-#, fuzzy
-#| msgid "Primary"
 msgid "Primary email:"
-msgstr "Haupt-E-Mail"
+msgstr "Haupt-E-Mail-Adresse:"
 
 #: templates/django_mailman3/profile/profile.html:31
 msgid "Other emails:"
@@ -360,17 +374,14 @@ msgstr "Zurück"
 msgid "Next"
 msgstr "Weiter"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
-msgstr ""
+msgstr "Das Profil wurde erfolgreich aktualisiert."
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
-msgstr ""
+msgstr "Keine Änderung festgestellt."
 
-#: views/profile.py:108
+#: views/profile.py:107
 msgid "Successfully deleted account"
-msgstr ""
-
-#~ msgid "Main email:"
-#~ msgstr "Haupt-E-Mail-Adresse:"
+msgstr "Konto erfolgreich gelöscht"
