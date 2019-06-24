@@ -27,7 +27,6 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect, render
 from django.urls import reverse
-from django.utils.timezone import get_current_timezone
 from django.utils.translation import gettext as _
 
 from allauth.account.models import EmailAddress
@@ -51,7 +50,7 @@ def user_profile(request):
         "username": request.user.username,
         "first_name": request.user.first_name,
         "last_name": request.user.last_name,
-        "timezone": get_current_timezone().zone,
+        "timezone": profile.timezone,
         }
 
     if request.method == 'POST':
