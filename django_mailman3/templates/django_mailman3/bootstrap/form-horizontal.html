@@ -49,7 +49,7 @@
         </div>
         {% if field.help_text %}
         <p id="help-{{ field.id_for_label }}"
-           class="offset-{{ fold_class }}-{{ size_left }} col-{{ fold_class }}-{{ size_right }} text-muted">
+           class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }} text-muted">
             {{ field.help_text|safe|linebreaksbr }}
         </p>
         {% endif %}
