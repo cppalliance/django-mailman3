@@ -11,7 +11,7 @@
 {% endfor %}
 
 {% for field in form.visible_fields %}
-    <div class="form-group {% if field.errors %}has-errors{% endif %}">
+    <div class="form-group {% if field.errors %}has-errors{% endif %} row">
         <label class="control-label col-{{ fold_class }}-{{ size_left }}"
                for="{{ field.id_for_label }}">
             {% if not field|fieldtype_is:'CheckboxInput' %}
@@ -49,7 +49,7 @@
         </div>
         {% if field.help_text %}
         <p id="help-{{ field.id_for_label }}"
-           class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }} help-block">
+           class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }} text-muted">
             {{ field.help_text|safe|linebreaksbr }}
         </p>
         {% endif %}

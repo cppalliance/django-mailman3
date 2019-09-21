@@ -20,7 +20,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="django-mailman3",
-    version='1.2.0',
+    version='1.3.1',
     description="Django library to help interaction with Mailman",
     long_description=open('README.rst').read(),
     maintainer="Mailman Developers",
@@ -38,7 +38,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'Django>=1.11,<2.2',
+        'Django>=1.11,<2.3',
         'mailmanclient',
         'django-allauth',
         'django-gravatar2 >= 1.0.6',

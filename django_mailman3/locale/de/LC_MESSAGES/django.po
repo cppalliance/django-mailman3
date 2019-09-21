@@ -19,12 +19,25 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 3.7\n"
 
-#: forms.py:42
+#: forms.py:33
+msgid "First name"
+msgstr "Vorname"
+
+#: forms.py:34
+msgid "Last name"
+msgstr "Nachname"
+
+#: forms.py:36
+msgid "Time zone"
+msgstr "Zeitzone"
+
+#: forms.py:43
 msgid "A user with that username already exists."
 msgstr "Ein Benutzer mit diesem Namen existiert bereits."
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:16
+#: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Konto"
 
@@ -156,7 +169,8 @@ msgstr "Bist du dir sicher, dass du dich abmelden willst?"
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
-#: templates/django_mailman3/profile/base.html:19
+#: templates/django_mailman3/profile/base.html:20
+#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Passwort ändern"
 
@@ -185,7 +199,7 @@ msgstr ""
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr "Mangelhaftes Token"
+msgstr "Falsches Token"
 
 #: templates/account/password_reset_from_key.html:13
 #, python-format
@@ -227,15 +241,15 @@ msgstr ""
 "Du hast bereits ein Konto? Dann <a href=\"%(login_url)s\">melde dich bitte "
 "an</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:40
+#: templates/django_mailman3/paginator/pagination.html:41
 msgid "Jump to page:"
 msgstr "Springe zur Seite:"
 
-#: templates/django_mailman3/paginator/pagination.html:58
+#: templates/django_mailman3/paginator/pagination.html:59
 msgid "Results per page:"
 msgstr "Ergebnisse pro Seite:"
 
-#: templates/django_mailman3/paginator/pagination.html:74
+#: templates/django_mailman3/paginator/pagination.html:75
 #: templates/django_mailman3/profile/profile.html:66
 msgid "Update"
 msgstr "Aktualisieren"
@@ -252,13 +266,29 @@ msgstr "Benutzerprofil"
 msgid "for"
 msgstr "für"
 
-#: templates/django_mailman3/profile/base.html:22
+#: templates/django_mailman3/profile/base.html:24
+#: templates/django_mailman3/profile/base.html:25
 msgid "E-mail Addresses"
 msgstr "E-Mail-Adressen"
 
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:29
+#: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Kontoverbindungen"
+
+#: templates/django_mailman3/profile/base.html:33
+#: templates/django_mailman3/profile/base.html:34
+#: templates/django_mailman3/profile/delete_profile.html:18
+msgid "Delete Account"
+msgstr "Konto löschen"
+
+#: templates/django_mailman3/profile/delete_profile.html:13
+msgid ""
+"Are you sure you want to delete your account? This will remove your account "
+"along with all your subscriptions."
+msgstr ""
+"Bist du dir sicher, dass du dein Konto löschen möchtest? Dies wird dein "
+"Konto mitsamt all deiner Mitgliedschaften entfernen."
 
 #: templates/django_mailman3/profile/profile.html:18
 #: templates/django_mailman3/profile/profile.html:53
@@ -266,7 +296,7 @@ msgid "Edit on"
 msgstr "Bearbeiten auf"
 
 #: templates/django_mailman3/profile/profile.html:25
-msgid "Main email:"
+msgid "Primary email:"
 msgstr "Haupt-E-Mail-Adresse:"
 
 #: templates/django_mailman3/profile/profile.html:31
@@ -340,3 +370,15 @@ msgstr "Zurück"
 #: templatetags/pagination.py:47
 msgid "Next"
 msgstr "Weiter"
+
+#: views/profile.py:72
+msgid "The profile was successfully updated."
+msgstr "Das Profil wurde erfolgreich aktualisiert."
+
+#: views/profile.py:74
+msgid "No change detected."
+msgstr "Keine Änderung festgestellt."
+
+#: views/profile.py:107
+msgid "Successfully deleted account"
+msgstr "Konto erfolgreich gelöscht"

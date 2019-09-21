@@ -29,11 +29,11 @@ from django_mailman3.models import TIMEZONES
 
 
 class UserProfileForm(forms.Form):
-    username = forms.CharField(required=True)
-    first_name = forms.CharField()
-    last_name = forms.CharField()
+    username = forms.CharField(required=True, label=_('Username'))
+    first_name = forms.CharField(label=_('First name'))
+    last_name = forms.CharField(label=_('Last name'))
     timezone = forms.ChoiceField(
-        label="Time zone", choices=TIMEZONES)
+        label=_('Time zone'), choices=TIMEZONES)
 
     def clean_username(self):
         username = self.cleaned_data.get("username")
