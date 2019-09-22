@@ -11,6 +11,9 @@ coverage:
 lint:
   script:
     - tox -e lint
+  artifacts:
+    reports:
+      codequality: gl-code-quality-report.json
 
 django-latest:
   script:
@@ -56,7 +59,6 @@ py37-django22:
   script:
     - tox -e py37-django22
 
-
 sast:
   image: docker:stable
   variables:
@@ -74,4 +76,3 @@ sast:
   artifacts:
     reports:
       sast: gl-sast-report.json
-
