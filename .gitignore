@@ -7,3 +7,4 @@
 .coverage
 coverage
 *.bak
+/gl-code-quality-report.json
