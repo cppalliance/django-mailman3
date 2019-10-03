@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
 "PO-Revision-Date: 2019-10-03 14:11+0000\n"
-"Last-Translator: ParkSeongSoo <syvf64@naver.com>\n"
+"Last-Translator: 김상남 <ksn7491@naver.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ko/>\n"
 "Language: ko\n"
@@ -91,7 +91,7 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
-"<a href=\"mailto:%(email)s\"> % (email) s </a>가 사용자 % (user_display) s의 이메일 "
+"<a href=\"mailto:%(email)s\"> % (email) s </a>가 사용자 %(user_display)s의 이메일 "
 "주소인지 확인하십시오."
 
 #: templates/account/email_confirm.html:20
@@ -104,6 +104,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
+"이 이메일 확인 링크가 만료되었거나 유효하지 않습니다.<a href=\"%(email_url)s\"> 새로운 이메일 확인 요청을 "
+"발행</a>하십시오."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -118,6 +120,9 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
+"하나로 로그인하십시오\n"
+"기존 제 3 자 계정 중 또는 <a href=\"%(signup_url)s\"> 가입</a>\n"
+"%(site_name)s계정의 경우 아래에서 로그인하십시오:"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
@@ -130,6 +135,8 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"아직 계정을 만들지 않았다면 제발\n"
+"먼저 <a href=\"%(signup_url)s\">가입</a>하십시오."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
@@ -182,6 +189,8 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"비밀번호 재설정 링크가 이미 사용 되었기 때문에 유효하지 않습니다. <a href=\"%(passwd_reset_url)s\"> 새 "
+"비밀번호 재설정 </a>을 요청하십시오."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -315,8 +324,8 @@ msgid ""
 "You are about to use your %(provider_name)s account to login to\n"
 "%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
-"귀하의 % (provider_name) 계정에 로그인하려고 합니다.\n"
-" % (site_name) s를 사용합니다. 마지막 단계로 다음 양식을 작성하십시오:"
+"귀하의 %(provider_name)s계정에 로그인하려고 합니다.\n"
+"%(site_name)s를 사용합니다. 마지막 단계로 다음 양식을 작성하십시오:"
 
 #: templatetags/pagination.py:43
 msgid "Newer"
@@ -340,7 +349,7 @@ msgstr "프로파일이 성공적으로 업데이트되었다."
 
 #: views/profile.py:75
 msgid "No change detected."
-msgstr ""
+msgstr "변경 사항이 감지되지 않았습니다."
 
 #: views/profile.py:108
 msgid "Successfully deleted account"
