@@ -17,7 +17,11 @@ lint:
 
 django-latest:
   script:
-    - tox -e py36-djangolatest
+    - tox -e py38-djangolatest
+
+py38-django-22:
+  script:
+    - tox -e py38-django22
 
 py35-django-1.11:
   script:
