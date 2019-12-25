@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2019-12-24 12:21+0000\n"
+"PO-Revision-Date: 2019-12-26 08:21+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/he/>\n"
@@ -97,7 +97,7 @@ msgstr ""
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr "באישור"
+msgstr "באימות"
 
 #: templates/account/email_confirm.html:27
 #, python-format
