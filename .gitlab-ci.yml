@@ -27,10 +27,6 @@ py38-django-30:
   script:
     - tox -e py38-django30
 
-py35-django-1.11:
-  script:
-    - tox -e py35-django111
-
 py36-django-20:
   script:
     - tox -e py36-django20
@@ -42,10 +38,6 @@ py36-django-21:
 py36-django-30:
   script:
     - tox -e py36-django30
-
-py36-django-1.11:
-  script:
-    - tox -e py36-django111
 
 py37-django-20:
   script:
