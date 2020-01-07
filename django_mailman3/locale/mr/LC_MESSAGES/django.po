@@ -3,72 +3,76 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-01-08 16:21+0000\n"
+"Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
+"Language-Team: Marathi <https://hosted.weblate.org/projects/gnu-mailman/"
+"django-mailman3/mr/>\n"
+"Language: mr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.10.1-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
-msgstr ""
+msgstr "त्या वापरकर्तानावाचा वापरकर्ता आधीपासून विद्यमान आहे."
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
-msgstr ""
+msgstr "खाते"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "खालील खाती आपल्या खात्याशी संबंधित आहेत:"
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "सत्यापित"
 
 #: templates/account/email.html:27
 msgid "Unverified"
-msgstr ""
+msgstr "न तपासलेले"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr ""
+msgstr "प्राथमिक"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr ""
+msgstr "प्राथमिक करा"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr ""
+msgstr "सत्यापन पुन्हा पाठवा"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr ""
+msgstr "हटवा"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr ""
+msgstr "चेतावणी:"
 
 #: templates/account/email.html:44
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
+"आपल्याकडे सध्या कोणताही ई-मेल पत्ता सेट अप केलेला नाही. आपण खरोखर एक ई-मेल "
+"पत्ता जोडावा जेणेकरुन आपण सूचना प्राप्त करू शकता, आपला संकेतशब्द रीसेट करू "
+"शकता इ."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "ई-मेल पत्ता जोडा"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
