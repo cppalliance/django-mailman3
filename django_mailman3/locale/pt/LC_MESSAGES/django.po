@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
-"PO-Revision-Date: 2019-10-02 09:04+0000\n"
-"Last-Translator: Manuela Silva <mmsrs@sky.com>\n"
+"PO-Revision-Date: 2020-01-05 15:21+0000\n"
+"Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/pt/>\n"
 "Language: pt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 3.10\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -55,7 +55,7 @@ msgstr ""
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr ""
+msgstr "Remover"
 
 #: templates/account/email.html:44
 msgid "Warning:"
@@ -119,7 +119,7 @@ msgstr ""
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
 msgid "or"
-msgstr ""
+msgstr "ou"
 
 #: templates/account/login.html:37
 #, python-format
@@ -218,19 +218,19 @@ msgstr ""
 #: templates/django_mailman3/paginator/pagination.html:75
 #: templates/django_mailman3/profile/profile.html:66
 msgid "Update"
-msgstr ""
+msgstr "Atualizar"
 
 #: templates/django_mailman3/profile/base.html:5
 msgid "User Profile"
-msgstr ""
+msgstr "Perfil do Utilizador"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "User profile"
-msgstr ""
+msgstr "Perfil do utilizador"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "for"
-msgstr ""
+msgstr "para"
 
 #: templates/django_mailman3/profile/base.html:24
 #: templates/django_mailman3/profile/base.html:25
@@ -273,7 +273,7 @@ msgstr ""
 
 #: templates/django_mailman3/profile/profile.html:42
 msgid "Link another address"
-msgstr ""
+msgstr "Vincular outro endereço"
 
 #: templates/django_mailman3/profile/profile.html:49
 msgid "Avatar:"
@@ -285,7 +285,7 @@ msgstr ""
 
 #: templates/django_mailman3/profile/profile.html:67
 msgid "cancel"
-msgstr ""
+msgstr "cancelar"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"

@@ -3,63 +3,64 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-01-07 04:21+0000\n"
+"Last-Translator: Milo Ivir <mail@milotype.de>\n"
+"Language-Team: Croatian <https://hosted.weblate.org/projects/gnu-mailman/"
+"django-mailman3/hr/>\n"
+"Language: hr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<="
+"4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 3.10\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
-msgstr ""
+msgstr "Korisnik s tim korisničkim imenom već postoji."
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
-msgstr ""
+msgstr "Račun"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Sljedeće e-adrese su pridružene tvom računu:"
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "Potvrđeno"
 
 #: templates/account/email.html:27
 msgid "Unverified"
-msgstr ""
+msgstr "Nepotvrđeno"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr ""
+msgstr "Primarno"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr ""
+msgstr "Postavi kao primarno"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Ponovo pošalji potvrdu"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr ""
+msgstr "Ukloni"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr ""
+msgstr "Upozorenje:"
 
 #: templates/account/email.html:44
 msgid ""
@@ -69,20 +70,20 @@ msgstr ""
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "Dodaj e-adresu"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
-msgstr ""
+msgstr "Dodaj e-poštu"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
+msgstr "Stvarno želiš ukloniti odabranu e-adresu?"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "Potvrdi e-adresu"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -90,10 +91,12 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
+"Potvrdi, da je <a href=\"mailto:%(email)s\">%(email)s</a> e-adresa za "
+"korisnika %(user_display)s."
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr ""
+msgstr "Potvrdi"
 
 #: templates/account/email_confirm.html:27
 #, python-format
@@ -105,7 +108,7 @@ msgstr ""
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
 msgid "Sign In"
-msgstr ""
+msgstr "Prijavi se"
 
 #: templates/account/login.html:18
 #, python-format
@@ -119,7 +122,7 @@ msgstr ""
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
 msgid "or"
-msgstr ""
+msgstr "ili"
 
 #: templates/account/login.html:37
 #, python-format
@@ -130,16 +133,16 @@ msgstr ""
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Zaboravio(la) si lozinku?"
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr ""
+msgstr "Odjavi se"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Stvarno se želiš odjaviti?"
 
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
@@ -147,7 +150,7 @@ msgstr ""
 #: templates/django_mailman3/profile/base.html:20
 #: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
-msgstr ""
+msgstr "Promijeni lozinku"
 
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:11
@@ -190,7 +193,7 @@ msgstr ""
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
-msgstr ""
+msgstr "Postavi lozinku"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
 msgid "Signup"
@@ -209,11 +212,11 @@ msgstr ""
 
 #: templates/django_mailman3/paginator/pagination.html:41
 msgid "Jump to page:"
-msgstr ""
+msgstr "Skoči na stranicu:"
 
 #: templates/django_mailman3/paginator/pagination.html:59
 msgid "Results per page:"
-msgstr ""
+msgstr "Broj rezultata po stranici:"
 
 #: templates/django_mailman3/paginator/pagination.html:75
 #: templates/django_mailman3/profile/profile.html:66
@@ -222,15 +225,15 @@ msgstr ""
 
 #: templates/django_mailman3/profile/base.html:5
 msgid "User Profile"
-msgstr ""
+msgstr "Korisnički profil"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "User profile"
-msgstr ""
+msgstr "Korisnički profil"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "for"
-msgstr ""
+msgstr "za"
 
 #: templates/django_mailman3/profile/base.html:24
 #: templates/django_mailman3/profile/base.html:25
@@ -240,13 +243,13 @@ msgstr ""
 #: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
-msgstr ""
+msgstr "Veze računa"
 
 #: templates/django_mailman3/profile/base.html:33
 #: templates/django_mailman3/profile/base.html:34
 #: templates/django_mailman3/profile/delete_profile.html:18
 msgid "Delete Account"
-msgstr ""
+msgstr "Izbriši račun"
 
 #: templates/django_mailman3/profile/delete_profile.html:13
 msgid ""
@@ -261,23 +264,23 @@ msgstr ""
 
 #: templates/django_mailman3/profile/profile.html:25
 msgid "Primary email:"
-msgstr ""
+msgstr "Primarna e-adresa:"
 
 #: templates/django_mailman3/profile/profile.html:31
 msgid "Other emails:"
-msgstr ""
+msgstr "Ostale e-adrese:"
 
 #: templates/django_mailman3/profile/profile.html:37
 msgid "(no other email)"
-msgstr ""
+msgstr "(nema druge e-adrese)"
 
 #: templates/django_mailman3/profile/profile.html:42
 msgid "Link another address"
-msgstr ""
+msgstr "Poveži drugu adresu"
 
 #: templates/django_mailman3/profile/profile.html:49
 msgid "Avatar:"
-msgstr ""
+msgstr "Avatar:"
 
 #: templates/django_mailman3/profile/profile.html:58
 msgid "Joined on:"
@@ -285,11 +288,11 @@ msgstr ""
 
 #: templates/django_mailman3/profile/profile.html:67
 msgid "cancel"
-msgstr ""
+msgstr "odustani"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
-msgstr ""
+msgstr "Prijava putem OpenID-a"
 
 #: templates/socialaccount/connections.html:9
 msgid ""
@@ -304,7 +307,7 @@ msgstr ""
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr ""
+msgstr "Dodajte račun treće strane"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
@@ -315,28 +318,28 @@ msgstr ""
 
 #: templatetags/pagination.py:43
 msgid "Newer"
-msgstr ""
+msgstr "Novija"
 
 #: templatetags/pagination.py:44
 msgid "Older"
-msgstr ""
+msgstr "Starija"
 
 #: templatetags/pagination.py:46
 msgid "Previous"
-msgstr ""
+msgstr "Prethodno"
 
 #: templatetags/pagination.py:47
 msgid "Next"
-msgstr ""
+msgstr "Sljedeće"
 
 #: views/profile.py:73
 msgid "The profile was successfully updated."
-msgstr ""
+msgstr "Profil je uspješno aktualiziran."
 
 #: views/profile.py:75
 msgid "No change detected."
-msgstr ""
+msgstr "Nijedna promjena nije otkrivena."
 
 #: views/profile.py:108
 msgid "Successfully deleted account"
-msgstr ""
+msgstr "Račun je uspješno izbrisan"
