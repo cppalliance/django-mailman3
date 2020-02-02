@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2020-02-01 16:26+0000\n"
+"PO-Revision-Date: 2020-02-04 07:06+0000\n"
 "Last-Translator: Leandro Navarro <leandro@pangea.org>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/es/>\n"
@@ -55,7 +55,7 @@ msgstr "Reenviar verificación"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr "Remover"
+msgstr "Quitar"
 
 #: templates/account/email.html:44
 msgid "Warning:"
@@ -217,7 +217,7 @@ msgstr "Suscribirse"
 #: templates/account/signup.html:9 templates/account/signup.html:20
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
-msgstr "Suscribirse"
+msgstr "Inscribirse"
 
 #: templates/account/signup.html:11
 #, python-format
