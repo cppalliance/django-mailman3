@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2019-10-30 19:03+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-03-31 02:16+0000\n"
+"Last-Translator: JD <jonathan+weblate@dupart.org>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -143,7 +143,7 @@ msgid ""
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 "Si vous n'avez pas encore de compte, veuillez\n"
-"<a href=\"%(signup_url)s\">vous inscrire</a> d'abord"
+"<a href=\"%(signup_url)s\">vous inscrire</a> d'abord."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
@@ -186,8 +186,8 @@ msgstr "Réinitialiser mon mot de passe"
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
-"Veuillez nous contacter si vous avez des problèmes pour réinitialiser notre "
-"mot de passe"
+"Veuillez nous contacter si vous avez des difficultés pour réinitialiser "
+"notre mot de passe."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
@@ -210,7 +210,7 @@ msgstr "Changer le mot de passe"
 
 #: templates/account/password_reset_from_key.html:25
 msgid "Your password is now changed."
-msgstr "Votre mot de passe a été changé"
+msgstr "Votre mot de passe a été changé."
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
@@ -266,9 +266,8 @@ msgstr "Adresses e-mail"
 
 #: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
-#, fuzzy
 msgid "Account Connections"
-msgstr "Connexions de compte"
+msgstr "Connexions du compte"
 
 #: templates/django_mailman3/profile/base.html:33
 #: templates/django_mailman3/profile/base.html:34
