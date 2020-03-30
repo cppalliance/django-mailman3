@@ -49,7 +49,7 @@
         </div>
         {% if field.help_text %}
         <p id="help-{{ field.id_for_label }}"
-           class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }} text-muted">
+           class="offset-{{ fold_class }}-{{ size_left }} col-{{ fold_class }}-{{ size_right }} text-muted">
             {{ field.help_text|safe|linebreaksbr }}
         </p>
         {% endif %}
@@ -57,7 +57,7 @@
 {% endfor %}
 {% if button %}
     <div class="form-group">
-        <div class="col-{{ fold_class }}-offset-{{ size_left }} col-{{ fold_class }}-{{ size_right }}">
+        <div class="offset-{{ fold_class }}-{{ size_left }} col-{{ fold_class }}-{{ size_right }}">
             <button class="btn btn-primary" type="submit">{% trans button %}</button>
         </div>
     </div>

@@ -44,7 +44,7 @@ for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
   <div class="form-group">
-    <div class="col-md-offset-2 col-md-4">
+    <div class="offset-md-2 col-md-4">
       <button class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
       &nbsp;
       <a href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>

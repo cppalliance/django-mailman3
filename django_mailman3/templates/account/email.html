@@ -22,18 +22,18 @@
 
 {{ emailaddress.email }}
     {% if emailaddress.verified %}
-    <span class="label label-success">{% trans "Verified" %}</span>
+    <span class="badge badge-success">{% trans "Verified" %}</span>
     {% else %}
-    <span class="label label-warning">{% trans "Unverified" %}</span>
+    <span class="badge badge-warning">{% trans "Unverified" %}</span>
     {% endif %}
-      {% if emailaddress.primary %}<span class="label label-primary">{% trans "Primary" %}</span>{% endif %}
+      {% if emailaddress.primary %}<span class="badge badge-primary">{% trans "Primary" %}</span>{% endif %}
 </label>
 </div>
   {% endfor %}
 
 <div class="form-group buttonHolder">
-      <button class="btn btn-default secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
-      <button class="btn btn-default secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
+      <button class="btn btn-outline-primary secondaryAction" type="submit" name="action_primary" >{% trans 'Make Primary' %}</button>
+      <button class="btn btn-outline-primary secondaryAction" type="submit" name="action_send" >{% trans 'Re-send Verification' %}</button>
       <button class="btn btn-danger primaryAction" type="submit" name="action_remove" >{% trans 'Remove' %}</button>
 </div>
 
@@ -51,7 +51,7 @@
     <form method="post" action="{% url 'account_email' %}" class="add_email form-horizontal">
         {% bootstrap_form_horizontal form 2 4 %}
         <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
+            <div class="col-lg-offset-2 col-lg-10">
                 <button class="btn btn-primary" name="action_add" type="submit">{% trans "Add E-mail" %}</button>
             </div>
         </div>
