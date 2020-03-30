@@ -9,6 +9,11 @@ To use this application, add ``django_mailman3`` to the ``INSTALLED_APPS`` list
 in your Django server's settings file.
 
 
+NEWS
+====
+
+- Hide "Account Connections" tab in accounts if no social account providers are
+  installed. (See !54)
 License
 =======
 
