@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2020-03-30 15:04+0000\n"
+"PO-Revision-Date: 2020-03-31 20:13+0000\n"
 "Last-Translator: Jaume Ortolà i Font <jaumeortola@gmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ca/>\n"
@@ -124,10 +124,10 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
-"Si us plau ingressi amb una\n"
-"de les seves comptes de tercers. O, <a href=\"%(signup_url)s\"> registra't "
+"Inicieu la sessió amb un\n"
+"dels vostres comptes de tercers. O <a href=\"%(signup_url)s\"> registreu-vos "
 "</a>\n"
-"per a un compte a %(site_name)s i entreu a sota:"
+"per a un compte en %(site_name)s i entreu a sota:"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
@@ -174,16 +174,17 @@ msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
-"Heu oblidat la contrasenya? Introduïu la vostra adreça de correu i li "
-"enviarem un correu amb instruccions per restablir-la."
+"Heu oblidat la contrasenya? Introduïu la vostra adreça de correu i us "
+"enviarem un correu amb instruccions per a restablir-la."
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
-msgstr "Restablir la contrasenya"
+msgstr "Restableix la contrasenya"
 
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr "Si us plau, contacti'ns si té algun problema restablint la contrasenya."
+msgstr ""
+"Contacteu amb nosaltres si teniu algun problema restablint la contrasenya."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
@@ -196,13 +197,13 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
-"L'enllaç per restablir la contrasenya no era vàlid, és possible que ja "
-"s'hagués fet servir. Si us plau, demani un <a href=\"%(passwd_reset_url)s\">"
-"nou restabliment de contrasenya</a>."
+"L'enllaç per a restablir la contrasenya no era vàlid, potser perquè ja s'ha "
+"fet servir. Demaneu un <a href=\"%(passwd_reset_url)s\">nou restabliment de "
+"contrasenya</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
-msgstr "canviar contrasenya"
+msgstr "canvia la contrasenya"
 
 #: templates/account/password_reset_from_key.html:25
 msgid "Your password is now changed."
