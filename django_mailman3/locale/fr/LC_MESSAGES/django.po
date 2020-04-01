@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2019-10-30 19:03+0000\n"
-"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"PO-Revision-Date: 2020-03-31 20:13+0000\n"
+"Last-Translator: ButterflyOfFire <ButterflyOfFire@protonmail.com>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/fr/>\n"
 "Language: fr\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -42,12 +42,10 @@ msgid "Unverified"
 msgstr "Non vérifié"
 
 #: templates/account/email.html:29
-#, fuzzy
 msgid "Primary"
 msgstr "Principal"
 
 #: templates/account/email.html:35
-#, fuzzy
 msgid "Make Primary"
 msgstr "Rendre principal"
 
@@ -77,7 +75,6 @@ msgid "Add E-mail Address"
 msgstr "Ajouter une adresse e-mail"
 
 #: templates/account/email.html:55
-#, fuzzy
 msgid "Add E-mail"
 msgstr "Ajouter un e-mail"
 
@@ -104,14 +101,14 @@ msgid "Confirm"
 msgstr "Confirmer"
 
 #: templates/account/email_confirm.html:27
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"Ce lien de confirmation d'adresse e-mail est invalide ou a expiré. Veuillez <"
-"a href=\"%(email_url)s\"> envoyer une nouvelle demande de confirmation "
-"d'adresse e-mail.</a>"
+"Ce lien de confirmation d’adresse e-mail est invalide ou a expiré. Veuillez <"
+"a href=\"%(email_url)s\"> émettre une nouvelle requête de confirmation d’"
+"adresse e-mail</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -119,17 +116,17 @@ msgid "Sign In"
 msgstr "Se connecter"
 
 #: templates/account/login.html:18
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "Please sign in with one\n"
 "of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
-"Veuillez vous connecter avec l'un\n"
-"de vos compte d'application tierce existant. Ou, <a href=\"%(signup_url)s\">"
-"inscrivez vous</a>\n"
-"pour un %(site_name)s compte et connectez-vous ci-dessous :"
+"Veuillez vous connecter avec l’un\n"
+"de vos compte d’application tierce existant. Ou, <a href=\"%(signup_url)s\""
+">créez</a>\n"
+"un %(site_name)s compte et connectez-vous ci-dessous :"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
@@ -143,7 +140,7 @@ msgid ""
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 "Si vous n'avez pas encore de compte, veuillez\n"
-"<a href=\"%(signup_url)s\">vous inscrire</a> d'abord"
+"<a href=\"%(signup_url)s\">vous inscrire</a> d'abord."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
@@ -186,23 +183,23 @@ msgstr "Réinitialiser mon mot de passe"
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
-"Veuillez nous contacter si vous avez des problèmes pour réinitialiser notre "
-"mot de passe"
+"Veuillez nous contacter si vous avez des difficultés pour réinitialiser "
+"notre mot de passe."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
 msgstr "Jeton invalide"
 
 #: templates/account/password_reset_from_key.html:13
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The password reset link was invalid, possibly because it has already been "
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
-"Le lien de réinitialisation du mot de passe était invalide, possiblement "
-"parce qu'il a déjà été utilisé. Veuillez demander une <a href=\""
-"%(passwd_reset_url)s\">nouvelle réinitialisation de mot de passe</a>"
+"Le lien de réinitialisation du mot de passe n’était pas valide, peut-être "
+"parce qu’il a déjà été utilisé.  Veuillez demander une <a href=\""
+"%(passwd_reset_url)s\">nouvelle réinitialisation du mot de passe</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -210,7 +207,7 @@ msgstr "Changer le mot de passe"
 
 #: templates/account/password_reset_from_key.html:25
 msgid "Your password is now changed."
-msgstr "Votre mot de passe a été changé"
+msgstr "Votre mot de passe a été changé."
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
@@ -238,9 +235,8 @@ msgid "Jump to page:"
 msgstr "Aller à la page :"
 
 #: templates/django_mailman3/paginator/pagination.html:59
-#, fuzzy
 msgid "Results per page:"
-msgstr "Nombre de résultats pas page :"
+msgstr "Résultats par page :"
 
 #: templates/django_mailman3/paginator/pagination.html:75
 #: templates/django_mailman3/profile/profile.html:66
@@ -266,9 +262,8 @@ msgstr "Adresses e-mail"
 
 #: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
-#, fuzzy
 msgid "Account Connections"
-msgstr "Connexions de compte"
+msgstr "Connexions du compte"
 
 #: templates/django_mailman3/profile/base.html:33
 #: templates/django_mailman3/profile/base.html:34
@@ -288,12 +283,11 @@ msgstr ""
 #: templates/django_mailman3/profile/profile.html:53
 #, fuzzy
 msgid "Edit on"
-msgstr "Edition activée"
+msgstr "Édition activée"
 
 #: templates/django_mailman3/profile/profile.html:25
-#, fuzzy
 msgid "Primary email:"
-msgstr "e-mail principal :"
+msgstr "Courriel primaire :"
 
 #: templates/django_mailman3/profile/profile.html:31
 msgid "Other emails:"
@@ -324,13 +318,12 @@ msgid "OpenID Sign In"
 msgstr "Connexion avec OpenID"
 
 #: templates/socialaccount/connections.html:9
-#, fuzzy
 msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
 msgstr ""
-"Vous pouvez vous connecter avec votre compte en utilisant les comptes "
-"d'applications tierces suivant :"
+"Vous pouvez vous connecter à votre compte en utilisant l’un des comptes "
+"tiers suivants :"
 
 #: templates/socialaccount/connections.html:42
 msgid ""
@@ -352,12 +345,10 @@ msgstr ""
 "%(site_name)s. Pour finir, veuillez compléter le formulaire suivant :"
 
 #: templatetags/pagination.py:43
-#, fuzzy
 msgid "Newer"
 msgstr "Plus récent"
 
 #: templatetags/pagination.py:44
-#, fuzzy
 msgid "Older"
 msgstr "Plus ancien"
 
