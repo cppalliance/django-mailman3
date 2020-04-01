@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
-"PO-Revision-Date: 2020-03-31 02:16+0000\n"
+"PO-Revision-Date: 2020-04-01 23:49+0000\n"
 "Last-Translator: Derek Zhou <derek@3qin.us>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/"
 "gnu-mailman/django-mailman3/zh_Hans/>\n"
@@ -124,7 +124,7 @@ msgstr ""
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
 msgid "or"
-msgstr "或者"
+msgstr "或"
 
 #: templates/account/login.html:37
 #, python-format
