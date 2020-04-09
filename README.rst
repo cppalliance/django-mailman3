@@ -14,6 +14,8 @@ NEWS
 
 - Hide "Account Connections" tab in accounts if no social account providers are
   installed. (See !54)
+- Use bold font for form labels (See !82)
+
 License
 =======
 
