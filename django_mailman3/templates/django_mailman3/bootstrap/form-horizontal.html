@@ -12,7 +12,7 @@
 
 {% for field in form.visible_fields %}
     <div class="form-group {% if field.errors %}has-errors{% endif %} row">
-        <label class="control-label col-{{ fold_class }}-{{ size_left }}"
+        <label class="control-label font-weight-bold col-{{ fold_class }}-{{ size_left }}"
                for="{{ field.id_for_label }}">
             {% if not field|fieldtype_is:'CheckboxInput' %}
                 {{ field.label }}

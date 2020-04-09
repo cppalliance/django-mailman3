@@ -93,7 +93,7 @@ class TestBootstrapTags(SimpleTestCase):
             '<form> {% bootstrap_form form %}')
         rendered_template = template.render(context=context)
         label_field = '''
-<label class="control-label" for="id_datetime">
+<label class="control-label font-weight-bold" for="id_datetime">
     Datetime
 </label>'''
         self.assertInHTML(label_field, rendered_template)
