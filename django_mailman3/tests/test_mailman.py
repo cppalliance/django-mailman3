@@ -241,3 +241,49 @@ class GetSubscriptionsTestCase(TestCase):
             "list.example.com", "test@example.com", role="nonmember")
         self.mm_user.subscriptions = [fake_member]
         self.assertEqual(mailman.get_subscriptions(self.user), {})
+
+
+class UpdatePreferredAddressTestCase(TestCase):
+
+    def setUp(self):
+        self.user = User.objects.create_user(
+            'testuser', 'test@example.com', 'testPass')
+        EmailAddress.objects.create(
+            user=self.user, email=self.user.email, verified=True)
+        self.mm_user = Mock()
+        self.mm_user.user_id = "dummy"
+        self.mm_user.addresses = FakeMMAddressList()
+        self.mailman_client.get_user.side_effect = lambda e: self.mm_user
+
+    def test_update_preferred_address_updates_mailman(self):
+        """Updating preferred address in Django updates Core."""
+        self.mm_user.addresses.extend([
+            FakeMMAddress('another@example.com', verified=False),
+            FakeMMAddress('verified@example.com', verified=True),
+            ])
+        email2 = EmailAddress.objects.create(
+            user=self.user, email='another@example.com', verified=False)
+        email2.set_as_primary()
+        mailman.update_preferred_address(self.user, email2)
+        # A non-verified address should never set the preferred address.
+        self.assertNotEqual(
+            self.mm_user.preferred_address, 'another@example.com')
+        email3 = EmailAddress.objects.create(
+            user=self.user, email='verified@example.com', verified=True)
+        email3.set_as_primary()
+        mailman.update_preferred_address(self.user, email3)
+        self.assertEqual(
+            self.mm_user.preferred_address, 'verified@example.com')
+
+    def test_update_preferred_address_adds_address(self):
+        """Setting a preferred address which isn't already created in Core."""
+        # Test that we can set an address which isn't already associated with
+        # the user in Mailman Core.
+        email4 = EmailAddress.objects.create(
+            user=self.user, email='not-added@example.com', verified=True)
+        email4.set_as_primary()
+        mailman.update_preferred_address(self.user, email4)
+        self.assertEqual(
+            self.mm_user.preferred_address, 'not-added@example.com')
+        self.mm_user.add_address.assert_called_once_with(
+            'not-added@example.com', absorb_existing=True)

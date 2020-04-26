@@ -176,3 +176,34 @@ def sync_email_addresses(user):
         except IntegrityError:
             continue  # Email exists and belongs to another user.
         check_verified(django_address, mm_address)
+
+
+def update_preferred_address(user, to_email_address):
+    """Update the preferred address of a user in Mailman Core.
+
+    This synchronizes the preferred address between Mailman Core and Django,
+    although, it is a one-way sync.
+    """
+    logger.debug("Synchronizing primary address for user %s", user.username)
+    mm_user = get_mailman_user(user)
+
+    if mm_user is None:
+        logger.info(
+            "Could not find or create a Mailman user for %s", user.username)
+        return
+    if not to_email_address.verified:
+        return
+
+    # Note: Although, setting preferred address will already add the address to
+    # the user, but if the address isn't verified then it will result in an
+    # exception. So, we trigger a verify + add workflow before setting primary
+    # address.
+    add_address_to_mailman_user(user, to_email_address.email)
+
+    # Finally, set the preferred address.
+
+    try:
+        mm_user.preferred_address = to_email_address.email
+    except HTTPError:
+        logger.error("Failed to update preferred address for %s in Core",
+                     user.username, exc_info=True)

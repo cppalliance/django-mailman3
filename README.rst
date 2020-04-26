@@ -15,6 +15,8 @@ NEWS
 - Hide "Account Connections" tab in accounts if no social account providers are
   installed. (See !54)
 - Use bold font for form labels (See !82)
+- Update a user's preferred_address in Mailman Core when a user updates their
+  primary address in Profile. (Closes #32)
 
 License
 =======
