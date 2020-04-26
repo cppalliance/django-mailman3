@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
-"PO-Revision-Date: 2019-11-25 13:04+0000\n"
+"PO-Revision-Date: 2020-04-07 20:22+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 3.10-dev\n"
+"X-Generator: Weblate 4.0-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -85,7 +85,7 @@ msgstr "Seçili e-posta adresini gerçekten kaldırmak istiyor musunuz?"
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr "E-posta Adresini Onayla"
+msgstr "E-posta Adresini Doğrula"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -94,11 +94,11 @@ msgid ""
 "address for user %(user_display)s."
 msgstr ""
 "Lütfen <a href=\"mailto:%(email)s\">%(email)s</a> adresinin %(user_display)s "
-"kullanıcısına ait bir e-posta adresi olduğunu onaylayın."
+"kullanıcısına ait bir e-posta adresi olduğunu doğrulayın."
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr "Onayla"
+msgstr "Doğrula"
 
 #: templates/account/email_confirm.html:27
 #, python-format
@@ -106,8 +106,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"Bu e-posta onay bağlantısının süresi doldu veya geçersiz. Lütfen <a href=\""
-"%(email_url)s\">yeni bir e-posta onaylama isteği gönderin</a>."
+"Bu e-posta doğrulama bağlantısının süresi doldu veya geçersiz. Lütfen <a "
+"href=\"%(email_url)s\">yeni bir e-posta doğrulama isteği gönderin</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
