@@ -31,12 +31,13 @@ from django.dispatch import Signal, receiver
 
 from allauth.account.models import EmailAddress
 from allauth.account.signals import (
-    email_confirmed, email_removed, user_logged_in, user_signed_up)
+    email_changed, email_confirmed, email_removed,
+    user_logged_in, user_signed_up)
 from allauth.socialaccount.signals import social_account_added
 
 from django_mailman3.lib.mailman import (
     add_address_to_mailman_user, get_mailman_user, get_subscriptions,
-    sync_email_addresses)
+    sync_email_addresses, update_preferred_address)
 from django_mailman3.models import Profile
 
 
@@ -138,12 +139,14 @@ def on_email_confirmed(sender, **kwargs):
     add_address_to_mailman_user(email_address.user, email_address.email)
 
 
-# from django_mailman3.lib.mailman import get_mailman_client
-# @receiver(email_changed)
-# def on_email_changed(sender, **kwargs):
-#     # Sent when a primary email address has been changed.
-#     user = get_mailman_client().get_user(kwargs['user'].email)
-#     # TODO: propagate to Mailman
+@receiver(email_changed)
+def on_email_changed(sender, **kwargs):
+    # Sent when a primary email address has been changed.
+    user = kwargs.get('user')
+    to_email_address = kwargs.get('to_email_address')
+    if to_email_address is None:
+        return
+    update_preferred_address(user, to_email_address)
 
 
 @receiver(social_account_added)
