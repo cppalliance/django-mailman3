@@ -12,6 +12,9 @@ in your Django server's settings file.
 NEWS
 ====
 
+1.3.3rc1 (2020-05-09)
+---------------------
+
 - Hide "Account Connections" tab in accounts if no social account providers are
   installed. (See !54)
 - Use bold font for form labels (See !82)
