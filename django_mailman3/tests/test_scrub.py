@@ -129,9 +129,9 @@ class TestScrubber(unittest.TestCase):
             scrubber = Scrubber(msg)
             contents = scrubber.scrub()[0]
             self.assertTrue(isinstance(contents, str))
-            self.assertEqual(contents,
-                'This message contains non-ascii characters:\n\xe9 \xe8 \xe7 \xe0 \xee \xef \xeb \u20ac\n'  # noqa
-            )
+            self.assertEqual(
+                contents,
+                'This message contains non-ascii characters:\n\xe9 \xe8 \xe7 \xe0 \xee \xef \xeb \u20ac\n')  # noqa: E501
 
     def test_non_ascii_payload_utf8(self):
         """Scrubber must handle non-ascii messages"""
