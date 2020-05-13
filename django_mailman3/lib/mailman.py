@@ -35,7 +35,7 @@ from mailmanclient import MailmanConnectionError
 logger = logging.getLogger(__name__)
 
 
-def get_mailman_client(api_version='3.0'):
+def get_mailman_client(api_version='3.1'):
     """Return an instance of Mailman Client.
 
     :param api_version: The API version for Mailman Core to use.

@@ -12,7 +12,7 @@ in your Django server's settings file.
 NEWS
 ====
 
-1.3.3rc1 (2020-05-09)
+1.3.3 (2020-05-XX)
 ---------------------
 
 - Hide "Account Connections" tab in accounts if no social account providers are
@@ -20,6 +20,7 @@ NEWS
 - Use bold font for form labels (See !82)
 - Update a user's preferred_address in Mailman Core when a user updates their
   primary address in Profile. (Closes #32)
+- Use Mailman's API version 3.1 to get Hex UUIDs instead of integer.
 
 License
 =======
