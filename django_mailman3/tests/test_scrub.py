@@ -154,6 +154,19 @@ class TestScrubber(unittest.TestCase):
             self.fail(e)  # codec not found
         self.assertTrue(isinstance(contents, str))
 
+    def test_bad_charset_html(self):
+        """Scrubber must handle unknown charsets in html parts too."""
+        with open(get_test_file("bad_charset.txt")) as email_file:
+            msg = message_from_file(email_file, policy=policy.SMTP)
+        scrubber = Scrubber(msg)
+        try:
+            contents = scrubber.scrub()[0]
+        except LookupError as e:
+            import traceback
+            print(traceback.format_exc())
+            self.fail(e)  # codec not found
+        self.assertTrue(isinstance(contents, str))
+
     def test_attachment_4(self):
         with open(get_test_file("attachment-4.txt")) as email_file:
             msg = message_from_file(email_file, policy=policy.SMTP)

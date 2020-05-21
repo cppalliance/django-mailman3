@@ -150,21 +150,28 @@ class Scrubber():
         :type filter_html: Bool
         """
         ctype = part.get_content_type()
-        # Get the charset of the message, if not set, try to guess it's value.
-        # When guess is True, it will never return None.
         charset = self._get_charset(part, default=None, guess=False)
-        payload = part.get_content()
-        # get_content can give either bytes or str, based on whether it was
-        # able to decode the payload. If it is str, return it as it is,
-        # otherwise, try to decode it using the guessed charset.
-        if not isinstance(payload, str):
-            decodedpayload = part.get_payload(decode=True)
+        try:
+            payload = part.get_content()
+        except LookupError as e:
+            payload = "Can't retrieve content: {}".format(e)
+        # get_content will raise KeyError if called on a multipart part.  We
+        # never call _parse_attachment() on multipart parts, so that's OK.
+        # We have seen LookupError if the part's charset is unknown, so catch
+        # that and just return a message.
+        # XXX We could try some known charsets, but for now we just punt.
+        #
+        # get_content will return a string for text/* parts, an
+        # EmailMessage object for message/rfc822 parts and bytes for other
+        # content types.  text/* parts will be CTE decoded and decoded per
+        # their declared charset.  Other parts will be CTE decoded.
+        if ctype == 'message/rfc822':
+            # Return message/rfc822 parts as a string.
+            decodedpayload = str(payload)
         else:
-            # It is also a str, just return it as it is.
+            # It is a str or bytes, just return it as it is.
             decodedpayload = payload
         filename = self._get_attachment_filename(part, ctype)
-        if ctype == 'message/rfc822':
-            decodedpayload = str(decodedpayload)
         return (part_num, filename, ctype, charset, decodedpayload)
 
     def _guess_all_extensions(self, ctype):
