@@ -154,6 +154,19 @@ class TestScrubber(unittest.TestCase):
             self.fail(e)  # codec not found
         self.assertTrue(isinstance(contents, str))
 
+    def test_bad_charset_html(self):
+        """Scrubber must handle unknown charsets in html parts too."""
+        with open(get_test_file("bad_charset.txt")) as email_file:
+            msg = message_from_file(email_file, policy=policy.SMTP)
+        scrubber = Scrubber(msg)
+        try:
+            contents = scrubber.scrub()[0]
+        except LookupError as e:
+            import traceback
+            print(traceback.format_exc())
+            self.fail(e)  # codec not found
+        self.assertTrue(isinstance(contents, str))
+
     def test_attachment_4(self):
         with open(get_test_file("attachment-4.txt")) as email_file:
             msg = message_from_file(email_file, policy=policy.SMTP)
@@ -194,6 +207,19 @@ class TestScrubber(unittest.TestCase):
             'This is a test, HTML message with '
             'accented letters : \xe9 \xe8 \xe7 \xe0.\nAnd an '
             'attachment with an accented filename\n\n\n\n\n\n')
+
+    def test_attachedMmessage_rfc822(self):
+        with open(get_test_file("attached_message.txt")) as email_file:
+            msg = message_from_file(email_file, policy=policy.SMTP)
+        scrubber = Scrubber(msg)
+        contents, attachments = scrubber.scrub()
+        self.assertEqual(len(attachments), 1)
+        self.assertEqual(
+            attachments[0][0:4],
+            (2, "Moderation.eml", "message/rfc822", None))
+        self.assertEqual(len(attachments[0][4]), 462)
+        self.assertEqual(contents, 'See the attached.\n\n\n')
+        self.assertIn('Message-ID: <1d3c4594-1268', attachments[0][4])
 
     def test_attachment_name_badly_encoded(self):
         with open(get_test_file("email-bad-filename.txt"), 'rb') as email_file:

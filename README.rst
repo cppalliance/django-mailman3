@@ -21,6 +21,9 @@ NEWS
 - Update a user's preferred_address in Mailman Core when a user updates their
   primary address in Profile. (Closes #32)
 - Use Mailman's API version 3.1 to get Hex UUIDs instead of integer.
+- Caught a LookupError when scrubbing an attachment with an unknown charset.
+  (Closes #12)
+- Properly scrub the content of message/rfc822 parts.  (Closes #34)
 
 License
 =======
@@ -28,4 +31,4 @@ License
 Django-mailman is licensed under the
 `GPL v3.0 <http://www.gnu.org/licenses/gpl-3.0.html>`_
 
-Copyright (C) 2017-2019 by the Free Software Foundation, Inc.
+Copyright (C) 2017-2020 by the Free Software Foundation, Inc.
