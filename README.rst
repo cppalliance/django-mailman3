@@ -23,6 +23,7 @@ NEWS
 - Use Mailman's API version 3.1 to get Hex UUIDs instead of integer.
 - Caught a LookupError when scrubbing an attachment with an unknown charset.
   (Closes #12)
+- Properly scrub the content of message/rfc822 parts.  (Closes #34)
 
 License
 =======
