@@ -92,14 +92,14 @@ class Scrubber():
             if ctype == 'text/plain':
                 if part.is_attachment():
                     attachments.append(self._parse_attachment(part, part_num))
-                    part.set_content('')
+                    part.set_content('\n')
             elif (ctype == 'text/html' and self.sanitize ==
                   Sanitize.SANITIZE_HTML):
                 attachments.append(self._parse_attachment(part, part_num))
-                part.set_content('')
+                part.set_content('\n')
             elif ctype == 'message/rfc822':
                 attachments.append(self._parse_attachment(part, part_num))
-                part.set_content('')
+                part.set_content('\n')
             elif part.get_payload() and not part.is_multipart():
                 attachments.append(self._parse_attachment(part, part_num))
         return attachments
