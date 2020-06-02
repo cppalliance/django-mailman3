@@ -12,8 +12,8 @@ in your Django server's settings file.
 NEWS
 ====
 
-1.3.3rc2 (2020-05-23)
----------------------
+1.3.3 (2020-06-01)
+------------------
 
 - Hide "Account Connections" tab in accounts if no social account providers are
   installed. (See !54)
