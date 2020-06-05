@@ -14,6 +14,8 @@ NEWS
 
 1.3.4
 -----
+* Fix a bug caused by bumping to Mailman API 3.1 in version 1.3.3 which
+  resulted in 404 errors for some users. (Closes #35)
 
 
 1.3.3 (2020-06-01)

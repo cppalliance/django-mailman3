@@ -23,6 +23,7 @@
 from urllib.error import HTTPError
 
 from django.contrib.auth.models import User
+from django.core.cache import cache
 from django.db import IntegrityError
 
 from allauth.account.models import EmailAddress
@@ -79,6 +80,32 @@ class GetMailmanUserTestCase(TestCase):
     def test_get_user_id(self):
         mm_user_id = mailman.get_mailman_user_id(self.user)
         self.assertEqual(mm_user_id, "dummy")
+
+    def test_bad_cached_user_id(self):
+        # Test that we lookup a user via email if the cached user_id is invalid
+        # and doesn't return a valid user.
+        new_mm_user = Mock()
+        new_mm_user.user_id = "dummy3"
+
+        def side_effect(user_id):
+            if user_id == '4':
+                raise HTTPError(
+                    url='', code=404, msg='No user with id 4',
+                    hdrs=None, fp=None)
+            elif user_id == 'test@example.com':
+                return new_mm_user
+            return None
+
+        self.mailman_client.get_user.side_effect = side_effect
+        # Now, also set integer user_id 4 in the cache.
+        cache.set("User:{0}:mailman_user_id".format(self.user.id), '4', None)
+
+        mm_user = mailman.get_mailman_user(self.user)
+        self.assertIsNotNone(mm_user)
+        self.assertEqual(mm_user, new_mm_user)
+
+        expected = [call('4'), call('test@example.com')]
+        self.mailman_client.get_user.call_args_list == expected
 
 
 class AddUserToMailmanTestCase(TestCase):
