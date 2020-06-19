@@ -21,6 +21,8 @@
 #
 
 
+from unittest.mock import Mock, call, patch
+
 from django.contrib.auth.models import User
 
 from allauth.account.models import EmailAddress
@@ -28,7 +30,6 @@ from allauth.account.signals import (
     email_confirmed, email_removed, user_logged_in, user_signed_up)
 from allauth.socialaccount.models import SocialLogin
 from allauth.socialaccount.signals import social_account_added
-from mock import Mock, call, patch
 
 from django_mailman3.models import Profile
 from django_mailman3.signals import user_subscribed, user_unsubscribed

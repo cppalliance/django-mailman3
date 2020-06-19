@@ -17,10 +17,11 @@
 # Django-Mailman3.  If not, see <http://www.gnu.org/licenses/>.
 
 
+from unittest.mock import Mock, patch
+
 from django.test import RequestFactory, TestCase
 from django.urls import reverse
 
-from mock import Mock, patch
 from openid.consumer import consumer
 
 from django_mailman3.lib.auth.fedora.provider import (

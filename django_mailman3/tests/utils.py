@@ -24,6 +24,7 @@ import os
 import sys
 from contextlib import contextmanager
 from io import StringIO
+from unittest.mock import Mock, patch
 
 from django.contrib.messages.storage.cookie import CookieStorage
 from django.core.cache import cache
@@ -32,7 +33,6 @@ from django.test import TestCase as DjangoTestCase
 from django.utils.timezone import now
 
 import mailmanclient
-from mock import Mock, patch
 
 
 def get_flash_messages(response, empty=True):
