@@ -20,6 +20,7 @@
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
 
+from unittest.mock import Mock, call, patch
 from urllib.error import HTTPError
 
 from django.contrib.auth.models import User
@@ -27,7 +28,6 @@ from django.core.cache import cache
 from django.db import IntegrityError
 
 from allauth.account.models import EmailAddress
-from mock import Mock, call, patch
 
 from django_mailman3.lib import mailman
 from django_mailman3.tests.utils import (

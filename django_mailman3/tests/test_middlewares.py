@@ -19,12 +19,12 @@
 #
 
 
+from unittest.mock import Mock
+
 from django.conf import settings
 from django.core.exceptions import ObjectDoesNotExist
 from django.test import TestCase
 from django.utils import timezone
-
-from mock import Mock
 
 from django_mailman3.middleware import PaginationMiddleware, TimezoneMiddleware
 
