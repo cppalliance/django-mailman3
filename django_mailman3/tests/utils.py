@@ -68,6 +68,8 @@ class FakeMMList:
             "archive_policy": "public",
             "advertised": False,
             }
+        self.owners = []
+        self.moderators = []
 
 
 class FakeMMMember:
