@@ -12,6 +12,11 @@ in your Django server's settings file.
 NEWS
 ====
 
+1.3.5
+-----
+* Add a new method get_django_user to return Django User model. (See !99)
+
+
 1.3.4 (2020-06-05)
 ------------------
 * Fix a bug caused by bumping to Mailman API 3.1 in version 1.3.3 which
