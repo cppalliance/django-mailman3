@@ -28,4 +28,4 @@ class DjangoMailman3Config(AppConfig):
     verbose_name = "Django Mailman 3"
 
     def ready(self):
-        import django_mailman3.signals    # noqa: F401
+        import django_mailman3.signals  # noqa: F401
