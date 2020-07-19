@@ -53,7 +53,7 @@ domain_created = Signal(providing_args=["mail_host"])
 domain_deleted = Signal(providing_args=["mail_host"])
 mailinglist_created = Signal(providing_args=["list_id"])
 mailinglist_modified = Signal(providing_args=["list_id"])
-mailinglist_deleted = Signal(providing_args=["list_id"])
+mailinglist_deleted = Signal(providing_args=["list_id", "delete_archives"])
 user_subscribed = Signal(providing_args=["list_id", "user_email", "role"])
 user_unsubscribed = Signal(providing_args=["list_id", "user_email", "role"])
 
