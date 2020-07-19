@@ -15,6 +15,7 @@ NEWS
 1.3.5
 -----
 * Add a new method get_django_user to return Django User model. (See !99)
+* Add ``delete_archives`` field to ``mailinglist_deleted`` Signal.
 
 
 1.3.4 (2020-06-05)
