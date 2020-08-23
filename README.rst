@@ -16,6 +16,7 @@ NEWS
 -----
 * Add a new method get_django_user to return Django User model. (See !99)
 * Add ``delete_archives`` field to ``mailinglist_deleted`` Signal.
+* Replaced deprecated ``ugettexy_lazy`` with ``gettext_lazy``. (Closes #37)
 
 
 1.3.4 (2020-06-05)
