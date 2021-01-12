@@ -3,84 +3,89 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: \n"
+"PO-Revision-Date: 2020-12-11 04:16+0000\n"
+"Last-Translator: Allan Nordhøy <epost@anotheragency.no>\n"
+"Language-Team: Norwegian Bokmål <https://hosted.weblate.org/projects/"
+"gnu-mailman/django-mailman3/nb_NO/>\n"
+"Language: nb_NO\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.4-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
-msgstr ""
+msgstr "En bruker med det brukernavnet finnes allerede."
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
-msgstr ""
+msgstr "Konto"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Følgende e-postadresser er tilknyttet din konto:"
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "Bekreftet"
 
 #: templates/account/email.html:27
 msgid "Unverified"
-msgstr ""
+msgstr "Ikke bekreftet"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr ""
+msgstr "Hoved-e-post"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr ""
+msgstr "Gjør til hoved-e-post"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Send bekreftelse på ny"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr ""
+msgstr "Fjern"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr ""
+msgstr "Advarsel:"
 
 #: templates/account/email.html:44
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
+"Du har ingen e-postadresse oppsatt. Du bør virkelig legge til en e-"
+"postadresse slik at du kan motta merknader, tilbakestille passordet ditt, "
+"osv."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "Legg til e-postadresse"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
-msgstr ""
+msgstr "Legg til e-post"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
+msgstr "Ønsker du virkelig å fjerne valgt e-postadresse?"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "Bekreft e-postadresse"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -88,10 +93,12 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
+"Bekreft at <a href=\"mailto:%(email)s\">%(email)s</a> er en e-postadresse "
+"for brukeren %(user_display)s."
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr ""
+msgstr "Bekreft"
 
 #: templates/account/email_confirm.html:27
 #, python-format
@@ -99,11 +106,13 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
+"E-postbekreftelseslenken er utløpt eller ugyldig. <a href=\"%(email_url)s\""
+">Send en ny bekreftelsesforespørsel</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
 msgid "Sign In"
-msgstr ""
+msgstr "Logg inn"
 
 #: templates/account/login.html:18
 #, python-format
@@ -113,11 +122,15 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
+"Logg inn med en\n"
+"av dine eksisterende kontoer, eller <a href=\"%(signup_url)s\">registrer "
+"deg</a>\n"
+"med en %(site_name)s-konto og logg inn nedenfor:"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
 msgid "or"
-msgstr ""
+msgstr "eller"
 
 #: templates/account/login.html:37
 #, python-format
@@ -125,19 +138,21 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"Hvis du ikke har opprettet en konto enda, må du\n"
+"<a href=\"%(signup_url)s\">registrere deg</a> først."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Glemt passordet?"
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr ""
+msgstr "Logg ut"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Er du sikker på at du vil logge ut?"
 
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
@@ -145,30 +160,32 @@ msgstr ""
 #: templates/django_mailman3/profile/base.html:20
 #: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
-msgstr ""
+msgstr "Endre passord"
 
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "Passord tilbakestilt"
 
 #: templates/account/password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
+"Glemt passordet ditt? Skriv inn e-postadressen din nedenfor, og du vil få en "
+"e-post som lar deg tilbakestille det."
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
-msgstr ""
+msgstr "Tilbakestill passordet mitt"
 
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr ""
+msgstr "Kontakt oss hvis du har problemer med å tilbakestille passordet ditt."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr ""
+msgstr "Feilaktig symbol"
 
 #: templates/account/password_reset_from_key.html:13
 #, python-format
@@ -177,132 +194,140 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"Passordstilbakestillingslenken var ugyldig, muligens fordi den allerede har "
+"blitt brukt. Forespør en<a href=\"%(passwd_reset_url)s\""
+">passordstilbakestilling</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
-msgstr ""
+msgstr "endre passord"
 
 #: templates/account/password_reset_from_key.html:25
 msgid "Your password is now changed."
-msgstr ""
+msgstr "Passordet ditt er nå endret."
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
-msgstr ""
+msgstr "Sett passord"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
+#, fuzzy
 msgid "Signup"
-msgstr ""
+msgstr "Registrering"
 
 #: templates/account/signup.html:9 templates/account/signup.html:20
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
-msgstr ""
+msgstr "Registrer"
 
 #: templates/account/signup.html:11
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
+"Du kan <a href=\"%(login_url)s\">logge inn</a> hvis du allerede har en konto."
 
 #: templates/django_mailman3/paginator/pagination.html:41
 msgid "Jump to page:"
-msgstr ""
+msgstr "Hopp til side:"
 
 #: templates/django_mailman3/paginator/pagination.html:59
 msgid "Results per page:"
-msgstr ""
+msgstr "Resultater per side:"
 
 #: templates/django_mailman3/paginator/pagination.html:75
 #: templates/django_mailman3/profile/profile.html:66
 msgid "Update"
-msgstr ""
+msgstr "Oppdater"
 
 #: templates/django_mailman3/profile/base.html:5
 msgid "User Profile"
-msgstr ""
+msgstr "Brukerprofil"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "User profile"
-msgstr ""
+msgstr "Brukerprofil"
 
 #: templates/django_mailman3/profile/base.html:12
 msgid "for"
-msgstr ""
+msgstr "for"
 
 #: templates/django_mailman3/profile/base.html:24
 #: templates/django_mailman3/profile/base.html:25
 msgid "E-mail Addresses"
-msgstr ""
+msgstr "E-postadresser"
 
 #: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
-msgstr ""
+msgstr "Kontotilknytninger"
 
 #: templates/django_mailman3/profile/base.html:33
 #: templates/django_mailman3/profile/base.html:34
 #: templates/django_mailman3/profile/delete_profile.html:18
 msgid "Delete Account"
-msgstr ""
+msgstr "Slett konto"
 
 #: templates/django_mailman3/profile/delete_profile.html:13
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
+"Er du sikker på at du vil slette kontoen din? Dette vil fjerne kontoen, "
+"sammen med alle dine abonnementer."
 
 #: templates/django_mailman3/profile/profile.html:18
 #: templates/django_mailman3/profile/profile.html:53
 msgid "Edit on"
-msgstr ""
+msgstr "Rediger på"
 
 #: templates/django_mailman3/profile/profile.html:25
 msgid "Primary email:"
-msgstr ""
+msgstr "Hoved-e-post:"
 
 #: templates/django_mailman3/profile/profile.html:31
 msgid "Other emails:"
-msgstr ""
+msgstr "Andre e-poster:"
 
 #: templates/django_mailman3/profile/profile.html:37
 msgid "(no other email)"
-msgstr ""
+msgstr "(ingen annen e-post)"
 
 #: templates/django_mailman3/profile/profile.html:42
 msgid "Link another address"
-msgstr ""
+msgstr "Tilknytt en annen adresse"
 
 #: templates/django_mailman3/profile/profile.html:49
 msgid "Avatar:"
-msgstr ""
+msgstr "Avatar:"
 
 #: templates/django_mailman3/profile/profile.html:58
 msgid "Joined on:"
-msgstr ""
+msgstr "Tok del den:"
 
 #: templates/django_mailman3/profile/profile.html:67
 msgid "cancel"
-msgstr ""
+msgstr "avbryt"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
-msgstr ""
+msgstr "OpenID-innlogging"
 
 #: templates/socialaccount/connections.html:9
 msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
 msgstr ""
+"Du kan logge inn på kontoen din ved bruk en av følgende tredjepartskontoer:"
 
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
-msgstr ""
+msgstr "Har har ikke noen sosiale nettverkskontoer tilknyttet denne kontoen."
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr ""
+msgstr "Legg til en tredjepartskonto"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
@@ -310,31 +335,33 @@ msgid ""
 "You are about to use your %(provider_name)s account to login to\n"
 "%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
+"Dy er i ferd med å bruke din %(provider_name)s-konto til å logge inn på\n"
+"%(site_name)s. Som et siste steg, fullfør følgende skjema:"
 
 #: templatetags/pagination.py:43
 msgid "Newer"
-msgstr ""
+msgstr "Nyere"
 
 #: templatetags/pagination.py:44
 msgid "Older"
-msgstr ""
+msgstr "Eldre"
 
 #: templatetags/pagination.py:46
 msgid "Previous"
-msgstr ""
+msgstr "Forrige"
 
 #: templatetags/pagination.py:47
 msgid "Next"
-msgstr ""
+msgstr "Neste"
 
 #: views/profile.py:73
 msgid "The profile was successfully updated."
-msgstr ""
+msgstr "Profil oppdatert."
 
 #: views/profile.py:75
 msgid "No change detected."
-msgstr ""
+msgstr "Ingen endring oppdaget."
 
 #: views/profile.py:108
 msgid "Successfully deleted account"
-msgstr ""
+msgstr "Konto slettet."
