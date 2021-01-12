@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:59+0200\n"
-"PO-Revision-Date: 2020-04-07 20:22+0000\n"
+"PO-Revision-Date: 2021-01-02 14:22+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/tr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -67,7 +67,7 @@ msgid ""
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
 "Şu anda ayarlanmış bir e-posta adresiniz yok. Bildirimleri alabilmeniz, "
-"şifrenizi sıfırlayabilmeniz vs. için gerçekten bir e-posta adresi "
+"parolanızı sıfırlayabilmeniz vs. için gerçekten bir e-posta adresi "
 "eklemelisiniz."
 
 #: templates/account/email.html:49
@@ -185,7 +185,7 @@ msgstr ""
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr "Kötü Belirteç"
+msgstr "Hatalı Belirteç"
 
 #: templates/account/password_reset_from_key.html:13
 #, python-format
