@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2019-09-28 11:55+0000\n"
-"Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
+"PO-Revision-Date: 2020-09-24 02:39+0000\n"
+"Last-Translator: Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
 "Language: ja\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 3.9-dev\n"
+"X-Generator: Weblate 4.3-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
-msgstr ""
+msgstr "そのユーザー名のユーザーはすでに存在します。"
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:16
@@ -31,27 +31,27 @@ msgstr "アカウント"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "あなたのアカウントには以下のメールアドレスが関連付けられています。"
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "確認済み"
 
 #: templates/account/email.html:27
 msgid "Unverified"
-msgstr ""
+msgstr "未確認"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr ""
+msgstr "メイン"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr ""
+msgstr "メインに設定"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr ""
+msgstr "確認メールを再送信"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
@@ -59,30 +59,30 @@ msgstr "削除"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr ""
+msgstr "警告:"
 
 #: templates/account/email.html:44
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
-msgstr ""
+msgstr "現在、セットアップ済みのメールアドレスがありません。通知の受信やパスワードのリセットなどを行うには、メールアドレスを追加する必要があります。"
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "メールアドレスを追加"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
-msgstr ""
+msgstr "メールを追加"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
+msgstr "選択したメールアドレスを本当に削除してもよろしいですか？"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "メールアドレスを確認"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -90,10 +90,12 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
+"<a href=\"mailto:%(email)s\">%(email)s</a> がユーザー %(user_display)s "
+"のメールアドレスであることを確認してください。"
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr ""
+msgstr "確認"
 
 #: templates/account/email_confirm.html:27
 #, python-format
@@ -101,6 +103,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
+"このメールの確認リンクは期限切れまたは無効です。<a href=\"%(email_url)s\""
+">新しいメールの確認リクエストを発行</a>してください。"
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -115,6 +119,8 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
+"既存のサードパーティアカウントの1つでサインインしてください。または、%(site_name)s のアカウントの<a href=\""
+"%(signup_url)s\">登録</a>を行い、以下からサインインしてください。"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:67
@@ -126,20 +132,20 @@ msgstr "または"
 msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
-msgstr ""
+msgstr "まだアカウントを作成していない場合は、はじめに<a href=\"%(signup_url)s\">登録</a>を行ってください。"
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
-msgstr ""
+msgstr "パスワードを忘れましたか？"
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr ""
+msgstr "サインアウト"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "本当にサインアウトしますか？"
 
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
@@ -147,30 +153,30 @@ msgstr ""
 #: templates/django_mailman3/profile/base.html:20
 #: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
-msgstr ""
+msgstr "パスワードの変更"
 
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "パスワードのリセット"
 
 #: templates/account/password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
-msgstr ""
+msgstr "パスワードを忘れましたか？ 以下にメールアドレスを入力すると、パスワードをリセットするためのメールを送信します。"
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
-msgstr ""
+msgstr "パスワードをリセットする"
 
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr ""
+msgstr "パスワードのリセットで問題が起きたときは連絡してください。"
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr ""
+msgstr "トークンが正しくありません"
 
 #: templates/account/password_reset_from_key.html:13
 #, python-format
@@ -179,22 +185,24 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"パスワードリセットのリンクが無効です。すでに使用済みである可能性があります。<a href=\"%(passwd_reset_url)s\""
+">新しいパスワードリセット</a>をリクエストしてください。"
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
-msgstr ""
+msgstr "パスワードの変更"
 
 #: templates/account/password_reset_from_key.html:25
 msgid "Your password is now changed."
-msgstr ""
+msgstr "パスワードが変更されました。"
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
-msgstr ""
+msgstr "パスワードの設定"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
 msgid "Signup"
-msgstr ""
+msgstr "登録"
 
 #: templates/account/signup.html:9 templates/account/signup.html:20
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
