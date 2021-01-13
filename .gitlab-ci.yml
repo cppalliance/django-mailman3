@@ -2,11 +2,11 @@ image: ghcr.io/maxking/mailman-ci-runner
 
 head:
   script:
-    - tox -e py36-django111-head
+    - tox -e py36-django30-head
 
 coverage:
   script:
-    - tox -e py36-django111-coverage
+    - tox -e py36-django30-coverage
 
 lint:
   script:
@@ -27,26 +27,6 @@ py38-django-30:
   script:
     - tox -e py38-django30
 
-py39-django-30:
-  script:
-    - tox -e py39-django30
-
-py36-django-20:
-  script:
-    - tox -e py36-django20
-
-py36-django-21:
-  script:
-    - tox -e py36-django21
-
-py36-django-30:
-  script:
-    - tox -e py36-django30
-
-py37-django-20:
-  script:
-    - tox -e py37-django20
-
 py37-django21:
   script:
     - tox -e py37-django21
@@ -58,6 +38,18 @@ py36-django21:
 py36-django22:
   script:
     - tox -e py36-django22
+
+python39-django30:
+  script:
+    - tox -e py39-django30
+
+python39-django31:
+  script:
+    - tox -e py39-django31
+
+python39-django22:
+  script:
+    - tox -e py39-django22
 
 py37-django21:
   script:
