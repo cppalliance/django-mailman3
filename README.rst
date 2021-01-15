@@ -12,8 +12,8 @@ in your Django server's settings file.
 NEWS
 ====
 
-1.3.5
------
+1.3.5 (2021-01-15)
+------------------
 * Add a new method get_django_user to return Django User model. (See !99)
 * Add ``delete_archives`` field to ``mailinglist_deleted`` Signal.
 * Replaced deprecated ``ugettexy_lazy`` with ``gettext_lazy``. (Closes #37)
