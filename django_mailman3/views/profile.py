@@ -84,9 +84,12 @@ def user_profile(request):
 
     # Extract the gravatar_url used by django_gravatar2.  The site
     # administrator could alternatively set this to http://cdn.libravatar.org/
-    gravatar_url = getattr(settings, 'GRAVATAR_URL', 'http://www.gravatar.com')
-    gravatar_shortname = '.'.join(gravatar_url.split('.')[-2:]).strip('/')
-
+    if getattr(settings, 'HYPERKITTY_ENABLE_GRAVATAR', True):
+        gravatar_url = getattr(settings, 'GRAVATAR_URL',
+                               'http://www.gravatar.com')
+        gravatar_shortname = '.'.join(gravatar_url.split('.')[-2:]).strip('/')
+    else:
+        gravatar_url = gravatar_shortname = None
     context = {
         'user_profile': profile,
         'form': form,
