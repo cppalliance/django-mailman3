@@ -1,6 +1,6 @@
 {% extends "django_mailman3/profile/base.html" %}
 {% load i18n %}
-{% load gravatar %}
+{% load d_gravatar %}
 {% load static %}
 {% load bootstrap_tags %}
 
@@ -14,10 +14,12 @@
       <div class="row">
       {% csrf_token %}
         <div class="d-none d-md-block col-md-4 order-2">
+          {% if gravatar_url is not None %}
             <div class="gravatar">
                 <a href="{{ gravatar_url }}">{% gravatar user.email 100 %}</a>
                 <p><a href="{{ gravatar_url }}">{% trans "Edit on" %} {{ gravatar_shortname }}</a></p>
             </div>
+          {% endif %}
         </div>
 
         <div class="col-md-6 offset-md-1">
@@ -47,6 +49,7 @@
                 </div>
             </div>
             <div class="form-group d-md-none row">
+              {% if gravatar_url is not None %}
                 <label class="col-md-3 control-label">{% trans 'Avatar:' %}</label>
                 <div class="col-md-9">
                     <p class="form-control-static">
@@ -54,6 +57,7 @@
                         <a href="{{ gravatar_url }}">{% trans "Edit on" %} {{ gravatar_shortname }}</a>
                     </p>
                 </div>
+             {% endif %}
             </div>
             <div class="form-group row">
                 <label class="col-md-3 control-label">{% trans 'Joined on:' %}</label>
