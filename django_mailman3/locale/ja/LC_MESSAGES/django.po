@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2020-09-24 02:39+0000\n"
-"Last-Translator: Shuuji TAKAHASHI (shuuji3) <shuuji3@gmail.com>\n"
+"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.4.1-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -243,18 +243,18 @@ msgstr ""
 #: templates/django_mailman3/profile/base.html:24
 #: templates/django_mailman3/profile/base.html:25
 msgid "E-mail Addresses"
-msgstr ""
+msgstr "メールアドレス"
 
 #: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
-msgstr ""
+msgstr "アカウント接続"
 
 #: templates/django_mailman3/profile/base.html:33
 #: templates/django_mailman3/profile/base.html:34
 #: templates/django_mailman3/profile/delete_profile.html:18
 msgid "Delete Account"
-msgstr ""
+msgstr "アカウント削除"
 
 #: templates/django_mailman3/profile/delete_profile.html:13
 msgid ""
@@ -285,7 +285,7 @@ msgstr ""
 
 #: templates/django_mailman3/profile/profile.html:49
 msgid "Avatar:"
-msgstr ""
+msgstr "アバター:"
 
 #: templates/django_mailman3/profile/profile.html:58
 msgid "Joined on:"
@@ -297,7 +297,7 @@ msgstr "キャンセル"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
-msgstr ""
+msgstr "OpenID サインイン"
 
 #: templates/socialaccount/connections.html:9
 msgid ""
@@ -331,11 +331,11 @@ msgstr ""
 
 #: templatetags/pagination.py:46
 msgid "Previous"
-msgstr ""
+msgstr "前へ"
 
 #: templatetags/pagination.py:47
 msgid "Next"
-msgstr ""
+msgstr "次へ"
 
 #: views/profile.py:73
 msgid "The profile was successfully updated."
