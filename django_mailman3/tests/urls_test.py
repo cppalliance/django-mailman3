@@ -21,11 +21,13 @@
 This file is the main URL config for a Django website including Django-Mailman.
 """
 
-from django.conf.urls import include, url
+
+from django.conf.urls import include
+from django.urls import re_path
 
 
 urlpatterns = [
-    url(r'', include('django_mailman3.urls')),
-    url(r'^accounts/', include('allauth.urls')),
-    url(r'', include('django.contrib.auth.urls')),
+    re_path(r'', include('django_mailman3.urls')),
+    re_path(r'^accounts/', include('allauth.urls')),
+    re_path(r'', include('django.contrib.auth.urls')),
 ]
