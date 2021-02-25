@@ -20,14 +20,14 @@
 #
 
 
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 
 urlpatterns = [
-    url('^fedora/login/$', views.LoginView.as_view(),
-        name="fedora_login"),
-    url('^fedora/callback/$', views.CallbackView.as_view(),
-        name='fedora_callback'),
+    re_path('^fedora/login/$', views.LoginView.as_view(),
+            name="fedora_login"),
+    re_path('^fedora/callback/$', views.CallbackView.as_view(),
+            name='fedora_callback'),
 ]

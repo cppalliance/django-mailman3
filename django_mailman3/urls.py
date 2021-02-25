@@ -21,13 +21,13 @@
 #
 
 
-from django.conf.urls import url
+from django.urls import re_path
 
 from django_mailman3.views.profile import delete_account, user_profile
 
 
 urlpatterns = [
-    url(r'^user-profile/delete$', delete_account,
-        name='mm_user_account_delete'),
-    url(r'^user-profile/$', user_profile, name='mm_user_profile'),
+    re_path(r'^user-profile/delete$', delete_account,
+            name='mm_user_account_delete'),
+    re_path(r'^user-profile/$', user_profile, name='mm_user_profile'),
     ]
