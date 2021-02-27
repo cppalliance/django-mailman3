@@ -19,8 +19,16 @@
 #
 # Author: Aurelien Bompard <abompard@fedoraproject.org>
 #
+import logging
 
 from django.apps import AppConfig
+
+
+# For a library, adding a NullHandler is a good idea. If the Django project
+# wants, they can configure the handler in LOGGING config for `django_mailman3`
+# logger.
+log = logging.getLogger(__name__)
+log.addHandler(logging.NullHandler())
 
 
 class DjangoMailman3Config(AppConfig):

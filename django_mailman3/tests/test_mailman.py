@@ -26,6 +26,7 @@ from urllib.error import HTTPError
 from django.contrib.auth.models import User
 from django.core.cache import cache
 from django.db import IntegrityError
+from django.test import override_settings
 
 from allauth.account.models import EmailAddress
 
@@ -314,3 +315,17 @@ class UpdatePreferredAddressTestCase(TestCase):
             self.mm_user.preferred_address, 'not-added@example.com')
         self.mm_user.add_address.assert_called_once_with(
             'not-added@example.com', absorb_existing=True)
+
+
+class TestGetMailmanclient(TestCase):
+
+    @override_settings(DEBUG=True)
+    def test_get_mailman_client_hooks(self):
+
+        @mailman.mailmanclient_request_hook
+        def hook(params):
+            return params
+
+        # When not in debug mode, the hooks aren't added to Client.
+        self.assertTrue(hook in mailman.get_request_hooks())
+        self.assertEqual(len(mailman.get_request_hooks()), 1)
