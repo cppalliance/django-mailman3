@@ -34,6 +34,24 @@ from mailmanclient import MailmanConnectionError
 
 logger = logging.getLogger(__name__)
 
+_REQUEST_HOOKS = []
+#: List of hooks that can into request parameter of Mailmanclient.
+
+
+def mailmanclient_request_hook(fn):
+    """Decorator that converts a method into Mailmanclient request hook."""
+    if fn not in _REQUEST_HOOKS:
+        _REQUEST_HOOKS.append(fn)
+    return fn
+
+
+def get_request_hooks():
+    """Get a list of default request hooks.
+
+    Returns default hooks, but only in DEBUG mode.
+    """
+    return _REQUEST_HOOKS
+
 
 def get_mailman_client(api_version='3.1'):
     """Return an instance of Mailman Client.
@@ -46,7 +64,8 @@ def get_mailman_client(api_version='3.1'):
     client = MailmanClient(
         '{}/{}'.format(settings.MAILMAN_REST_API_URL, api_version),
         settings.MAILMAN_REST_API_USER,
-        settings.MAILMAN_REST_API_PASS)
+        settings.MAILMAN_REST_API_PASS,
+        get_request_hooks())
     return client
 
 

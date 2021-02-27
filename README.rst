@@ -12,6 +12,13 @@ in your Django server's settings file.
 NEWS
 ====
 
+1.3.6 (2021-XX-XX)
+------------------
+* ``django_mailman3.lib.mailman.get_mailman_client()`` now supports
+  Mailmanclient request hooks to be added using a new
+  ``@mailmanclient_request_hook`` decorator.
+
+
 1.3.5 (2021-01-15)
 ------------------
 * Add a new method get_django_user to return Django User model. (See !99)
