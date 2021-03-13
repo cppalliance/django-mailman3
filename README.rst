@@ -17,6 +17,7 @@ NEWS
 * ``django_mailman3.lib.mailman.get_mailman_client()`` now supports
   Mailmanclient request hooks to be added using a new
   ``@mailmanclient_request_hook`` decorator.
+* Scrubber now removes null bytes from the scrubbed message body.
 
 
 1.3.5 (2021-01-15)

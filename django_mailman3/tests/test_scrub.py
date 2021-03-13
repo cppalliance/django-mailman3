@@ -257,3 +257,22 @@ class TestScrubber(unittest.TestCase):
                 name = attachment[1]
                 self.assertTrue(isinstance(name, str),
                                 "attachment %r must be unicode" % name)
+
+    def test_msg_with_null_byte(self):
+        with open(get_test_file("null_byte.txt")) as email_file:
+            msg = message_from_file(email_file, policy=policy.SMTP)
+        scrubber = Scrubber(msg)
+        body = scrubber.scrub()[0]
+        self.assertEqual(body, 'The body with a -><- null byte\n')
+
+    def test_multipart_msg_with_null_byte(self):
+        with open(get_test_file("null_byte_multipart.txt")) as email_file:
+            msg = message_from_file(email_file, policy=policy.SMTP)
+        scrubber = Scrubber(msg)
+        body, attachments = scrubber.scrub()
+        self.assertEqual(body, """The body with a -><- null byte
+
+-- \nA sig with a -><- null byte
+""")
+        self.assertEqual(attachments[0][4],
+                         b'The attachment with a ->\x00<- null byte')
