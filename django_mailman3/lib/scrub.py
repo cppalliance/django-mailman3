@@ -248,6 +248,8 @@ class Scrubber():
         next_part_match = NEXT_PART.search(result)
         if next_part_match:
             result = result[0:next_part_match.start(0)]
+        # MAS Remove any null butes from the result.
+        result = re.sub('\x00', '', result)
         return result
 
     def _get_text(self):
@@ -276,6 +278,7 @@ class Scrubber():
                     if not part_content.endswith('\n'):
                         part_content += '\n'
                 text.append(part_content)
-            return '\n'.join(text)
+            # MAS remove any null bytes from the text.
+            return re.sub('\x00', '', '\n'.join(text))
         else:
             return self._get_text_one_part(self.msg)
