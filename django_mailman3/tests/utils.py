@@ -67,6 +67,7 @@ class FakeMMList:
             "created_at": now().isoformat(),
             "archive_policy": "public",
             "advertised": False,
+            "archive_rendering_mode": "text",
             }
         self.owners = []
         self.moderators = []
