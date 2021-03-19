@@ -43,12 +43,14 @@ from django_mailman3.models import Profile
 
 logger = logging.getLogger(__name__)
 
+# Fields for settings.AUTH_USER_MODEL. These are for the default Django's
+# contrib.auth.User model object.
+FIELD_FIRST_NAME = 'first_name'
+FIELD_LAST_NAME = 'last_name'
 
 #
 # Defined signals
 #
-
-
 domain_created = Signal(providing_args=["mail_host"])
 domain_deleted = Signal(providing_args=["mail_host"])
 mailinglist_created = Signal(providing_args=["list_id"])
@@ -57,15 +59,15 @@ mailinglist_deleted = Signal(providing_args=["list_id", "delete_archives"])
 user_subscribed = Signal(providing_args=["list_id", "user_email", "role"])
 user_unsubscribed = Signal(providing_args=["list_id", "user_email", "role"])
 
-
 #
 # Signals listened to
 #
 
 
-# Clear the subscriptions cache when a user is subscribed or unsubscribed.
 @receiver([user_subscribed, user_unsubscribed])
 def on_user_subscribed(sender, **kwargs):
+    """Clear the subscriptions cache when a user is subscribed or unsubscribed.
+    """
     user_email = kwargs["user_email"]
     User = get_user_model()
     try:
@@ -80,20 +82,31 @@ def on_user_subscribed(sender, **kwargs):
     get_subscriptions(user)
 
 
-# Create a Profile when a User is created
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_profile(sender, **kwargs):
+    """Create a Profile when a User is created"""
     user = kwargs["instance"]
     if not Profile.objects.filter(user=user).exists():
         Profile.objects.create(user=user)
-
+    # If the current user's first or last name is not None, then update them in
+    # Core.
+    if user.first_name or user.last_name:
+        mm_user = get_mailman_user(user)
+        new_display_name = "{} {}".format(user.first_name, user.last_name)
+        if mm_user and mm_user.display_name != new_display_name:
+            mm_user.display_name = new_display_name
+            mm_user.save()
+            # Also, update the names in the address objects.
+            for address in mm_user.addresses:
+                address.display_name = new_display_name
+                address.save()
 
 # Allauth
 
 
 @receiver(user_logged_in)
 def on_user_logged_in(sender, **kwargs):
-    # Sent when a user logs in.
+    """Sync a user's address with Core when they logs in."""
     user = kwargs["user"]
     if not Profile.objects.filter(user=user).exists():
         Profile.objects.create(user=user)

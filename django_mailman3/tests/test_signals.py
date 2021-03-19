@@ -125,3 +125,32 @@ class SignalsTestCase(TestCase):
             user_unsubscribed.send(
                 sender="Postorius", user_email="test-2@example.com")
             self.assertEqual(gs.call_count, 2)
+
+    def test_create_profile(self):
+        # Test that when a user is saved, we create a Profile if one doesn't
+        # exist for the User. Also, we update the display name for the user and
+        # their all addresses.
+        mm_user = Mock()
+        mm_user.display_name = None
+        # Mock user has two addresses.
+        mm_user.addresses = [Mock(), Mock()]
+
+        with patch('django_mailman3.signals.get_mailman_user') as gmu:
+            gmu.return_value = mm_user
+            user = User.objects.create_user(
+                'myuser', 'testing@example.com', 'testPass')
+            # Initially, the name of user is null, so we don't update the
+            # display_name in Core.
+            gmu.assert_not_called()
+            # Now lets update the name of the user and see if it is reflected.
+            user.first_name = 'Anne'
+            user.last_name = 'Person'
+            user.save()
+            # Assert that the mock user was fetched and that the display name
+            # was set.
+            gmu.assert_called_once_with(user)
+            mm_user.save.assert_called_once()
+            self.assertEqual(mm_user.display_name, 'Anne Person')
+            for addr in mm_user.addresses:
+                self.assertEqual(addr.display_name, 'Anne Person')
+                addr.save.assert_called_once()
