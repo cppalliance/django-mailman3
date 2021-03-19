@@ -35,6 +35,7 @@ class ProfileViewTestCase(TestCase):
     def setUp(self):
         self.mm_user = Mock()
         self.mm_user.user_id = "dummy"
+        self.mm_user.addresses = [Mock()]
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
         self.user = User.objects.create_user(
             'testuser', 'test@example.com', 'testPass',

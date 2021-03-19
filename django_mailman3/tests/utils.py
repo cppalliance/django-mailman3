@@ -118,6 +118,9 @@ class FakeMMAddress:
     def verify(self):
         self.verified = True
 
+    def save(self):
+        pass
+
 
 class FakeMMAddressList(list):
 

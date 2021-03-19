@@ -42,6 +42,7 @@ class GetMailmanUserTestCase(TestCase):
             'testuser', 'test@example.com', 'testPass')
         self.mm_user = Mock()
         self.mm_user.user_id = "dummy"
+        self.mm_user.addresses = [Mock()]
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 
     def test_get_user(self):
@@ -250,6 +251,7 @@ class GetSubscriptionsTestCase(TestCase):
             user=self.user, email=self.user.email, verified=True)
         self.mm_user = Mock()
         self.mm_user.user_id = "dummy"
+        self.mm_user.addresses = FakeMMAddressList()
         self.mailman_client.get_user.side_effect = lambda e: self.mm_user
 
     def test_get_subscriptions(self):
