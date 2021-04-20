@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2018-04-26 20:05+0200\n"
 "PO-Revision-Date: 2021-04-15 11:27+0000\n"
-"Last-Translator: Michael Lorenzen <ml@m-lorenzen.de>\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/de/>\n"
 "Language: de\n"
@@ -124,7 +124,7 @@ msgstr ""
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
 msgid "Sign In"
-msgstr "Einloggen"
+msgstr "Anmelden"
 
 #: templates/account/login.html:18
 #, python-format

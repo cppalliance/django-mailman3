@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2021-02-20 11:50+0000\n"
-"Last-Translator: Guillermo Hernandez <guillermo@querysoft.es>\n"
+"PO-Revision-Date: 2021-04-15 11:27+0000\n"
+"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/es/>\n"
 "Language: es\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5\n"
+"X-Generator: Weblate 4.6-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -75,7 +75,7 @@ msgstr "Agregar dirección de correo"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
-msgstr "Agregar e-mail"
+msgstr "Añadir un correo electrónico"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
@@ -93,7 +93,7 @@ msgid ""
 "address for user %(user_display)s."
 msgstr ""
 "Por favor confirme que <a href=\"mailto:%(email)s\">%(email)s</a> es una "
-"dirección de e-mail del usuario %(user_display)s."
+"dirección de correo electrónico del usuario %(user_display)s."
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
@@ -105,9 +105,9 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"El link de confirmación de corre electrónico ha expirado o no es válido. Por "
-"favor <a href=\"%(email_url)s\">Solicite una nueva confirmación de correo "
-"electrónico</a>."
+"Este enlace de confirmación de corre electrónico ha expirado o no es válido. "
+"Por favor <a href=\"%(email_url)s\">Solicite una nueva confirmación de "
+"correo electrónico</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
