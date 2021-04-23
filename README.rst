@@ -20,6 +20,7 @@ NEWS
 * Scrubber now removes null bytes from the scrubbed message body.
 * Update the Display Name of a user and it's associated addresses in Mailman
   when the display name is updated in Django.
+* Sync a Django user's email address to Core even if it is not verified.
 
 1.3.5 (2021-01-15)
 ------------------
