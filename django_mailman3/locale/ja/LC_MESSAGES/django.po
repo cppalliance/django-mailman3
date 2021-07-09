@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2019-06-22 10:58+0200\n"
-"PO-Revision-Date: 2021-01-13 21:51+0000\n"
+"PO-Revision-Date: 2021-07-07 15:32+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.4.1-dev\n"
+"X-Generator: Weblate 4.8-dev\n"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -213,15 +213,15 @@ msgstr "登録"
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr ""
+msgstr "既にアカウントを持っていますか？その場合は<a href=\"%(login_url)s\">サインイン</a>してください。"
 
 #: templates/django_mailman3/paginator/pagination.html:41
 msgid "Jump to page:"
-msgstr ""
+msgstr "ページに飛ぶ:"
 
 #: templates/django_mailman3/paginator/pagination.html:59
 msgid "Results per page:"
-msgstr ""
+msgstr "1ページに表示する結果:"
 
 #: templates/django_mailman3/paginator/pagination.html:75
 #: templates/django_mailman3/profile/profile.html:66
@@ -303,16 +303,16 @@ msgstr "OpenID サインイン"
 msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
-msgstr ""
+msgstr "以下のサードパーティのアカウントを使ってサインインすることができます:"
 
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
-msgstr ""
+msgstr "このアカウントに接続されているソーシャルネットワークアカウントは存在しません。"
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr ""
+msgstr "サードパーティアカウントの追加"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
