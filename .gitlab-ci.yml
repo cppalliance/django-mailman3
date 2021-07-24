@@ -1,9 +1,10 @@
-image: ghcr.io/maxking/mailman-ci-runner
+---
 
+image: ghcr.io/maxking/mailman-ci-runner
 
 coverage:
   script:
-    - tox -e py38-django30-coverage
+    - tox -e py39-django32-coverage
 
 lint:
   script:
@@ -12,41 +13,78 @@ lint:
     reports:
       codequality: gl-code-quality-report.json
 
-django-latest:
-  script:
-    - tox -e py38-djangolatest
-
-Python3.6 Django-2.1:
+py36-django22:
   stage: test
   script:
-    - tox -e py36-django21
+    - tox -e py36-django22
 
-Python3.7 Django-2.2:
+py36-django31:
+  stage: test
+  script:
+    - tox -e py36-django31
+
+py36-django32:
+  stage: test
+  script:
+    - tox -e py36-django32
+
+py37-django22:
   stage: test
   script:
     - tox -e py37-django22
 
-Python3.8 Django-3.0:
+py37-django31:
   stage: test
   script:
-    - tox -e py38-django30
+    - tox -e py37-django31
 
-Django-3.0:
+py37-django32:
+  stage: test
+  script:
+    - tox -e py37-django32
+
+py38-django22:
+  stage: test
+  script:
+    - tox -e py38-django22
+
+py38-django31:
+  stage: test
+  script:
+    - tox -e py38-django31
+
+py38-django32:
+  stage: test
+  script:
+    - tox -e py38-django32
+
+py39-django22:
+  stage: test
+  script:
+    - tox -e py39-django22
+
+py39-django30:
   stage: test
   script:
     - tox -e py39-django30
 
-Django-3.1:
+py39-django31:
   stage: test
   script:
     - tox -e py39-django31
 
-Django-3.2:
+py39-django32:
   stage: test
   script:
-    - sed -i 's/<3.2/<3.3/g' setup.py
-    - cat setup.py
     - tox -e py39-django32
+
+py39-djangolatest:
+  stage: test
+  allow_failure: true
+  script:
+    - printf "Remove all django version restriction from setup.py.\n"
+    - sed -E 's/django[<=>,.[:digit:]]+/django/' -i setup.py
+    - tox -e py39-djangolatest
 
 include:
   - template: SAST.gitlab-ci.yml
