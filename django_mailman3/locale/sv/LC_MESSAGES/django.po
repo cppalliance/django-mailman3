@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2019-06-22 10:59+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-05-30 22:30+0000\n"
 "Last-Translator: Jonas B <joonas-b@hotmail.se>\n"
 "Language-Team: Swedish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,12 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.7-dev\n"
 
+#: forms.py:32
+msgid "Username"
+msgstr ""
+
+#: forms.py:33
+msgid "First name"
+msgstr ""
+
+#: forms.py:34
+msgid "Last name"
+msgstr ""
+
+#: forms.py:36
+msgid "Time zone"
+msgstr ""
+
 #: forms.py:43
 msgid "A user with that username already exists."
 msgstr "En användare med det namnet finns redan."
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Konto"
@@ -105,8 +120,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"E-postbekräftelselänken har löpt ut eller är ogiltig. <a href=\"%(email_url)"
-"s\">Skicka en ny bekräftelselänk.</a>."
+"E-postbekräftelselänken har löpt ut eller är ogiltig. <a href=\"%(email_url)s"
+"\">Skicka en ny bekräftelselänk.</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -122,12 +137,12 @@ msgid ""
 "for a %(site_name)s account and sign in below:"
 msgstr ""
 "Logga in med ett\n"
-"av dina befintliga konton. Eller <a href=\"%(signup_url)s\">registrera "
-"dig</a>\n"
+"av dina befintliga konton. Eller <a href=\"%(signup_url)s\">registrera dig</"
+"a>\n"
 "med ett %(site_name)s-konto och logga in här under:"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "eller"
 
@@ -157,7 +172,6 @@ msgstr "Är du säker på att du vill logga ut?"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Ändra lösenord"
 
@@ -225,48 +239,45 @@ msgid ""
 msgstr ""
 "Du kan <a href=\"%(login_url)s\">logga in</a> om du redan har ett konto."
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "Gå till sida:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "Resultat per sida:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Uppdatera"
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "Användarprofil"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "Användarprofil"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr "för"
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "E-postadress"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Kontokopplingar"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "Radera konto"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
@@ -274,36 +285,36 @@ msgstr ""
 "Är du säker på att du vill radera ditt konto? Detta kommer ta bort ditt "
 "konto och alla dina abonnenter."
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr "Redigera på"
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr "Huvud-e-post:"
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr "Andra e-poster:"
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr "(ingen annan e-post)"
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr "Koppla samman en annan adress"
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr "Gick med:"
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "avbryt"
 
@@ -351,14 +362,14 @@ msgstr "Tidigare"
 msgid "Next"
 msgstr "Nästa"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
 msgstr "Profilen uppdaterades."
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
 msgstr "Ingen ändring hittades."
 
-#: views/profile.py:108
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr "Kontot raderades"

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2019-06-22 10:59+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2020-04-16 10:11+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,12 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.0.1-dev\n"
 
+#: forms.py:32
+msgid "Username"
+msgstr ""
+
+#: forms.py:33
+msgid "First name"
+msgstr ""
+
+#: forms.py:34
+msgid "Last name"
+msgstr ""
+
+#: forms.py:36
+msgid "Time zone"
+msgstr ""
+
 #: forms.py:43
 msgid "A user with that username already exists."
 msgstr "Ka tashmë një emër të tillë përdoruesi."
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Llogari"
@@ -122,12 +137,12 @@ msgid ""
 "for a %(site_name)s account and sign in below:"
 msgstr ""
 "Ju lutemi, hyni me një\n"
-"nga llogaritë tuaja ekzistuese prej palësh të treta. Ose, <a href=\""
-"%(signup_url)s\">regjistrohuni</a>\n"
+"nga llogaritë tuaja ekzistuese prej palësh të treta. Ose, <a href="
+"\"%(signup_url)s\">regjistrohuni</a>\n"
 "për një llogari %(site_name)s dhe bëni hyrjen më poshtë:"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "ose"
 
@@ -157,7 +172,6 @@ msgstr "Jeni i sigurt se doni të dilni?"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Ndryshoni Fjalëkalimin"
 
@@ -196,8 +210,8 @@ msgid ""
 "a>."
 msgstr ""
 "Lidhja e ricaktimit të fjalëkalimit qe e pavlefshme, mundet ngaqë qe "
-"përdorur tashmë një herë.  Ju lutemi, kërkoni një <a href=\""
-"%(passwd_reset_url)s\">ricaktim të ri fjalëkalimi</a>."
+"përdorur tashmë një herë.  Ju lutemi, kërkoni një <a href="
+"\"%(passwd_reset_url)s\">ricaktim të ri fjalëkalimi</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -228,48 +242,45 @@ msgstr ""
 "Keni tashmë një llogari? Atëherë, ju lutemi, <a href=\"%(login_url)s\">bëni "
 "hyrjen</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "Shko te faqja e fundit:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "Përfundime për faqe:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Përditësoje"
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "Profil Përdoruesi"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "Profil përdoruesi"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr "për"
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "Adresa Email"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Lidhje Llogarie"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "Fshini Llogari"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
@@ -277,36 +288,36 @@ msgstr ""
 "Jeni i sigurt se doni të fshihet llogaria juaj? Kjo do të heqë llogarinë "
 "tuaj tok me krejt pajtimet tuaja."
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr "Përpunojeni në"
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr "Email parësor:"
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr "Email-e të tjerë:"
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr "(pa email tjetër)"
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr "Lidhni një tjetër adresë"
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr "U bë pjesë më:"
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "anuloje"
 
@@ -325,7 +336,8 @@ msgstr ""
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
-msgstr "Aktualisht s’keni llogari rrjetesh shoqërorë të lidhur me këtë llogari."
+msgstr ""
+"Aktualisht s’keni llogari rrjetesh shoqërorë të lidhur me këtë llogari."
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
@@ -356,14 +368,14 @@ msgstr "I mëparshëm"
 msgid "Next"
 msgstr "Pasues"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
 msgstr "Profili u përditësua me sukses."
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
 msgstr "S’u pikas ndryshim."
 
-#: views/profile.py:108
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr "Llogaria u fshi me sukses"
