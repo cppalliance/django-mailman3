@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2019-06-22 10:58+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-02-12 10:50+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,12 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.5-dev\n"
 
+#: forms.py:32
+msgid "Username"
+msgstr ""
+
+#: forms.py:33
+msgid "First name"
+msgstr ""
+
+#: forms.py:34
+msgid "Last name"
+msgstr ""
+
+#: forms.py:36
+msgid "Time zone"
+msgstr ""
+
 #: forms.py:43
 msgid "A user with that username already exists."
 msgstr "Már létezik egy felhasználó evvel a felhasználónévvel."
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Fiók"
@@ -126,7 +141,7 @@ msgstr ""
 "a %(site_name)s listára és lépjen be lejjebb:"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "vagy"
 
@@ -156,7 +171,6 @@ msgstr "Biztos ki szeretne jelentkezni?"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Jelszó módosítása"
 
@@ -179,7 +193,8 @@ msgstr "Jelszó visszaállítása"
 
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
-msgstr "Keressen meg minket amennyiben nem sikerül visszaállítania a jelszavát."
+msgstr ""
+"Keressen meg minket amennyiben nem sikerül visszaállítania a jelszavát."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
@@ -193,8 +208,8 @@ msgid ""
 "a>."
 msgstr ""
 "A jelszó visszaállító hivatkozás érvénytelen, valószínűleg mert már "
-"használva volt.  Kérjen egy új <a href=\"%(passwd_reset_url)s\""
-">jelszóvisszaállítást</a>."
+"használva volt.  Kérjen egy új <a href=\"%(passwd_reset_url)s"
+"\">jelszóvisszaállítást</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -223,48 +238,45 @@ msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr "Már van fiókja? Akkor <a href=\"%(login_url)s\">jelentkezzen be</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "Ugrás az oldalra:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "Találatok az oldalon:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Frissítés"
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "Felhasználóprofil"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "Felhasználóprofil"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr "a következőnek"
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "E-mail cím"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Fiókkapcsolatok"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "Fiók törlése"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
@@ -272,36 +284,36 @@ msgstr ""
 "Biztos benne, hogy törli a fiókját? Evvel törli a fiókot és az összes "
 "feliratkozását."
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr "Szerkesztés"
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr "Elsődleges e-mail:"
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr "Más e-mail:"
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr "(nincs más e-mail)"
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr "Más cím kapcsolása"
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr "Csatlakozva:"
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "mégsem"
 
@@ -351,14 +363,14 @@ msgstr "Előző"
 msgid "Next"
 msgstr "Következő"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
 msgstr "A profil sikeresen frissítve."
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
 msgstr "Nem találtunk változást."
 
-#: views/profile.py:108
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr "A fiók sikeresen törölve"

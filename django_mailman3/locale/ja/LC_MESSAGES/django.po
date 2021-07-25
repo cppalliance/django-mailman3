@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2019-06-22 10:58+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-07-07 15:32+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,12 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.8-dev\n"
 
+#: forms.py:32
+msgid "Username"
+msgstr ""
+
+#: forms.py:33
+msgid "First name"
+msgstr ""
+
+#: forms.py:34
+msgid "Last name"
+msgstr ""
+
+#: forms.py:36
+msgid "Time zone"
+msgstr ""
+
 #: forms.py:43
 msgid "A user with that username already exists."
 msgstr "そのユーザー名のユーザーはすでに存在します。"
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "アカウント"
@@ -65,7 +80,9 @@ msgstr "警告:"
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
-msgstr "現在、セットアップ済みのメールアドレスがありません。通知の受信やパスワードのリセットなどを行うには、メールアドレスを追加する必要があります。"
+msgstr ""
+"現在、セットアップ済みのメールアドレスがありません。通知の受信やパスワードの"
+"リセットなどを行うには、メールアドレスを追加する必要があります。"
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
@@ -90,8 +107,8 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
-"<a href=\"mailto:%(email)s\">%(email)s</a> がユーザー %(user_display)s "
-"のメールアドレスであることを確認してください。"
+"<a href=\"mailto:%(email)s\">%(email)s</a> がユーザー %(user_display)s のメー"
+"ルアドレスであることを確認してください。"
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
@@ -103,8 +120,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"このメールの確認リンクは期限切れまたは無効です。<a href=\"%(email_url)s\""
-">新しいメールの確認リクエストを発行</a>してください。"
+"このメールの確認リンクは期限切れまたは無効です。<a href=\"%(email_url)s\">新"
+"しいメールの確認リクエストを発行</a>してください。"
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -119,11 +136,12 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
-"既存のサードパーティアカウントの1つでサインインしてください。または、%(site_name)s のアカウントの<a href=\""
-"%(signup_url)s\">登録</a>を行い、以下からサインインしてください。"
+"既存のサードパーティアカウントの1つでサインインしてください。また"
+"は、%(site_name)s のアカウントの<a href=\"%(signup_url)s\">登録</a>を行い、以"
+"下からサインインしてください。"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "または"
 
@@ -132,7 +150,9 @@ msgstr "または"
 msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
-msgstr "まだアカウントを作成していない場合は、はじめに<a href=\"%(signup_url)s\">登録</a>を行ってください。"
+msgstr ""
+"まだアカウントを作成していない場合は、はじめに<a href=\"%(signup_url)s\">登録"
+"</a>を行ってください。"
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
@@ -151,7 +171,6 @@ msgstr "本当にサインアウトしますか？"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "パスワードの変更"
 
@@ -164,7 +183,9 @@ msgstr "パスワードのリセット"
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
-msgstr "パスワードを忘れましたか？ 以下にメールアドレスを入力すると、パスワードをリセットするためのメールを送信します。"
+msgstr ""
+"パスワードを忘れましたか？ 以下にメールアドレスを入力すると、パスワードをリ"
+"セットするためのメールを送信します。"
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
@@ -185,8 +206,9 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
-"パスワードリセットのリンクが無効です。すでに使用済みである可能性があります。<a href=\"%(passwd_reset_url)s\""
-">新しいパスワードリセット</a>をリクエストしてください。"
+"パスワードリセットのリンクが無効です。すでに使用済みである可能性があります。"
+"<a href=\"%(passwd_reset_url)s\">新しいパスワードリセット</a>をリクエストして"
+"ください。"
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -213,85 +235,84 @@ msgstr "登録"
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr "既にアカウントを持っていますか？その場合は<a href=\"%(login_url)s\">サインイン</a>してください。"
+msgstr ""
+"既にアカウントを持っていますか？その場合は<a href=\"%(login_url)s\">サインイ"
+"ン</a>してください。"
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "ページに飛ぶ:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "1ページに表示する結果:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr ""
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "ユーザープロフィール"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "ユーザープロフィール"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr ""
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "メールアドレス"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "アカウント接続"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "アカウント削除"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "アバター:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr ""
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "キャンセル"
 
@@ -308,7 +329,9 @@ msgstr "以下のサードパーティのアカウントを使ってサインイ
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
-msgstr "このアカウントに接続されているソーシャルネットワークアカウントは存在しません。"
+msgstr ""
+"このアカウントに接続されているソーシャルネットワークアカウントは存在しませ"
+"ん。"
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
@@ -337,14 +360,14 @@ msgstr "前へ"
 msgid "Next"
 msgstr "次へ"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
 msgstr ""
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
 msgstr ""
 
-#: views/profile.py:108
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr ""

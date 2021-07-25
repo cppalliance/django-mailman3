@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2019-06-22 10:58+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-04-15 11:27+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,12 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.6-dev\n"
 
+#: forms.py:32
+msgid "Username"
+msgstr ""
+
+#: forms.py:33
+msgid "First name"
+msgstr ""
+
+#: forms.py:34
+msgid "Last name"
+msgstr ""
+
+#: forms.py:36
+msgid "Time zone"
+msgstr ""
+
 #: forms.py:43
 msgid "A user with that username already exists."
 msgstr "Ya existe otro usuario con ese nombre de usuario."
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Cuenta"
@@ -127,7 +142,7 @@ msgstr ""
 "en %(site_name)s y luego ingrese abajo:"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "o"
 
@@ -157,7 +172,6 @@ msgstr "¿Está seguro de que quiere salir?"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Cambiar contraseña"
 
@@ -194,8 +208,8 @@ msgid ""
 "a>."
 msgstr ""
 "El enlace para restablecer la contraseña no era válido, es posible que ya se "
-"hubiera usado.   Por favor,  solicite un<a href=\"%(passwd_reset_url)s\">"
-"nuevo restablecimiento de contraseña</a>."
+"hubiera usado.   Por favor,  solicite un<a href=\"%(passwd_reset_url)s"
+"\">nuevo restablecimiento de contraseña</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -223,51 +237,48 @@ msgstr "Inscribirse"
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
-"¿Ya tiene cuenta? En ese caso, por favor, <a href=\"%(login_url)s\""
-">acceda</a>."
+"¿Ya tiene cuenta? En ese caso, por favor, <a href=\"%(login_url)s\">acceda</"
+"a>."
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "Ir a la página:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "Resultados por página:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Actualizar"
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "Perfil de usuario"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "Perfil de usuario"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr "para"
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "Direcciones de correo-e"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Conexiones de la cuenta"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "Eliminar cuenta"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
@@ -275,36 +286,36 @@ msgstr ""
 "¿Está seguro que quiere eliminar la cuenta? Esto eliminará su cuenta junto "
 "con todas sus suscripciones."
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr "Editar en"
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr "Dirección principal:"
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr "Otras direcciones:"
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr "(no hay otras direcciones)"
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr "Añadir otra dirección"
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr "Suscrito el:"
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "cancelar"
 
@@ -355,14 +366,14 @@ msgstr "Anterior"
 msgid "Next"
 msgstr "Siguiente"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
 msgstr "El perfil se ha actualizado con éxito."
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
 msgstr "No se han detectado cambios."
 
-#: views/profile.py:108
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr "La cuenta se ha eliminado"

@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2019-06-22 10:59+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-01-02 14:22+0000\n"
 "Last-Translator: Oğuz Ersen <oguzersen@protonmail.com>\n"
 "Language-Team: Turkish <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -19,12 +19,27 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.4.1-dev\n"
 
+#: forms.py:32
+msgid "Username"
+msgstr ""
+
+#: forms.py:33
+msgid "First name"
+msgstr ""
+
+#: forms.py:34
+msgid "Last name"
+msgstr ""
+
+#: forms.py:36
+msgid "Time zone"
+msgstr ""
+
 #: forms.py:43
 msgid "A user with that username already exists."
 msgstr "Bu isimde bir kullanıcı zaten var."
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Hesap"
@@ -127,7 +142,7 @@ msgstr ""
 "hesabı için <a href=\"%(signup_url)s\">kaydolun</a> ve aşağıda oturum açın:"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "veya"
 
@@ -157,7 +172,6 @@ msgstr "Oturumu kapatmak istediğinizden emin misiniz?"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Parolayı Değiştir"
 
@@ -226,48 +240,45 @@ msgstr ""
 "Zaten bir hesabınız var mı? Öyleyse lütfen <a href=\"%(login_url)s\">oturum "
 "açın</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "Sayfaya atla:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "Sayfa başına sonuç:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Güncelle"
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "Kullanıcı Profili"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "Kullanıcı profili"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr "için"
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "E-posta Adresleri"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Hesap Bağlantıları"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "Hesabı Sil"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
@@ -275,36 +286,36 @@ msgstr ""
 "Hesabınızı silmek istediğinizden emin misiniz? Bu, hesabınızı tüm "
 "aboneliklerinizle birlikte kaldıracaktır."
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr "Düzenle"
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr "Birincil e-posta:"
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr "Diğer e-postalar:"
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr "(başka e-posta yok)"
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr "Başka bir adres bağla"
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr "Katıldığı tarih:"
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "iptal et"
 
@@ -354,14 +365,14 @@ msgstr "Önceki"
 msgid "Next"
 msgstr "Sonraki"
 
-#: views/profile.py:73
+#: views/profile.py:72
 msgid "The profile was successfully updated."
 msgstr "Profil başarıyla güncellendi."
 
-#: views/profile.py:75
+#: views/profile.py:74
 msgid "No change detected."
 msgstr "Herhangi bir değişiklik tespit edilmedi."
 
-#: views/profile.py:108
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr "Hesap başarıyla silindi"

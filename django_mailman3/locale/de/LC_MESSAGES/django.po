@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2018-04-26 20:05+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-04-15 11:27+0000\n"
 "Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
 "Language-Team: German <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -18,6 +18,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.6-dev\n"
+
+#: forms.py:32
+msgid "Username"
+msgstr ""
 
 #: forms.py:33
 msgid "First name"
@@ -36,7 +40,6 @@ msgid "A user with that username already exists."
 msgstr "Ein Benutzer mit diesem Namen existiert bereits."
 
 #: templates/account/email.html:6
-#: templates/django_mailman3/profile/base.html:16
 #: templates/django_mailman3/profile/base.html:17
 msgid "Account"
 msgstr "Konto"
@@ -135,12 +138,12 @@ msgid ""
 "for a %(site_name)s account and sign in below:"
 msgstr ""
 "Bitte melden Sie sich mit einem\n"
-"Ihrer bestehenden Konten Dritter an. Oder <a href=\"%(signup_url)s\">"
-"registrieren Sie</a>\n"
+"Ihrer bestehenden Konten Dritter an. Oder <a href=\"%(signup_url)s"
+"\">registrieren Sie</a>\n"
 "ein %(site_name)s-Konto und melden sich unten an:"
 
 #: templates/account/login.html:30
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "oder"
 
@@ -170,7 +173,6 @@ msgstr "Bist du dir sicher, dass du dich abmelden willst?"
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
-#: templates/django_mailman3/profile/base.html:21
 msgid "Change Password"
 msgstr "Passwort ändern"
 
@@ -209,8 +211,8 @@ msgid ""
 "a>."
 msgstr ""
 "Der Link zum Zurücksetzen des Passworts war ungültig, möglicherweise weil er "
-"bereits benutzt wurde. Bitte fordere einen neuen <a href=\""
-"%(passwd_reset_url)s\">Link </a> zum Zurücksetzen des Passworts an."
+"bereits benutzt wurde. Bitte fordere einen neuen <a href="
+"\"%(passwd_reset_url)s\">Link </a> zum Zurücksetzen des Passworts an."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -241,48 +243,45 @@ msgstr ""
 "Du hast bereits ein Konto? Dann <a href=\"%(login_url)s\">melde dich bitte "
 "an</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:41
+#: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
 msgstr "Springe zur Seite:"
 
-#: templates/django_mailman3/paginator/pagination.html:59
+#: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
 msgstr "Ergebnisse pro Seite:"
 
-#: templates/django_mailman3/paginator/pagination.html:75
-#: templates/django_mailman3/profile/profile.html:66
+#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Aktualisieren"
 
-#: templates/django_mailman3/profile/base.html:5
+#: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
 msgstr "Benutzerprofil"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
 msgstr "Benutzerprofil"
 
-#: templates/django_mailman3/profile/base.html:12
+#: templates/django_mailman3/profile/base.html:13
 msgid "for"
 msgstr "für"
 
-#: templates/django_mailman3/profile/base.html:24
-#: templates/django_mailman3/profile/base.html:25
+#: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
 msgstr "E-Mail-Adressen"
 
-#: templates/django_mailman3/profile/base.html:29
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
 msgstr "Kontoverbindungen"
 
-#: templates/django_mailman3/profile/base.html:33
-#: templates/django_mailman3/profile/base.html:34
-#: templates/django_mailman3/profile/delete_profile.html:18
+#: templates/django_mailman3/profile/base.html:35
+#: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
 msgstr "Konto löschen"
 
-#: templates/django_mailman3/profile/delete_profile.html:13
+#: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
@@ -290,36 +289,36 @@ msgstr ""
 "Bist du dir sicher, dass du dein Konto löschen möchtest? Dies wird dein "
 "Konto mitsamt all deiner Mitgliedschaften entfernen."
 
-#: templates/django_mailman3/profile/profile.html:18
-#: templates/django_mailman3/profile/profile.html:53
+#: templates/django_mailman3/profile/profile.html:20
+#: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
 msgstr "Bearbeiten auf"
 
-#: templates/django_mailman3/profile/profile.html:25
+#: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
 msgstr "Haupt-E-Mail-Adresse:"
 
-#: templates/django_mailman3/profile/profile.html:31
+#: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
 msgstr "Andere E-Mail-Adressen:"
 
-#: templates/django_mailman3/profile/profile.html:37
+#: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
 msgstr "(keine andere E-Mail-Adresse)"
 
-#: templates/django_mailman3/profile/profile.html:42
+#: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
 msgstr "Eine andere Adresse verknüpfen"
 
-#: templates/django_mailman3/profile/profile.html:49
+#: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
 msgstr "Avatar:"
 
-#: templates/django_mailman3/profile/profile.html:58
+#: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
 msgstr "Beigetreten am:"
 
-#: templates/django_mailman3/profile/profile.html:67
+#: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
 msgstr "abbrechen"
 
@@ -379,6 +378,6 @@ msgstr "Das Profil wurde erfolgreich aktualisiert."
 msgid "No change detected."
 msgstr "Keine Änderung festgestellt."
 
-#: views/profile.py:107
+#: views/profile.py:110
 msgid "Successfully deleted account"
 msgstr "Konto erfolgreich gelöscht"
