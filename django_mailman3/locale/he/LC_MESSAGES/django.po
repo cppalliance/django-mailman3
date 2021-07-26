@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2019-12-26 08:21+0000\n"
+"PO-Revision-Date: 2021-07-25 22:24+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/he/>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 3.10\n"
+"X-Generator: Weblate 4.7.2-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "שם משתמש"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "שם פרטי"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "שם משפחה"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "אזור זמן"
 
 #: forms.py:43
 msgid "A user with that username already exists."
