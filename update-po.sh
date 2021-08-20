@@ -20,7 +20,7 @@ cd django_mailman3/
 
 cat locale/LINGUAS | while read lingua; do
 
-	django-admin makemessages -l "${lingua}"
+	django-admin makemessages --ignore 'tests/*' -l "${lingua}"
 
 done
 cd - 1>/dev/null
