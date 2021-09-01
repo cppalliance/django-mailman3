@@ -12,7 +12,7 @@ in your Django server's settings file.
 NEWS
 ====
 
-1.3.6 (2021-XX-XX)
+1.3.6 (2021-08-31)
 ------------------
 * ``django_mailman3.lib.mailman.get_mailman_client()`` now supports
   Mailmanclient request hooks to be added using a new
@@ -22,6 +22,7 @@ NEWS
   when the display name is updated in Django.
 * Sync a Django user's email address to Core even if it is not verified.
 * Add an allauth account adapter to disable signups.
+* Add support for Django 3.2.
 
 1.3.5 (2021-01-15)
 ------------------
