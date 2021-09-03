@@ -12,6 +12,12 @@ in your Django server's settings file.
 NEWS
 ====
 
+1.3.7 (2021-09-02)
+------------------
+
+* Set the minimum required version of ``mailmanclient`` in setup.py.
+  (Fixes #46)
+
 1.3.6 (2021-08-31)
 ------------------
 * ``django_mailman3.lib.mailman.get_mailman_client()`` now supports
