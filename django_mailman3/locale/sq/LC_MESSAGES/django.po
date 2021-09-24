@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2020-04-16 10:11+0000\n"
+"PO-Revision-Date: 2021-09-21 09:38+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/sq/>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0.1-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "Emër përdoruesi"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Emër"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Mbiemër"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Zonë kohore"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -50,7 +50,7 @@ msgstr "Me llogarinë tuaj janë të përshoqëruara adresat vijuese email:"
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr "E verifikuar"
+msgstr "E paraverifikuar"
 
 #: templates/account/email.html:27
 msgid "Unverified"
