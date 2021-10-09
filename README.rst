@@ -12,6 +12,10 @@ in your Django server's settings file.
 NEWS
 ====
 
+1.3.8 (XXXX-XX-XX)
+------------------
+
+
 1.3.7 (2021-09-02)
 ------------------
 
