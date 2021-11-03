@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
 "PO-Revision-Date: 2021-11-03 14:15+0000\n"
-"Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
+"Last-Translator: Вероника Заглотова <zelenaruta@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ru/>\n"
 "Language: ru\n"
@@ -242,7 +242,7 @@ msgstr "Регистрация"
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr ""
+msgstr "Уже есть аккаунт? Тогда <a href=\"%(login_url)s\">войдите</a>."
 
 #: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
