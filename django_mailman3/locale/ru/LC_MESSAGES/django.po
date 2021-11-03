@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2020-09-03 01:50+0000\n"
-"Last-Translator: Artem <KovalevArtem.ru@gmail.com>\n"
+"PO-Revision-Date: 2021-11-03 14:00+0000\n"
+"Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ru/>\n"
 "Language: ru\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.3-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "Имя пользователя"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Имя"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Фамилия"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Часовая зона"
 
 #: forms.py:43
 msgid "A user with that username already exists."
