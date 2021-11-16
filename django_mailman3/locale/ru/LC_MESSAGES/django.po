@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2021-11-03 17:01+0000\n"
+"PO-Revision-Date: 2021-11-16 18:44+0000\n"
 "Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ru/>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.9.1-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -261,7 +261,7 @@ msgstr "Обновление"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
-msgstr "Профиль Пользователя"
+msgstr "Профиль пользователя"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
