@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2020-03-31 20:13+0000\n"
-"Last-Translator: Jaume Ortolà i Font <jaumeortola@gmail.com>\n"
+"PO-Revision-Date: 2021-11-24 12:52+0000\n"
+"Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ca/>\n"
 "Language: ca\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.0-dev\n"
+"X-Generator: Weblate 4.10-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "Nom d'usuari"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Nom"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Cognom"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Fus horari"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -51,19 +51,19 @@ msgstr ""
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr "Verificat"
+msgstr "Verificada"
 
 #: templates/account/email.html:27
 msgid "Unverified"
-msgstr "No verificat"
+msgstr "Per verificar"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr "Primari"
+msgstr "Primària"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr "Seleccionar com a primari"
+msgstr "Fes-la primària"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
@@ -101,7 +101,7 @@ msgstr "Esteu segur que voleu suprimir l'adreça electrònica seleccionada?"
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr "Confirmi l'adreça electrònica"
+msgstr "Confirmeu l'adreça electrònica"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -129,7 +129,7 @@ msgstr ""
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
 msgid "Sign In"
-msgstr "Registra't"
+msgstr "Inicia la sessió"
 
 #: templates/account/login.html:18
 #, python-format
@@ -155,17 +155,17 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
-"Si encara no ha creat un compte, si us plau\n"
-"<a href=\"%(signup_url)s\"> registra't</a> abans."
+"Si encara no heu creat un compte, si us plau\n"
+"<a href=\"%(signup_url)s\"> registreu-vos</a> abans."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
-msgstr "Ha oblidat la clau?"
+msgstr "Heu oblidat la contrasenya?"
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr "Sortir"
+msgstr "Surt"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
@@ -176,12 +176,12 @@ msgstr "Esteu segur que voleu sortir?"
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
 msgid "Change Password"
-msgstr "Canviar contrasenya"
+msgstr "Canvia la contrasenya"
 
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:11
 msgid "Password Reset"
-msgstr "Restablir contrasenya"
+msgstr "Restableix la contrasenya"
 
 #: templates/account/password_reset.html:16
 msgid ""
@@ -217,15 +217,15 @@ msgstr ""
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
-msgstr "canvia la contrasenya"
+msgstr "canvi de contrasenya"
 
 #: templates/account/password_reset_from_key.html:25
 msgid "Your password is now changed."
-msgstr "S'ha canviat la seva contrasenya."
+msgstr "S'ha canviat la contrasenya."
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
-msgstr "Posar contrasenya"
+msgstr "Establiu una contrasenya"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
 msgid "Signup"
@@ -234,19 +234,19 @@ msgstr "Inscripció"
 #: templates/account/signup.html:9 templates/account/signup.html:20
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
-msgstr "Inscriure's"
+msgstr "Registreu-vos"
 
 #: templates/account/signup.html:11
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
-"Ja té compte? En aquest cas, si us plau, <a href=\"%(login_url)s"
-"\">accedeixi</a>."
+"Ja teniu un compte? Aleshores, <a href=\"%(login_url)s\">inicieu la "
+"sessió</a>."
 
 #: templates/django_mailman3/paginator/pagination.html:43
 msgid "Jump to page:"
-msgstr "Anar a la pàgina:"
+msgstr "Vés a la pàgina:"
 
 #: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
@@ -255,7 +255,7 @@ msgstr "Resultats per pàgina:"
 #: templates/django_mailman3/paginator/pagination.html:77
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
-msgstr "Actualitzar"
+msgstr "Actualitza"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
@@ -280,20 +280,20 @@ msgstr "Connexions del compte"
 #: templates/django_mailman3/profile/base.html:35
 #: templates/django_mailman3/profile/delete_profile.html:17
 msgid "Delete Account"
-msgstr "Esborra el compte"
+msgstr "Suprimeix el compte"
 
 #: templates/django_mailman3/profile/delete_profile.html:12
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
-"Esteu segur que voleu eliminar el compte? Això eliminarà el seu compte "
-"juntament amb totes les seves subscripcions."
+"Esteu segur que voleu suprimir el compte? Això suprimirà el vostre compte "
+"juntament amb totes les subscripcions."
 
 #: templates/django_mailman3/profile/profile.html:20
 #: templates/django_mailman3/profile/profile.html:57
 msgid "Edit on"
-msgstr "Editar a"
+msgstr "Edita en"
 
 #: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
@@ -305,11 +305,11 @@ msgstr "Altres adreces:"
 
 #: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
-msgstr "(No hi han altres direccions)"
+msgstr "(No hi ha altres adreces)"
 
 #: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
-msgstr "Afegir una altra direcció"
+msgstr "Enllaça una altra adreça"
 
 #: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
@@ -321,29 +321,30 @@ msgstr "Subscrit el:"
 
 #: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
-msgstr "cancel·lar"
+msgstr "cancel·la"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
-msgstr "Accedir amb OpenID"
+msgstr "Accés amb OpenID"
 
 #: templates/socialaccount/connections.html:9
 msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
 msgstr ""
-"Podeu accedir al seu compte utilitzant qualsevol de les comptes d'altres "
+"Podeu accedir al vostre compte utilitzant qualsevol dels comptes d'altres "
 "llocs:"
 
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
 msgstr ""
-"En aquest moment no té comptes de xarxes socials connectades a aquest compte."
+"En aquest moment no teniu comptes de cap xarxa social connectats a aquest "
+"compte."
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr "Afegir un compte d'un altre lloc"
+msgstr "Afegeix un compte d'un altre lloc"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
@@ -353,7 +354,7 @@ msgid ""
 msgstr ""
 "Esteu a punt de fer servir el vostre compte de %(provider_name)s per a "
 "accedir a %(site_name)s.\n"
-"Com a últim pas, si us plau, ompliu el formulari següent:"
+"Com a últim pas, ompliu el formulari següent:"
 
 #: templatetags/pagination.py:43
 msgid "Newer"
@@ -381,4 +382,4 @@ msgstr "No s'han detectat canvis."
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr "El compte s'ha esborrat"
+msgstr "El compte s'ha suprimit"
