@@ -154,3 +154,71 @@ class SignalsTestCase(TestCase):
             for addr in mm_user.addresses:
                 self.assertEqual(addr.display_name, 'Anne Person')
                 addr.save.assert_called_once()
+
+    def test_create_profile_one_name(self):
+        # Same as test_create_profile but tests that first_name only has no
+        # trailing space.
+        mm_user = Mock()
+        mm_user.display_name = None
+        # Mock user has two addresses.
+        mm_user.addresses = [Mock(), Mock()]
+
+        with patch('django_mailman3.signals.get_mailman_user') as gmu:
+            gmu.return_value = mm_user
+            user = User.objects.create_user(
+                'myuser', 'testing@example.com', 'testPass')
+            # Initially, the name of user is null, so we don't update the
+            # display_name in Core.
+            gmu.assert_not_called()
+            # Now lets update the name of the user and see if it is reflected.
+            user.first_name = 'Anne'
+            # user.last_name = 'Person'
+            user.save()
+            # Assert that the mock user was fetched and that the display name
+            # was set.
+            gmu.assert_called_once_with(user)
+            mm_user.save.assert_called_once()
+            self.assertEqual(mm_user.display_name, 'Anne')
+            for addr in mm_user.addresses:
+                self.assertEqual(addr.display_name, 'Anne')
+                addr.save.assert_called_once()
+
+    def test_create_profile_one_address_not_updated(self):
+        # Similar to test_create_profile but tests that address.display_name
+        # not updated if not changed.
+        mm_user = Mock()
+        mm_user.display_name = None
+        # Mock user has two addresses.
+        mm_user.addresses = [Mock(), Mock()]
+
+        with patch('django_mailman3.signals.get_mailman_user') as gmu:
+            gmu.return_value = mm_user
+            user = User.objects.create_user(
+                'myuser', 'testing@example.com', 'testPass')
+            # Initially, the name of user is null, so we don't update the
+            # display_name in Core.
+            gmu.assert_not_called()
+            # Now lets update the name of the user and see if it is reflected.
+            user.first_name = 'Anne'
+            user.last_name = 'Person'
+            user.save()
+            # Assert that the mock user was fetched and that the display name
+            # was set.
+            gmu.assert_called_once_with(user)
+            mm_user.save.assert_called_once()
+            self.assertEqual(mm_user.display_name, 'Anne Person')
+            for addr in mm_user.addresses:
+                self.assertEqual(addr.display_name, 'Anne Person')
+                addr.save.assert_called_once()
+            # Set second address display_name to new name.
+            mm_user.addresses[1].display_name = 'Ann Person'
+            # Reset the mocks and update the user.
+            for addr in mm_user.addresses:
+                addr.reset_mock()
+            user.first_name = 'Ann'
+            user.save()
+            self.assertEqual(mm_user.display_name, 'Ann Person')
+            self.assertEqual(mm_user.addresses[0].display_name, 'Ann Person')
+            mm_user.addresses[0].save.assert_called_once()
+            self.assertEqual(mm_user.addresses[1].display_name, 'Ann Person')
+            mm_user.addresses[1].save.assert_not_called()
