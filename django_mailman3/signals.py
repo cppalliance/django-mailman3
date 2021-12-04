@@ -93,13 +93,16 @@ def create_profile(sender, **kwargs):
     if user.first_name or user.last_name:
         mm_user = get_mailman_user(user)
         new_display_name = "{} {}".format(user.first_name, user.last_name)
+        # Remove leading or trailing space if only first_ or last_.
+        new_display_name = new_display_name.strip()
         if mm_user and mm_user.display_name != new_display_name:
             mm_user.display_name = new_display_name
             mm_user.save()
             # Also, update the names in the address objects.
             for address in mm_user.addresses:
-                address.display_name = new_display_name
-                address.save()
+                if address.display_name != new_display_name:
+                    address.display_name = new_display_name
+                    address.save()
 
 # Allauth
 
