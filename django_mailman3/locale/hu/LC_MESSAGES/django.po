@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2021-02-12 10:50+0000\n"
+"PO-Revision-Date: 2021-10-20 00:02+0000\n"
 "Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/hu/>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.5-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "Felhasználónév"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Keresztnév"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Vezetéknév"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Időzóna"
 
 #: forms.py:43
 msgid "A user with that username already exists."

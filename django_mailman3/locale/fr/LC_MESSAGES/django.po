@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2021-04-15 11:27+0000\n"
-"Last-Translator: J. Lavoie <j.lavoie@net-c.ca>\n"
+"PO-Revision-Date: 2021-10-31 22:40+0000\n"
+"Last-Translator: Frédéric Daniel Luc Lehobey <weblate@lehobey.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/fr/>\n"
 "Language: fr\n"
@@ -17,27 +17,27 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.6-dev\n"
+"X-Generator: Weblate 4.9-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "Identifiant"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Prénom"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Nom"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Fuseau horaire"
 
 #: forms.py:43
 msgid "A user with that username already exists."
-msgstr "Un utilisateur de même nom existe déjà."
+msgstr "Un utilisateur existe déjà avec cet identifiant."
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:17
@@ -46,7 +46,7 @@ msgstr "Compte"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr "Les adresses courriel suivantes sont associées à votre compte :"
+msgstr "Les adresses de courriel suivantes sont associées à votre compte :"
 
 #: templates/account/email.html:25
 msgid "Verified"
@@ -70,7 +70,7 @@ msgstr "Ré-envoyer la vérification"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr "Retirer"
+msgstr "Supprimer"
 
 #: templates/account/email.html:44
 msgid "Warning:"
@@ -381,4 +381,4 @@ msgstr "Aucun changement détecté."
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr "La compte a bien été supprimé"
+msgstr "Le compte a bien été supprimé"
