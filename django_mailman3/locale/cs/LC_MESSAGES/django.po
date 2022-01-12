@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2021-12-14 12:58+0000\n"
-"Last-Translator: Jiří Morariu <jirkamorariu@gmail.com>\n"
+"PO-Revision-Date: 2022-01-12 22:42+0000\n"
+"Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
 "Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/cs/>\n"
 "Language: cs\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms.py:32
 msgid "Username"
@@ -112,7 +112,7 @@ msgstr ""
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr "Potvrdit"
+msgstr "S potvrzením"
 
 #: templates/account/email_confirm.html:27
 #, python-format
