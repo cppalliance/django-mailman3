@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2021-10-20 00:02+0000\n"
-"Last-Translator: Peter Donka <peter.donka@gmail.com>\n"
+"PO-Revision-Date: 2021-12-27 21:53+0000\n"
+"Last-Translator: f3rr31 <5920873@disroot.org>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/hu/>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms.py:32
 msgid "Username"
@@ -265,7 +265,7 @@ msgstr "a következőnek"
 
 #: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
-msgstr "E-mail cím"
+msgstr "E-mail-címek"
 
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
