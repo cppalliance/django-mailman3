@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2021-10-16 21:34+0000\n"
+"PO-Revision-Date: 2022-01-02 23:04+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/pt/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #: forms.py:32
 msgid "Username"
@@ -25,15 +25,15 @@ msgstr "Utilizador"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Primeiro nome"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Apelido"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Fuso horário"
 
 #: forms.py:43
 msgid "A user with that username already exists."
