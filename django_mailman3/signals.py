@@ -51,13 +51,13 @@ FIELD_LAST_NAME = 'last_name'
 #
 # Defined signals
 #
-domain_created = Signal(providing_args=["mail_host"])
-domain_deleted = Signal(providing_args=["mail_host"])
-mailinglist_created = Signal(providing_args=["list_id"])
-mailinglist_modified = Signal(providing_args=["list_id"])
-mailinglist_deleted = Signal(providing_args=["list_id", "delete_archives"])
-user_subscribed = Signal(providing_args=["list_id", "user_email", "role"])
-user_unsubscribed = Signal(providing_args=["list_id", "user_email", "role"])
+domain_created = Signal()
+domain_deleted = Signal()
+mailinglist_created = Signal()
+mailinglist_modified = Signal()
+mailinglist_deleted = Signal()
+user_subscribed = Signal()
+user_unsubscribed = Signal()
 
 #
 # Signals listened to
