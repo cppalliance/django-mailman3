@@ -64,7 +64,8 @@ class LoginView(View):
             data['openid'] = self.provider.endpoint
         form = LoginForm(data)
         if form.is_valid():
-            client = _openid_consumer(request)
+            client = _openid_consumer(
+                request, self.provider, self.provider.endpoint)
             try:
                 auth_request = client.begin(form.cleaned_data['openid'])
                 if QUERY_EMAIL:

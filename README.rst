@@ -16,7 +16,7 @@ NEWS
 ------------------
 * Add support for Django 4.0 (Fixes #55)
 * Add support for Python 3.10 (See !153)
-
+* Fix the Fedora socialaccount provider. (Fixes #50)
 
 1.3.7 (2021-09-02)
 ------------------
