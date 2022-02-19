@@ -19,11 +19,11 @@
 
     {% for pagenum in page.paginator.page_range_ellipsis %}
         {% if pagenum == page.number %}
-            <li class="page-item active"><span class="page-link">{{ pagenum }}</span></li>
+            <li class="page-item active"><span class="page-link" aria-label="Current Page, Page {{ pagenum }}" aria-current="true">{{ pagenum }}</span></li>
         {% elif pagenum == "..." %}
             <li class="page-item"><a href="#" class="jump-to-page active page-link">...</a></li>
         {% else %}
-            <li class="page-item"><a href="?{% add_to_query_string page_key pagenum %}" class="page-link">{{ pagenum }}</a></li>
+            <li class="page-item"><a href="?{% add_to_query_string page_key pagenum %}" class="page-link" aria-label="Goto Page {{ pagenum }}">{{ pagenum }}</a></li>
         {% endif %}
     {% endfor %}
 
