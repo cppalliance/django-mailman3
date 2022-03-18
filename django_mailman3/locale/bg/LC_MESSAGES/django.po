@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2022-03-04 22:14+0000\n"
+"PO-Revision-Date: 2022-03-18 07:59+0000\n"
 "Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/bg/>\n"
@@ -214,12 +214,12 @@ msgstr ""
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
 msgid "Signup"
-msgstr ""
+msgstr "Нова регистрация"
 
 #: templates/account/signup.html:9 templates/account/signup.html:20
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
-msgstr ""
+msgstr "Нова регистрация"
 
 #: templates/account/signup.html:11
 #, python-format
@@ -233,12 +233,12 @@ msgstr "Скочи на страница:"
 
 #: templates/django_mailman3/paginator/pagination.html:61
 msgid "Results per page:"
-msgstr ""
+msgstr "Резултати на страница:"
 
 #: templates/django_mailman3/paginator/pagination.html:77
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
-msgstr ""
+msgstr "Обнови"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
@@ -278,11 +278,11 @@ msgstr "Промяна на"
 
 #: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
-msgstr ""
+msgstr "Основен електронен адрес:"
 
 #: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
-msgstr ""
+msgstr "Други електронни адреси:"
 
 #: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
