@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2022-03-18 07:59+0000\n"
+"PO-Revision-Date: 2022-03-20 17:16+0000\n"
 "Last-Translator: dpa-weblate@aegee.org <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/bg/>\n"
@@ -58,19 +58,19 @@ msgstr "Непотвърден"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr ""
+msgstr "Основен"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr ""
+msgstr "Направи основен"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Изпрати потвърждение отново"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr ""
+msgstr "Отстрани"
 
 #: templates/account/email.html:44
 msgid "Warning:"
@@ -81,6 +81,9 @@ msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
+"В момента нямаш настроени електронни адреси. Ти би трябвало да добавиш "
+"електронен адрес за да може да получаваш известия, да си сменяш паролата и "
+"др."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
@@ -158,7 +161,7 @@ msgstr ""
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Сигурен ли си, че искаш да излезеш?"
 
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
@@ -170,7 +173,7 @@ msgstr "Промяна на парола"
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "Смяна на парола"
 
 #: templates/account/password_reset.html:16
 msgid ""
@@ -182,7 +185,7 @@ msgstr ""
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
-msgstr ""
+msgstr "Смени ми паролата"
 
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
@@ -199,6 +202,9 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"Връзката за смяна на паролата е недействителна, вероятно защото вече е била "
+"използвана.  Моля поискай <a href=\"%(passwd_reset_url)s\">нова смяна на "
+"парола</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -210,7 +216,7 @@ msgstr "Паролата е променена."
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
-msgstr ""
+msgstr "Задай парола"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
 msgid "Signup"
@@ -238,7 +244,7 @@ msgstr "Резултати на страница:"
 #: templates/django_mailman3/paginator/pagination.html:77
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
-msgstr "Обнови"
+msgstr "Запази"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
@@ -270,6 +276,8 @@ msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
+"Сигурен ли си, че искаш да изтриеш регистрацията си? Това ще изтрие "
+"регистрацията заедно с абонаментите ти."
 
 #: templates/django_mailman3/profile/profile.html:20
 #: templates/django_mailman3/profile/profile.html:57
