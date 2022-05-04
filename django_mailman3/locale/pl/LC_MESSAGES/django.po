@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2021-07-24 20:21-0700\n"
-"PO-Revision-Date: 2020-05-13 19:20+0000\n"
-"Last-Translator: Szylu <chipolade@gmail.com>\n"
+"PO-Revision-Date: 2022-04-27 17:11+0000\n"
+"Last-Translator: Piotr Frankowski <piotr@ten.net.pl>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/pl/>\n"
 "Language: pl\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
 "%100<12 || n%100>=14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-"X-Generator: Weblate 4.1-dev\n"
+"X-Generator: Weblate 4.12.1-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -114,7 +114,7 @@ msgstr ""
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr "Akceptuj"
+msgstr "Potwierdzone"
 
 #: templates/account/email_confirm.html:27
 #, python-format
