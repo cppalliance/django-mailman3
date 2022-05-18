@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-24 20:21-0700\n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2021-07-07 15:32+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -239,15 +239,15 @@ msgstr ""
 "既にアカウントを持っていますか？その場合は<a href=\"%(login_url)s\">サインイ"
 "ン</a>してください。"
 
-#: templates/django_mailman3/paginator/pagination.html:43
+#: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
 msgstr "ページに飛ぶ:"
 
-#: templates/django_mailman3/paginator/pagination.html:61
+#: templates/django_mailman3/paginator/pagination.html:63
 msgid "Results per page:"
 msgstr "1ページに表示する結果:"
 
-#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr ""
@@ -273,11 +273,11 @@ msgid "Account Connections"
 msgstr "アカウント接続"
 
 #: templates/django_mailman3/profile/base.html:35
-#: templates/django_mailman3/profile/delete_profile.html:17
+#: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
 msgstr "アカウント削除"
 
-#: templates/django_mailman3/profile/delete_profile.html:12
+#: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."

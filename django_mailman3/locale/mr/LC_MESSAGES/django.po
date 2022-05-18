@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-24 20:21-0700\n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2020-01-08 16:21+0000\n"
 "Last-Translator: Prachi Joshi <josprachi@yahoo.com>\n"
 "Language-Team: Marathi <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -223,15 +223,15 @@ msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
 
-#: templates/django_mailman3/paginator/pagination.html:43
+#: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
 msgstr ""
 
-#: templates/django_mailman3/paginator/pagination.html:61
+#: templates/django_mailman3/paginator/pagination.html:63
 msgid "Results per page:"
 msgstr ""
 
-#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr ""
@@ -257,11 +257,11 @@ msgid "Account Connections"
 msgstr ""
 
 #: templates/django_mailman3/profile/base.html:35
-#: templates/django_mailman3/profile/delete_profile.html:17
+#: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
 msgstr ""
 
-#: templates/django_mailman3/profile/delete_profile.html:12
+#: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."

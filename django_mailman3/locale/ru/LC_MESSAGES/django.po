@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2021-07-24 20:21-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2021-12-11 16:52+0000\n"
 "Last-Translator: Ivan Kuznetsov <kia@solvo.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -141,8 +141,8 @@ msgid ""
 "for a %(site_name)s account and sign in below:"
 msgstr ""
 "Пожалуйста, войдите с одной\n"
-"из ваших существующих сторонних учетных записей. Или <a href=\"%(signup_url)"
-"s\">зарегистрируйте</a>\n"
+"из ваших существующих сторонних учетных записей. Или <a href=\"%(signup_url)s"
+"\">зарегистрируйте</a>\n"
 "учетную запись для %(site_name)s и войдите ниже:"
 
 #: templates/account/login.html:30
@@ -214,8 +214,8 @@ msgid ""
 "a>."
 msgstr ""
 "Данная ссылка для восстановления пароля недействительна, возможно, потому "
-"что она уже была использована. Пожалуйста, запросите <a href=\""
-"%(passwd_reset_url)s\">восстановление пароля заново</a>."
+"что она уже была использована. Пожалуйста, запросите <a href="
+"\"%(passwd_reset_url)s\">восстановление пароля заново</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -243,18 +243,18 @@ msgstr "Регистрация"
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
-"У вас уже есть учетная запись? Пожалуйста, <a href=\"%(login_url)s\""
-">войдите</a>."
+"У вас уже есть учетная запись? Пожалуйста, <a href=\"%(login_url)s"
+"\">войдите</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:43
+#: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
 msgstr "Перейти к странице:"
 
-#: templates/django_mailman3/paginator/pagination.html:61
+#: templates/django_mailman3/paginator/pagination.html:63
 msgid "Results per page:"
 msgstr "Результатов на странице:"
 
-#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Обновление"
@@ -280,11 +280,11 @@ msgid "Account Connections"
 msgstr "Подключения Учетной Записи"
 
 #: templates/django_mailman3/profile/base.html:35
-#: templates/django_mailman3/profile/delete_profile.html:17
+#: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
 msgstr "Удалить аккаунт"
 
-#: templates/django_mailman3/profile/delete_profile.html:12
+#: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
