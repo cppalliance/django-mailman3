@@ -6,12 +6,12 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2021-07-24 20:21-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2022-01-12 22:42+0000\n"
 "Last-Translator: Sebastian Machat <sebi@outlook.com>\n"
-"Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/"
-"django-mailman3/cs/>\n"
+"Language-Team: Czech <https://hosted.weblate.org/projects/gnu-mailman/django-"
+"mailman3/cs/>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -120,8 +120,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"Tento odkaz pro potvrzení je neplatný, nebo vypršel. Prosím <a href=\""
-"%(email_url)s\">požádejte o nový potvrzovací e-mail</a>."
+"Tento odkaz pro potvrzení je neplatný, nebo vypršel. Prosím <a href="
+"\"%(email_url)s\">požádejte o nový potvrzovací e-mail</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -137,8 +137,8 @@ msgid ""
 "for a %(site_name)s account and sign in below:"
 msgstr ""
 "Přihlašte se pomocí z jednoho\n"
-"poskytovatelů třetích stran, nebo se <a href=\"%(signup_url)s\""
-">zaregistrujte</a>\n"
+"poskytovatelů třetích stran, nebo se <a href=\"%(signup_url)s"
+"\">zaregistrujte</a>\n"
 "na %(site_name)s a přihlašte se níže:"
 
 #: templates/account/login.html:30
@@ -208,8 +208,8 @@ msgid ""
 "a>."
 msgstr ""
 "Odkaz pro obnovu hesla je neplatný, pravděpodobně byl již jednou použit.  "
-"Prosím požádejte si znovu o <a href=\"%(passwd_reset_url)s\">obnovu "
-"hesla</a>."
+"Prosím požádejte si znovu o <a href=\"%(passwd_reset_url)s\">obnovu hesla</"
+"a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -238,15 +238,15 @@ msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr "Už máte účet? Prosím <a href=\"%(login_url)s\">přihlaste se</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:43
+#: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
 msgstr "Jít na stránku:"
 
-#: templates/django_mailman3/paginator/pagination.html:61
+#: templates/django_mailman3/paginator/pagination.html:63
 msgid "Results per page:"
 msgstr "Výsledky na stránku:"
 
-#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Aktualizace"
@@ -272,11 +272,11 @@ msgid "Account Connections"
 msgstr "Propojení s účtem"
 
 #: templates/django_mailman3/profile/base.html:35
-#: templates/django_mailman3/profile/delete_profile.html:17
+#: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
 msgstr "Smazat účet"
 
-#: templates/django_mailman3/profile/delete_profile.html:12
+#: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."

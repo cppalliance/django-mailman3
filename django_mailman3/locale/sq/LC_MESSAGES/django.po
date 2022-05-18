@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2021-07-24 20:21-0700\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-05-18 17:38+0000\n"
 "PO-Revision-Date: 2021-09-21 09:38+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -242,15 +242,15 @@ msgstr ""
 "Keni tashmë një llogari? Atëherë, ju lutemi, <a href=\"%(login_url)s\">bëni "
 "hyrjen</a>."
 
-#: templates/django_mailman3/paginator/pagination.html:43
+#: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
 msgstr "Shko te faqja e fundit:"
 
-#: templates/django_mailman3/paginator/pagination.html:61
+#: templates/django_mailman3/paginator/pagination.html:63
 msgid "Results per page:"
 msgstr "Përfundime për faqe:"
 
-#: templates/django_mailman3/paginator/pagination.html:77
+#: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Përditësoje"
@@ -276,11 +276,11 @@ msgid "Account Connections"
 msgstr "Lidhje Llogarie"
 
 #: templates/django_mailman3/profile/base.html:35
-#: templates/django_mailman3/profile/delete_profile.html:17
+#: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
 msgstr "Fshini Llogari"
 
-#: templates/django_mailman3/profile/delete_profile.html:12
+#: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
