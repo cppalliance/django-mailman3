@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2021-07-07 15:32+0000\n"
+"PO-Revision-Date: 2022-05-20 17:29+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8-dev\n"
+"X-Generator: Weblate 4.13-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "ユーザー名"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "名前"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "苗字"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "タイムゾーン"
 
 #: forms.py:43
 msgid "A user with that username already exists."
@@ -250,7 +250,7 @@ msgstr "1ページに表示する結果:"
 #: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
@@ -362,12 +362,12 @@ msgstr "次へ"
 
 #: views/profile.py:72
 msgid "The profile was successfully updated."
-msgstr ""
+msgstr "プロフィールは更新されました。"
 
 #: views/profile.py:74
 msgid "No change detected."
-msgstr ""
+msgstr "変更はありません。"
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr ""
+msgstr "アカウントは削除されました"
