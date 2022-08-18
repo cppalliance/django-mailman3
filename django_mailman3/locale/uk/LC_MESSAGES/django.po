@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-08-14 09:22+0000\n"
+"PO-Revision-Date: 2022-08-17 19:21+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/uk/>\n"
@@ -51,11 +51,11 @@ msgstr "Перелік ел.адрес, пов'язаних з Вашим обл
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr "Підтверджено"
+msgstr "Перевірено"
 
 #: templates/account/email.html:27
 msgid "Unverified"
-msgstr "Не підтверджено"
+msgstr "Не перевірено"
 
 #: templates/account/email.html:29
 msgid "Primary"
@@ -67,7 +67,7 @@ msgstr "Зробити основною"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr "Запитати нове підтвердження"
+msgstr "Надіслати нову перевірку"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
@@ -113,7 +113,7 @@ msgstr ""
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr "Підтвердження"
+msgstr "Підтвердити"
 
 #: templates/account/email_confirm.html:27
 #, python-format
@@ -121,8 +121,8 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"Це посилання для підтвердження ел.пошти перевищило термін дії або воно "
-"хибне. Зробіть <a href=\"%(email_url)s\">новий запит для підтвердження</a>."
+"Це посилання для перевірки ел.адреси перевищило термін дії або воно хибне. "
+"Зробіть <a href=\"%(email_url)s\">новий запит на перевірку</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
