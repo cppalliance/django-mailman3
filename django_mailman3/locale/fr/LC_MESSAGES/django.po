@@ -141,7 +141,7 @@ msgstr ""
 "Veuillez vous connecter avec l’un\n"
 "de vos compte d’application tierce existant. Ou, <a href=\"%(signup_url)s"
 "\">créez</a>\n"
-"un %(site_name)s compte et connectez-vous ci-dessous :"
+"un compte sur %(site_name)s et connectez-vous ci-dessous :"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:72
