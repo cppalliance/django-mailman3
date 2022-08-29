@@ -14,7 +14,7 @@ NEWS
 
 1.3.8 (XXXX-XX-XX)
 ------------------
-* Add support for Django 4.0 (Fixes #55)
+* Add support for Django 4.0 and 4.1 (Fixes #55)
 * Add support for Python 3.10 (See !153)
 * Fix the Fedora socialaccount provider. (Fixes #50)
 * Add pagination only when there are more than one pages. (Fixes #58)
