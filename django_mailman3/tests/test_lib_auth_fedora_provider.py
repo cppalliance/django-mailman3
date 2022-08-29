@@ -71,22 +71,6 @@ class TestFedoraProvider(TestCase):
         username = FedoraProvider(req).extract_username(self.complete_response)
         self.assertEqual(username, 'bob')
 
-    def test_extract_commmon_fields(self):
-        # This this test we patch super(FedoraProvider, provider) so that it's
-        # complicated extract_common_fields method is not called. It is too
-        # complicated to try to find the return value and built a mock that
-        # satisfies the request. The only relevant output from this we need is
-        # a dictionary which is then extended by our FedoraProvider class.
-        mock_parent = Mock()
-        mock_parent.extract_common_fields.return_value = {}
-        # To patch the superclass, we patch the super() builtin.
-        with patch('builtins.super') as super_mock:
-            super_mock.return_value = mock_parent
-            req = self.factory.get('/')
-            provider = FedoraProvider(req)
-            res = provider.extract_common_fields(self.complete_response)
-        self.assertEqual(res, {'username': 'bob'})
-
     def test_extract_email_addresses(self):
         with patch('django_mailman3.lib.auth.fedora.provider'
                    '.get_email_from_response') as email_mock:
