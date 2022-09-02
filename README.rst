@@ -18,6 +18,7 @@ NEWS
 * Add support for Python 3.10 (See !153)
 * Fix the Fedora socialaccount provider. (Fixes #50)
 * Add pagination only when there are more than one pages. (Fixes #58)
+* Use Pytest as the test runner.
 
 1.3.7 (2021-09-02)
 ------------------
