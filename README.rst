@@ -12,7 +12,7 @@ in your Django server's settings file.
 NEWS
 ====
 
-1.3.8 (XXXX-XX-XX)
+1.3.8 (2022-10-22)
 ------------------
 * Add support for Django 4.0 and 4.1 (Fixes #55)
 * Add support for Python 3.10 (See !153)
