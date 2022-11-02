@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2021-05-14 08:32+0000\n"
-"Last-Translator: Lens0021 <lorentz0021@gmail.com>\n"
+"PO-Revision-Date: 2022-10-30 14:07+0000\n"
+"Last-Translator: 이정희 <daemul72@gmail.com>\n"
 "Language-Team: Korean <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ko/>\n"
 "Language: ko\n"
@@ -17,23 +17,23 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.14.2-dev\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "사용자이름"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "이름"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "성"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "시간대"
 
 #: forms.py:43
 msgid "A user with that username already exists."
