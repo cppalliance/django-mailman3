@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2021-06-12 00:44+0000\n"
-"Last-Translator: Reza Almanda <rezaalmanda27@gmail.com>\n"
+"PO-Revision-Date: 2022-11-06 17:16+0000\n"
+"Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/id/>\n"
 "Language: id\n"
@@ -17,27 +17,28 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.7-dev\n"
+"X-Generator: Weblate 4.14.2\n"
 
 #: forms.py:32
 msgid "Username"
-msgstr ""
+msgstr "Nama pengguna"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Nama depan"
 
 #: forms.py:34
+#, fuzzy
 msgid "Last name"
-msgstr ""
+msgstr "Nama belakang"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Zona waktu"
 
 #: forms.py:43
 msgid "A user with that username already exists."
-msgstr ""
+msgstr "Pengguna dengan nama pengguna berikut sudah ada."
 
 #: templates/account/email.html:6
 #: templates/django_mailman3/profile/base.html:17
@@ -46,58 +47,62 @@ msgstr "Akun"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr ""
+msgstr "Surel berikut terhubung dengan akun Anda:"
 
 #: templates/account/email.html:25
 msgid "Verified"
-msgstr ""
+msgstr "Terverifikasi"
 
 #: templates/account/email.html:27
+#, fuzzy
 msgid "Unverified"
-msgstr ""
+msgstr "Tidak terverifikasi"
 
 #: templates/account/email.html:29
 msgid "Primary"
-msgstr ""
+msgstr "Utama"
 
 #: templates/account/email.html:35
 msgid "Make Primary"
-msgstr ""
+msgstr "Buat Jadi Utama"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr ""
+msgstr "Kirim Ulang Verifikasi"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr ""
+msgstr "Hapus"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr ""
+msgstr "Peringatan:"
 
 #: templates/account/email.html:44
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
+"Saat ini Anda tidak memiliki surel untuk akun Anda. Anda sebaiknya harus "
+"menambahkan sebuah alamat surel sehingga Anda bisa menerima notifikasi, "
+"mengatur ulang kata sandi, dll."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
-msgstr ""
+msgstr "Tambah Alamat Surel"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
-msgstr ""
+msgstr "Tambah Surel"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr ""
+msgstr "Apakah Anda yakin ingin menghapus surel yang dipilih?"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr ""
+msgstr "Konfirmasi Alamat Surel"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -105,17 +110,21 @@ msgid ""
 "Please confirm that <a href=\"mailto:%(email)s\">%(email)s</a> is an e-mail "
 "address for user %(user_display)s."
 msgstr ""
+"Mohon konfirmasi bahwa <a href=\"mailto:%(email)s\">%(email)s</a> adalah "
+"alamat surel untuk %(user_display)s."
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
-msgstr ""
+msgstr "Konfirmasi"
 
 #: templates/account/email_confirm.html:27
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
+"Tautan konfirmasi surel ini sudah kedaluwarsa atau tidak valid. Mohon <a "
+"href=\"%(email_url)s\">kirim surel permintaan konfirmasi yang baru</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
@@ -134,7 +143,7 @@ msgstr ""
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:72
 msgid "or"
-msgstr ""
+msgstr "atau"
 
 #: templates/account/login.html:37
 #, python-format
@@ -145,46 +154,49 @@ msgstr ""
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
-msgstr ""
+msgstr "Lupa Kata Sandi"
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr ""
+msgstr "Keluar"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr ""
+msgstr "Apakah Anda yakin ingin keluar?"
 
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
 #: templates/account/password_reset_from_key.html:9
 #: templates/django_mailman3/profile/base.html:20
 msgid "Change Password"
-msgstr ""
+msgstr "Ubah Kata Sandi"
 
 #: templates/account/password_reset.html:7
 #: templates/account/password_reset.html:11
 msgid "Password Reset"
-msgstr ""
+msgstr "Atur Ulang Kata Sandi"
 
 #: templates/account/password_reset.html:16
 msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
+"Lupa kata sandi Anda? Masukkan surel Anda di bawah dan kami akan mengirimkan "
+"Anda sebuah surel untuk Anda mengatur ulangn kata sandi tersebut."
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
-msgstr ""
+msgstr "Atur Ulang Kata Sandi Saya"
 
 #: templates/account/password_reset.html:27
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
+"Kontak kami jika Anda memiliki masalah dalam mengatur ulang kata sandi Anda."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
-msgstr ""
+msgstr "Token Buruk"
 
 #: templates/account/password_reset_from_key.html:13
 #, python-format
@@ -193,22 +205,27 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
+"Tautan atur ulang kata sandi tidak valid, kemungkinan karena sudah "
+"digunakan.  Silakan minta kembali <a href=\"%(passwd_reset_url)s\">atur "
+"ulang kata sandi baru</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
-msgstr ""
+msgstr "ubah kata sandi"
 
 #: templates/account/password_reset_from_key.html:25
+#, fuzzy
 msgid "Your password is now changed."
-msgstr ""
+msgstr "Kata sandi Anda sudah diubah."
 
 #: templates/account/password_set.html:12
 msgid "Set Password"
-msgstr ""
+msgstr "Atur Kata Sandi"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
+#, fuzzy
 msgid "Signup"
-msgstr ""
+msgstr "Daftar"
 
 #: templates/account/signup.html:9 templates/account/signup.html:20
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
@@ -220,87 +237,92 @@ msgstr "Daftar"
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
+"Sudah punya akun? Kalau begitu silakan <a href=\"%(login_url)s\">masuk</a>."
 
 #: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
-msgstr ""
+msgstr "Loncat ke halaman:"
 
 #: templates/django_mailman3/paginator/pagination.html:63
 msgid "Results per page:"
-msgstr ""
+msgstr "Hasil per halaman:"
 
 #: templates/django_mailman3/paginator/pagination.html:79
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
-msgstr ""
+msgstr "Perbarui"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
-msgstr ""
+msgstr "Profil Pengguna"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
-msgstr ""
+msgstr "Profil pengguna"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "for"
-msgstr ""
+msgstr "untuk"
 
 #: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
-msgstr ""
+msgstr "Alamat Surel"
 
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
-msgstr ""
+msgstr "Koneksi Akun"
 
 #: templates/django_mailman3/profile/base.html:35
 #: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
-msgstr ""
+msgstr "Hapus Akun"
 
 #: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
+"Apakah Anda yakin ingin menghapus akun Anda? Ini akan menghapus akun Anda "
+"dan seluruh langganan Anda."
 
 #: templates/django_mailman3/profile/profile.html:20
 #: templates/django_mailman3/profile/profile.html:57
+#, fuzzy
 msgid "Edit on"
-msgstr ""
+msgstr "Sunting pada"
 
 #: templates/django_mailman3/profile/profile.html:28
 msgid "Primary email:"
-msgstr ""
+msgstr "Surel utama:"
 
 #: templates/django_mailman3/profile/profile.html:34
 msgid "Other emails:"
-msgstr ""
+msgstr "Surel lain:"
 
 #: templates/django_mailman3/profile/profile.html:40
 msgid "(no other email)"
-msgstr ""
+msgstr "(tidak ada surel lain)"
 
 #: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
-msgstr ""
+msgstr "Tautkan alamat lain"
 
 #: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
-msgstr ""
+msgstr "Avatar:"
 
 #: templates/django_mailman3/profile/profile.html:63
 msgid "Joined on:"
-msgstr ""
+msgstr "Bergabung pada:"
 
 #: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
-msgstr ""
+msgstr "batal"
 
 #: templates/openid/login.html:10
+#, fuzzy
 msgid "OpenID Sign In"
-msgstr ""
+msgstr "Masuk via OpenID"
 
 #: templates/socialaccount/connections.html:9
 msgid ""
@@ -315,7 +337,7 @@ msgstr ""
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr ""
+msgstr "Tambahkan Akun Pihak Ketiga"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
@@ -326,28 +348,28 @@ msgstr ""
 
 #: templatetags/pagination.py:43
 msgid "Newer"
-msgstr ""
+msgstr "Lebih baru"
 
 #: templatetags/pagination.py:44
 msgid "Older"
-msgstr ""
+msgstr "Lebih lama"
 
 #: templatetags/pagination.py:46
 msgid "Previous"
-msgstr ""
+msgstr "Sebelumnya"
 
 #: templatetags/pagination.py:47
 msgid "Next"
-msgstr ""
+msgstr "Selanjutnya"
 
 #: views/profile.py:72
 msgid "The profile was successfully updated."
-msgstr ""
+msgstr "Profil ini berhasil diperbarui."
 
 #: views/profile.py:74
 msgid "No change detected."
-msgstr ""
+msgstr "Tidak ada perubahan yang terdeteksi."
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr ""
+msgstr "Berhasil menghapus akun"
