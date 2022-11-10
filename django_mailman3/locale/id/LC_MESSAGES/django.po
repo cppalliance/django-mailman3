@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2022-05-18 17:38+0000\n"
-"PO-Revision-Date: 2022-11-09 13:49+0000\n"
+"PO-Revision-Date: 2022-11-09 17:30+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/id/>\n"
@@ -132,13 +132,15 @@ msgid "Sign In"
 msgstr "Masuk"
 
 #: templates/account/login.html:18
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "Please sign in with one\n"
 "of your existing third party accounts. Or, <a href=\"%(signup_url)s\">sign "
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
+"Mohon masuk dengan salah satu akun pihak ketiga. Atau <a href=\"%(signup_url)"
+"s\">daftar</a> untuk akun di %(site_name)s dan daftar di bawah:"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:72
@@ -151,10 +153,12 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
+"Jika Anda belum membuat akun, maka silakan <a href=\"%(signup_url)s\""
+">daftar</a> terlebih dahulu."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
-msgstr "Lupa Kata Sandi"
+msgstr "Lupa Kata Sandi?"
 
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
@@ -214,7 +218,6 @@ msgid "change password"
 msgstr "ubah kata sandi"
 
 #: templates/account/password_reset_from_key.html:25
-#, fuzzy
 msgid "Your password is now changed."
 msgstr "Kata sandi Anda sudah diubah."
 
@@ -223,7 +226,6 @@ msgid "Set Password"
 msgstr "Atur Kata Sandi"
 
 #: templates/account/signup.html:6 templates/socialaccount/signup.html:6
-#, fuzzy
 msgid "Signup"
 msgstr "Daftar"
 
@@ -320,7 +322,6 @@ msgid "cancel"
 msgstr "batal"
 
 #: templates/openid/login.html:10
-#, fuzzy
 msgid "OpenID Sign In"
 msgstr "Masuk via OpenID"
 
@@ -329,11 +330,14 @@ msgid ""
 "You can sign in to your account using any of the following third party "
 "accounts:"
 msgstr ""
+"Anda bisa masuk ke akun Anda menggunakan salah satu dari akun pihak ketiga "
+"berikut:"
 
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
 msgstr ""
+"Anda saat ini tidak memiliki akun jejaring sosial yang terhubung ke akun ini."
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
@@ -345,6 +349,8 @@ msgid ""
 "You are about to use your %(provider_name)s account to login to\n"
 "%(site_name)s. As a final step, please complete the following form:"
 msgstr ""
+"Anda akan menggunakan akun %(provider_name)s untuk masuk ke %(site_name)s. "
+"Sebagai langkah terakhir, mohon selesaikan formulir di bawah ini:"
 
 #: templatetags/pagination.py:43
 msgid "Newer"
