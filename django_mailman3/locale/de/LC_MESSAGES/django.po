@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018-2022 by the Free Software Foundation, Inc.
+# Copyright (C) 2018-2023 by the Free Software Foundation, Inc.
 # This file is distributed under the same license as the PACKAGE package.
 # Daniel <dsd.trash@gmail.com>, 2018
 #
