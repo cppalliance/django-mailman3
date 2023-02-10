@@ -49,7 +49,7 @@ py310-djangolatest:
   script:
     - printf "Remove all django version restriction from setup.py.\n"
     - sed -E 's/django[<=>,.[:digit:]]+/django/' -i setup.py
-    - tox -e py39-djangolatest
+    - tox -e py310-djangolatest
 
 include:
   - template: SAST.gitlab-ci.yml
