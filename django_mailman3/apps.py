@@ -34,6 +34,7 @@ log.addHandler(logging.NullHandler())
 class DjangoMailman3Config(AppConfig):
     name = 'django_mailman3'
     verbose_name = "Django Mailman 3"
+    default_auto_field = 'django.db.models.AutoField'
 
     def ready(self):
         import django_mailman3.signals  # noqa: F401
