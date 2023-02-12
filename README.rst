@@ -12,6 +12,10 @@ in your Django server's settings file.
 NEWS
 ====
 
+1.3.10
+------
+* Migrate to Bootstrap 5. (See !188)
+
 1.3.9 (2022-01-04)
 ------------------
 

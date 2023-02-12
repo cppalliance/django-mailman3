@@ -11,8 +11,8 @@
 {% endfor %}
 
 {% for field in form.visible_fields %}
-    <div class="form-group {% if field.errors %}has-errors{% endif %} row">
-        <label class="control-label font-weight-bold col-{{ fold_class }}-{{ size_left }}"
+    <div class="{% if field.errors %}has-errors{% endif %} mb-3 row">
+        <label class="control-label fw-bold col-{{ fold_class }}-{{ size_left }}"
                for="{{ field.id_for_label }}">
             {% if not field|fieldtype_is:'CheckboxInput' %}
                 {{ field.label }}
@@ -40,6 +40,8 @@
                         </label>
                     </div>
                 {% endfor %}
+            {% elif field|fieldtype_is:'Select' %}
+                {{ field|add_form_select }}
             {% else %}
                 {{ field|add_form_control }}
             {% endif %}
@@ -56,7 +58,7 @@
     </div>
 {% endfor %}
 {% if button %}
-    <div class="form-group">
+    <div class="">
         <div class="offset-{{ fold_class }}-{{ size_left }} col-{{ fold_class }}-{{ size_right }}">
             <button class="btn btn-primary" type="submit">{% trans button %}</button>
         </div>
