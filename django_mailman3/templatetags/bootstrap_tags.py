@@ -28,6 +28,11 @@ def add_form_control(field):
     return field.as_widget(attrs={'class': 'form-control'})
 
 
+@register.filter(name='add_form_select')
+def add_form_select(field):
+    return field.as_widget(attrs={'class': 'form-select'})
+
+
 @register.filter('fieldtype')
 def fieldtype(field):
     """
