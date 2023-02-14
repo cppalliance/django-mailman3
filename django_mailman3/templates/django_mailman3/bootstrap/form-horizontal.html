@@ -20,12 +20,15 @@
         </label>
         <div class="col-{{ fold_class }}-{{ size_right }}">
             {% if field|fieldtype_is:'RadioSelect' %}
+                <fieldset>
+                <legend class="visually-hidden">{{field.label}}</legend>
                 {% for choice in field %}
                     <label class="radio-inline">
-                        {{ choice.tag }}
+                        <span class="radio">{{ choice.tag }}</span>
                         {{ choice.choice_label }}
                     </label>
                 {% endfor %}
+                </fieldset>
             {% elif field|fieldtype_is:'CheckboxInput' %}
                 <div class="checkbox">
                     <label>
@@ -33,6 +36,8 @@
                     </label>
                 </div>
             {% elif field|fieldtype_is:'CheckboxSelectMultiple' %}
+            <fieldset>
+                <legend class="visually-hidden">{{field.label}}</legend>
                 {% for choice in field %}
                     <div class="checkbox">
                         <label>
@@ -40,6 +45,7 @@
                         </label>
                     </div>
                 {% endfor %}
+            </fieldset>
             {% elif field|fieldtype_is:'Select' %}
                 {{ field|add_form_select }}
             {% else %}
