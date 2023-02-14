@@ -15,6 +15,8 @@ NEWS
 1.3.10
 ------
 * Migrate to Bootstrap 5. (See !188)
+* A11y: Group related radio buttons and Multi-CheckboxInput. (Fixes #65)
+
 
 1.3.9 (2022-01-04)
 ------------------
