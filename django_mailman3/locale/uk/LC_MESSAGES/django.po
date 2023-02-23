@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-21 23:45+0000\n"
 "PO-Revision-Date: 2022-08-17 19:21+0000\n"
 "Last-Translator: Sergii Horichenko <m@sgg.im>\n"
 "Language-Team: Ukrainian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -82,8 +82,8 @@ msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
-"Наразі у Вас не налаштовані ел.адреси. Було б добре додати хоча б одну "
-"ел.адресу для отримання спощень, листів для скидання паролю та ін."
+"Наразі у Вас не налаштовані ел.адреси. Було б добре додати хоча б одну ел."
+"адресу для отримання спощень, листів для скидання паролю та ін."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
@@ -238,18 +238,18 @@ msgstr "Зареєструватися"
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
-"Вже маєте обліковий запис? В такому разі <a href=\"%(login_url)s\""
-">увійдіть</a>."
+"Вже маєте обліковий запис? В такому разі <a href=\"%(login_url)s\">увійдіть</"
+"a>."
 
 #: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
 msgstr "Перейти до сторінки:"
 
-#: templates/django_mailman3/paginator/pagination.html:63
+#: templates/django_mailman3/paginator/pagination.html:64
 msgid "Results per page:"
 msgstr "Результатів на сторінку:"
 
-#: templates/django_mailman3/paginator/pagination.html:79
+#: templates/django_mailman3/paginator/pagination.html:80
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Оновити"

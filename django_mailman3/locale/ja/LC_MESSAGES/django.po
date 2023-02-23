@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-21 23:45+0000\n"
 "PO-Revision-Date: 2022-05-20 17:29+0000\n"
 "Last-Translator: Shohei Kusakata <shohei@kusakata.com>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -243,11 +243,11 @@ msgstr ""
 msgid "Jump to page:"
 msgstr "ページに飛ぶ:"
 
-#: templates/django_mailman3/paginator/pagination.html:63
+#: templates/django_mailman3/paginator/pagination.html:64
 msgid "Results per page:"
 msgstr "1ページに表示する結果:"
 
-#: templates/django_mailman3/paginator/pagination.html:79
+#: templates/django_mailman3/paginator/pagination.html:80
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "更新"
