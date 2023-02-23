@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"POT-Creation-Date: 2023-02-21 23:45+0000\n"
 "PO-Revision-Date: 2022-01-02 23:04+0000\n"
 "Last-Translator: ssantos <ssantos@web.de>\n"
 "Language-Team: Portuguese <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -245,11 +245,11 @@ msgstr "já tem uma conta? Então <a href=\"%(login_url)s\">entre</a>."
 msgid "Jump to page:"
 msgstr "Pular para página:"
 
-#: templates/django_mailman3/paginator/pagination.html:63
+#: templates/django_mailman3/paginator/pagination.html:64
 msgid "Results per page:"
 msgstr "Resultados por página:"
 
-#: templates/django_mailman3/paginator/pagination.html:79
+#: templates/django_mailman3/paginator/pagination.html:80
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Atualizar"

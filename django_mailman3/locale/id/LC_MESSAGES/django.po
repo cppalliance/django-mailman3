@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
-"POT-Creation-Date: 2022-05-18 17:38+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-02-21 23:45+0000\n"
 "PO-Revision-Date: 2022-11-09 17:30+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -139,8 +139,9 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
-"Mohon masuk dengan salah satu akun pihak ketiga. Atau <a href=\"%(signup_url)"
-"s\">daftar</a> untuk akun di %(site_name)s dan daftar di bawah:"
+"Mohon masuk dengan salah satu akun pihak ketiga. Atau <a href="
+"\"%(signup_url)s\">daftar</a> untuk akun di %(site_name)s dan daftar di "
+"bawah:"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:72
@@ -153,8 +154,8 @@ msgid ""
 "If you have not created an account yet, then please\n"
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
-"Jika Anda belum membuat akun, maka silakan <a href=\"%(signup_url)s\""
-">daftar</a> terlebih dahulu."
+"Jika Anda belum membuat akun, maka silakan <a href=\"%(signup_url)s"
+"\">daftar</a> terlebih dahulu."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
@@ -245,11 +246,11 @@ msgstr ""
 msgid "Jump to page:"
 msgstr "Loncat ke halaman:"
 
-#: templates/django_mailman3/paginator/pagination.html:63
+#: templates/django_mailman3/paginator/pagination.html:64
 msgid "Results per page:"
 msgstr "Hasil per halaman:"
 
-#: templates/django_mailman3/paginator/pagination.html:79
+#: templates/django_mailman3/paginator/pagination.html:80
 #: templates/django_mailman3/profile/profile.html:71
 msgid "Update"
 msgstr "Perbarui"
