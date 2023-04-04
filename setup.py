@@ -38,7 +38,7 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        'django>=3.2,<4.2',
+        'django>=3.2,<4.3',
         'mailmanclient>=3.3.3',
         'django-allauth',
         'django-gravatar2 >= 1.0.6',

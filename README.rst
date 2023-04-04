@@ -14,6 +14,7 @@ NEWS
 
 1.3.10
 ------
+* Add support for Django 4.2
 * Migrate to Bootstrap 5. (See !188)
 * A11y: Group related radio buttons and Multi-CheckboxInput. (Fixes #65)
 
