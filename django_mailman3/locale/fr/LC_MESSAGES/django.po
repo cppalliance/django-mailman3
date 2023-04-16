@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-02-21 23:45+0000\n"
-"PO-Revision-Date: 2021-10-31 22:40+0000\n"
+"PO-Revision-Date: 2023-04-16 13:47+0000\n"
 "Last-Translator: Frédéric Daniel Luc Lehobey <weblate@lehobey.net>\n"
 "Language-Team: French <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.9-dev\n"
+"X-Generator: Weblate 4.17-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -46,7 +46,7 @@ msgstr "Compte"
 
 #: templates/account/email.html:11
 msgid "The following e-mail addresses are associated with your account:"
-msgstr "Les adresses de courriel suivantes sont associées à votre compte :"
+msgstr "Les adresses de courriel suivantes sont associées à votre compte :"
 
 #: templates/account/email.html:25
 msgid "Verified"
@@ -66,7 +66,7 @@ msgstr "Rendre principal"
 
 #: templates/account/email.html:36
 msgid "Re-send Verification"
-msgstr "Ré-envoyer la vérification"
+msgstr "Envoyer à nouveau la vérification"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
@@ -74,20 +74,20 @@ msgstr "Supprimer"
 
 #: templates/account/email.html:44
 msgid "Warning:"
-msgstr "Avertissement :"
+msgstr "Attention :"
 
 #: templates/account/email.html:44
 msgid ""
 "You currently do not have any e-mail address set up. You should really add "
 "an e-mail address so you can receive notifications, reset your password, etc."
 msgstr ""
-"Vous n'avez actuellement aucune adresse courriel de configurée. Vous devriez "
-"vraiment ajouter une adresse courriel afin de recevoir les notifications, "
-"réinitialiser votre mot de passe, etc."
+"Vous n'avez actuellement aucune adresse de courriel de configurée. Vous "
+"devriez vraiment ajouter une adresse de courriel afin de recevoir les "
+"notifications, réinitialiser votre mot de passe, etc."
 
 #: templates/account/email.html:49
 msgid "Add E-mail Address"
-msgstr "Ajouter une adresse courriel"
+msgstr "Ajouter une adresse de courriel"
 
 #: templates/account/email.html:55
 msgid "Add E-mail"
@@ -95,12 +95,12 @@ msgstr "Ajouter un courriel"
 
 #: templates/account/email.html:66
 msgid "Do you really want to remove the selected e-mail address?"
-msgstr "Voulez vous vraiment supprimer l'adresse courriel sélectionnée ?"
+msgstr "Voulez vous vraiment supprimer l'adresse de courriel sélectionnée ?"
 
 #: templates/account/email_confirm.html:6
 #: templates/account/email_confirm.html:10
 msgid "Confirm E-mail Address"
-msgstr "Confirmer l'adresse courriel"
+msgstr "Confirmer l'adresse de courriel"
 
 #: templates/account/email_confirm.html:16
 #, python-format
@@ -109,7 +109,7 @@ msgid ""
 "address for user %(user_display)s."
 msgstr ""
 "Veuillez confirmer que <a href=\"mailto:%(email)s\">%(email)s</a> est une "
-"adresse courriel pour l'utilisateur %(user_display)s."
+"adresse de courriel pour l'utilisateur %(user_display)s."
 
 #: templates/account/email_confirm.html:20
 msgid "Confirm"
@@ -121,14 +121,14 @@ msgid ""
 "This e-mail confirmation link expired or is invalid. Please <a href="
 "\"%(email_url)s\">issue a new e-mail confirmation request</a>."
 msgstr ""
-"Ce lien de confirmation d’adresse courriel est invalide ou a expiré. "
-"Veuillez <a href=\"%(email_url)s\"> émettre une nouvelle requête de "
-"confirmation d’adresse courriel</a>."
+"Ce lien de confirmation de courriel a expiré ou est incorrect. Veuillez <a "
+"href=\"%(email_url)s\"> émettre une nouvelle requête de confirmation de "
+"courriel</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:48
 msgid "Sign In"
-msgstr "Se connecter"
+msgstr "S'identifier"
 
 #: templates/account/login.html:18
 #, python-format
@@ -138,10 +138,9 @@ msgid ""
 "up</a>\n"
 "for a %(site_name)s account and sign in below:"
 msgstr ""
-"Veuillez vous connecter avec l’un\n"
-"de vos compte d’application tierce existant. Ou, <a href=\"%(signup_url)s"
-"\">créez</a>\n"
-"un compte sur %(site_name)s et connectez-vous ci-dessous :"
+"Veuillez vous identifier avec l’un\n"
+"de vos comptes tiers existant. Ou <a href=\"%(signup_url)s\">créez</a>\n"
+"un compte sur %(site_name)s et identifiez-vous ci-dessous :"
 
 #: templates/account/login.html:30
 #: templates/django_mailman3/profile/profile.html:72
@@ -155,7 +154,7 @@ msgid ""
 "<a href=\"%(signup_url)s\">sign up</a> first."
 msgstr ""
 "Si vous n'avez pas encore de compte, veuillez\n"
-"<a href=\"%(signup_url)s\">vous inscrire</a> d'abord."
+"<a href=\"%(signup_url)s\">en créer un</a> d'abord."
 
 #: templates/account/login.html:50
 msgid "Forgot Password?"
@@ -168,7 +167,7 @@ msgstr "Se déconnecter"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
-msgstr "Êtes-vous sûr·e de vouloir vous déconnecter ?"
+msgstr "Êtes-vous sûr de vouloir vous déconnecter ?"
 
 #: templates/account/password_change.html:12
 #: templates/account/password_reset_from_key.html:6
@@ -187,8 +186,8 @@ msgid ""
 "Forgotten your password? Enter your e-mail address below, and we'll send you "
 "an e-mail allowing you to reset it."
 msgstr ""
-"Mot de passe oublié ? Entrez votre adresse courriel ci-dessous et nous vous "
-"enverrons un courriel afin de le réinitialiser."
+"Mot de passe oublié ? Indiquez votre adresse de courriel ci-dessous et nous "
+"vous enverrons un courriel afin de le réinitialiser."
 
 #: templates/account/password_reset.html:22
 msgid "Reset My Password"
@@ -198,7 +197,7 @@ msgstr "Réinitialiser mon mot de passe"
 msgid "Please contact us if you have any trouble resetting your password."
 msgstr ""
 "Veuillez nous contacter si vous avez des difficultés pour réinitialiser "
-"notre mot de passe."
+"votre mot de passe."
 
 #: templates/account/password_reset_from_key.html:9
 msgid "Bad Token"
@@ -211,9 +210,9 @@ msgid ""
 "used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</"
 "a>."
 msgstr ""
-"Le lien de réinitialisation du mot de passe n’était pas valide, peut-être "
-"parce qu’il a déjà été utilisé.  Veuillez demander une <a href="
-"\"%(passwd_reset_url)s\">nouvelle réinitialisation du mot de passe</a>."
+"Le lien de réinitialisation du mot de passe était incorrect, peut-être parce "
+"qu’il a déjà été utilisé.  Veuillez demander une <a href=\""
+"%(passwd_reset_url)s\">nouvelle réinitialisation du mot de passe</a>."
 
 #: templates/account/password_reset_from_key.html:20
 msgid "change password"
@@ -242,7 +241,7 @@ msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
 msgstr ""
 "Vous avez déjà un compte ? Alors veuillez <a href=\"%(login_url)s\">vous "
-"connecter </a>."
+"identifier</a>."
 
 #: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
@@ -259,11 +258,11 @@ msgstr "Mettre à jour"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
-msgstr "Profil d'utilisateur"
+msgstr "Profil utilisateur"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
-msgstr "Profil d'utilisateur"
+msgstr "Profil utilisateur"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "for"
@@ -271,7 +270,7 @@ msgstr "pour"
 
 #: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
-msgstr "Adresses courriel"
+msgstr "Adresses de courriel"
 
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
@@ -287,8 +286,8 @@ msgid ""
 "Are you sure you want to delete your account? This will remove your account "
 "along with all your subscriptions."
 msgstr ""
-"Êtes-vous sûr·e de vouloir supprimer votre compte ? Ceci supprimera votre "
-"compte et tous ses abonnements."
+"Êtes-vous sûr de vouloir supprimer votre compte ? Ceci supprimera votre "
+"compte et tous vos abonnements."
 
 #: templates/django_mailman3/profile/profile.html:20
 #: templates/django_mailman3/profile/profile.html:57
@@ -325,7 +324,7 @@ msgstr "annuler"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
-msgstr "Connexion avec OpenID"
+msgstr "Identification avec OpenID"
 
 #: templates/socialaccount/connections.html:9
 msgid ""
@@ -343,7 +342,7 @@ msgstr ""
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr "Ajouter un compte d'application tierce"
+msgstr "Ajouter un compte tiers"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
@@ -353,7 +352,7 @@ msgid ""
 msgstr ""
 "Vous êtes sur le point d'utiliser votre compte %(provider_name)s pour vous "
 "connecter à\n"
-"%(site_name)s. Pour finir, veuillez compléter le formulaire suivant :"
+"%(site_name)s. Pour terminer, veuillez remplir le formulaire suivant :"
 
 #: templatetags/pagination.py:43
 msgid "Newer"
