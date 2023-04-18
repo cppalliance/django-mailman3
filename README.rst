@@ -16,6 +16,7 @@ NEWS
 ------
 * Migrate to Bootstrap 5. (See !188)
 * A11y: Group related radio buttons and Multi-CheckboxInput. (Fixes #65)
+* Add social account buttons to the Sign Up page. (Fixes #67)
 
 
 1.3.9 (2022-01-04)
