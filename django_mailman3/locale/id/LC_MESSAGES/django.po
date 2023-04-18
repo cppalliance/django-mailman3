@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:45+0000\n"
+"POT-Creation-Date: 2023-04-18 16:07+0000\n"
 "PO-Revision-Date: 2022-11-09 17:30+0000\n"
 "Last-Translator: Neko Nekowazarashi <kodra@nekoweb.my.id>\n"
 "Language-Team: Indonesian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -127,7 +127,7 @@ msgstr ""
 "href=\"%(email_url)s\">kirim surel permintaan konfirmasi yang baru</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:48
+#: templates/account/login.html:59
 msgid "Sign In"
 msgstr "Masuk"
 
@@ -143,12 +143,35 @@ msgstr ""
 "\"%(signup_url)s\">daftar</a> untuk akun di %(site_name)s dan daftar di "
 "bawah:"
 
-#: templates/account/login.html:30
+#: templates/account/login.html:22
+#, python-format
+msgid ""
+"If you have a %(site_name)s\n"
+"account that you haven't yet linked to any third party account, you must "
+"log\n"
+"in with your account's email address and password and once logged in, you "
+"can\n"
+"link your third party accounts via the Account Connections tab on your user\n"
+"profile page."
+msgstr ""
+
+#: templates/account/login.html:28 templates/account/signup.html:17
+#, python-format
+msgid ""
+"If you do not have a\n"
+"%(site_name)s account but you have one of these third party accounts, you "
+"can\n"
+"create a %(site_name)s account and sign-in in one step by clicking the "
+"third\n"
+"party account."
+msgstr ""
+
+#: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "atau"
 
-#: templates/account/login.html:37
+#: templates/account/login.html:48
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -157,7 +180,7 @@ msgstr ""
 "Jika Anda belum membuat akun, maka silakan <a href=\"%(signup_url)s"
 "\">daftar</a> terlebih dahulu."
 
-#: templates/account/login.html:50
+#: templates/account/login.html:61
 msgid "Forgot Password?"
 msgstr "Lupa Kata Sandi?"
 
@@ -226,16 +249,16 @@ msgstr "Kata sandi Anda sudah diubah."
 msgid "Set Password"
 msgstr "Atur Kata Sandi"
 
-#: templates/account/signup.html:6 templates/socialaccount/signup.html:6
+#: templates/account/signup.html:7 templates/socialaccount/signup.html:6
 msgid "Signup"
 msgstr "Daftar"
 
-#: templates/account/signup.html:9 templates/account/signup.html:20
+#: templates/account/signup.html:10 templates/account/signup.html:42
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
 msgstr "Daftar"
 
-#: templates/account/signup.html:11
+#: templates/account/signup.html:12
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
