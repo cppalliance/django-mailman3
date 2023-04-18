@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:45+0000\n"
+"POT-Creation-Date: 2023-04-18 16:07+0000\n"
 "PO-Revision-Date: 2023-01-05 13:50+0000\n"
 "Last-Translator: Besnik Bleta <besnik@programeshqip.org>\n"
 "Language-Team: Albanian <https://hosted.weblate.org/projects/gnu-mailman/"
@@ -124,7 +124,7 @@ msgstr ""
 "href=\"%(email_url)s\">bëni një kërkesë të re ripohimi email-i</a>."
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:48
+#: templates/account/login.html:59
 msgid "Sign In"
 msgstr "Hyni"
 
@@ -141,12 +141,35 @@ msgstr ""
 "\"%(signup_url)s\">regjistrohuni</a>\n"
 "për një llogari %(site_name)s dhe bëni hyrjen më poshtë:"
 
-#: templates/account/login.html:30
+#: templates/account/login.html:22
+#, python-format
+msgid ""
+"If you have a %(site_name)s\n"
+"account that you haven't yet linked to any third party account, you must "
+"log\n"
+"in with your account's email address and password and once logged in, you "
+"can\n"
+"link your third party accounts via the Account Connections tab on your user\n"
+"profile page."
+msgstr ""
+
+#: templates/account/login.html:28 templates/account/signup.html:17
+#, python-format
+msgid ""
+"If you do not have a\n"
+"%(site_name)s account but you have one of these third party accounts, you "
+"can\n"
+"create a %(site_name)s account and sign-in in one step by clicking the "
+"third\n"
+"party account."
+msgstr ""
+
+#: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "ose"
 
-#: templates/account/login.html:37
+#: templates/account/login.html:48
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -155,7 +178,7 @@ msgstr ""
 "Nëse s’keni krijuar ende një llogari, atëherë, ju lutemi,\n"
 "së pari <a href=\"%(signup_url)s\">regjistrohuni</a>."
 
-#: templates/account/login.html:50
+#: templates/account/login.html:61
 msgid "Forgot Password?"
 msgstr "Harruat Fjalëkalimin?"
 
@@ -225,16 +248,16 @@ msgstr "Fjalëkalimi juaj u ndryshua."
 msgid "Set Password"
 msgstr "Caktoni Fjalëkalim"
 
-#: templates/account/signup.html:6 templates/socialaccount/signup.html:6
+#: templates/account/signup.html:7 templates/socialaccount/signup.html:6
 msgid "Signup"
 msgstr "Regjistrim"
 
-#: templates/account/signup.html:9 templates/account/signup.html:20
+#: templates/account/signup.html:10 templates/account/signup.html:42
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
 msgstr "Regjistrohuni"
 
-#: templates/account/signup.html:11
+#: templates/account/signup.html:12
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."

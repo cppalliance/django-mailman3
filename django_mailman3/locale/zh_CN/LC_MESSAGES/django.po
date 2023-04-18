@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-02-21 23:45+0000\n"
+"POT-Creation-Date: 2023-04-18 16:07+0000\n"
 "PO-Revision-Date: 2021-11-19 16:51+0000\n"
 "Last-Translator: Dingzhong Chen <wsxy162@gmail.com>\n"
 "Language-Team: Chinese (Simplified) <https://hosted.weblate.org/projects/gnu-"
@@ -124,7 +124,7 @@ msgstr ""
 "子邮件确认信</a>。"
 
 #: templates/account/login.html:7 templates/account/login.html:11
-#: templates/account/login.html:48
+#: templates/account/login.html:59
 msgid "Sign In"
 msgstr "登入"
 
@@ -140,12 +140,35 @@ msgstr ""
 "第三方账户之一登录。或者, <a href=\"%(signup_url)s\">注册</a>\n"
 "一个 %(site_name)s 帐户再登录："
 
-#: templates/account/login.html:30
+#: templates/account/login.html:22
+#, python-format
+msgid ""
+"If you have a %(site_name)s\n"
+"account that you haven't yet linked to any third party account, you must "
+"log\n"
+"in with your account's email address and password and once logged in, you "
+"can\n"
+"link your third party accounts via the Account Connections tab on your user\n"
+"profile page."
+msgstr ""
+
+#: templates/account/login.html:28 templates/account/signup.html:17
+#, python-format
+msgid ""
+"If you do not have a\n"
+"%(site_name)s account but you have one of these third party accounts, you "
+"can\n"
+"create a %(site_name)s account and sign-in in one step by clicking the "
+"third\n"
+"party account."
+msgstr ""
+
+#: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
 msgid "or"
 msgstr "或"
 
-#: templates/account/login.html:37
+#: templates/account/login.html:48
 #, python-format
 msgid ""
 "If you have not created an account yet, then please\n"
@@ -154,7 +177,7 @@ msgstr ""
 "如果你尚未创建一个帐户，那么请先\n"
 "<a href=\"%(signup_url)s\">注册</a>。"
 
-#: templates/account/login.html:50
+#: templates/account/login.html:61
 msgid "Forgot Password?"
 msgstr "忘记密码？"
 
@@ -221,16 +244,16 @@ msgstr "你的密码已经更改。"
 msgid "Set Password"
 msgstr "设定密码"
 
-#: templates/account/signup.html:6 templates/socialaccount/signup.html:6
+#: templates/account/signup.html:7 templates/socialaccount/signup.html:6
 msgid "Signup"
 msgstr "注册"
 
-#: templates/account/signup.html:9 templates/account/signup.html:20
+#: templates/account/signup.html:10 templates/account/signup.html:42
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
 msgid "Sign Up"
 msgstr "注册"
 
-#: templates/account/signup.html:11
+#: templates/account/signup.html:12
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
