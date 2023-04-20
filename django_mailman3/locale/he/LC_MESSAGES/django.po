@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2021-09-01 08:34+0000\n"
+"PO-Revision-Date: 2023-04-20 13:49+0000\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: Hebrew <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/he/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Weblate 4.8.1-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -151,6 +151,11 @@ msgid ""
 "link your third party accounts via the Account Connections tab on your user\n"
 "profile page."
 msgstr ""
+"אם יש לך חשבון באתר %(site_name)s\n"
+"שטרם קישרת לחשבון צד־שלישי כלשהו, יש להיכנס\n"
+"עם כתובת הדוא״ל והסיסמה של החשבון שלך ולאחר הכניסה, אפשר\n"
+"לקשר את חשבונות הצד־השלישי שלך דרך הלשונית חיבורי חשבון בעמוד הפרופיל\n"
+"של המשתמש שלך."
 
 #: templates/account/login.html:28 templates/account/signup.html:17
 #, python-format
@@ -162,6 +167,10 @@ msgid ""
 "third\n"
 "party account."
 msgstr ""
+"אם אין לך חשבון באתר %(site_name)s\n"
+"אך יש לך אחד מחשבונות הצד־השלישי האלה, ניתן\n"
+"ליצור חשבון באתר %(site_name)s ולהיכנס אליו בשלב אחד בלחיצה על חשבון\n"
+"הצד־השלישי."
 
 #: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
