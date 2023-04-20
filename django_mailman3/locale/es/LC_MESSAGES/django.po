@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2023-02-25 13:39+0000\n"
+"PO-Revision-Date: 2023-04-20 13:49+0000\n"
 "Last-Translator: gallegonovato <fran-carro@hotmail.es>\n"
 "Language-Team: Spanish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/es/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.16-dev\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -152,6 +152,14 @@ msgid ""
 "link your third party accounts via the Account Connections tab on your user\n"
 "profile page."
 msgstr ""
+"Si tiene una %(site_name)s\n"
+"cuenta que aún no has vinculado a ninguna cuenta de terceros, debes iniciar "
+"sesión\n"
+"con la dirección de correo electrónico y la contraseña de tu cuenta y, una "
+"vez que hayas iniciado sesión, puedes\n"
+"vincular tus cuentas de terceros a través de la pestaña Conexiones de cuenta "
+"en tu página del perfil\n"
+"del usuario."
 
 #: templates/account/login.html:28 templates/account/signup.html:17
 #, python-format
@@ -163,6 +171,11 @@ msgid ""
 "third\n"
 "party account."
 msgstr ""
+"Si no tienes una cuenta de\n"
+"%(site_name)s pero tienes una de estas cuentas de terceros, puedes\n"
+"crear una cuenta %(site_name)s e iniciar sesión en un solo paso haciendo "
+"clic en la cuenta de\n"
+"terceros."
 
 #: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
@@ -185,7 +198,7 @@ msgstr "¿Olvidó su clave?"
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr "Salir"
+msgstr "Cerrar sesión"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
