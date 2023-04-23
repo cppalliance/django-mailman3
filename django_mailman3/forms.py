@@ -30,8 +30,8 @@ from django_mailman3.models import TIMEZONES
 
 class UserProfileForm(forms.Form):
     username = forms.CharField(required=True, label=_('Username'))
-    first_name = forms.CharField(label=_('First name'))
-    last_name = forms.CharField(label=_('Last name'))
+    first_name = forms.CharField(label=_('First name'), required=False)
+    last_name = forms.CharField(label=_('Last name'), required=False)
     timezone = forms.ChoiceField(
         label=_('Time zone'), choices=TIMEZONES)
 

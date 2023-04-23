@@ -45,11 +45,11 @@ class TestUserProfileForm(TestCase):
         data = dict(username='alice',
                     first_name='Alice',
                     last_name='',
-                    timezone='UTC')
+                    timezone='')
         form = UserProfileForm(data=data)
         self.assertFalse(form.is_valid())
         self.assertTrue('This field is required.' in str(form.errors))
-        self.assertTrue('last_name' in str(form.errors))
+        self.assertTrue('timezone' in str(form.errors))
 
     def test_form_cleans_username(self):
         data = dict(username='bob',
@@ -60,3 +60,9 @@ class TestUserProfileForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertTrue('A user with that username already exists.'
                         in str(form.errors))
+
+    def test_name_not_required(self):
+        data = dict(username='alice',
+                    timezone='UTC')
+        form = UserProfileForm(data=data)
+        self.assertTrue(form.is_valid())
