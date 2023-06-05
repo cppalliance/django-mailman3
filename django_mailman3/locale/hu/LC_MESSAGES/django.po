@@ -6,10 +6,10 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2021-12-27 21:53+0000\n"
-"Last-Translator: f3rr31 <5920873@disroot.org>\n"
+"PO-Revision-Date: 2023-06-05 08:50+0000\n"
+"Last-Translator: Balázs Úr <balazs@urbalazs.hu>\n"
 "Language-Team: Hungarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/hu/>\n"
 "Language: hu\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10.1\n"
+"X-Generator: Weblate 4.18-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -70,7 +70,7 @@ msgstr "Ellenőrzés újraküldése"
 
 #: templates/account/email.html:37 templates/socialaccount/connections.html:34
 msgid "Remove"
-msgstr "Töröl"
+msgstr "Eltávolítás"
 
 #: templates/account/email.html:44
 msgid "Warning:"
@@ -276,11 +276,11 @@ msgstr "Frissítés"
 
 #: templates/django_mailman3/profile/base.html:6
 msgid "User Profile"
-msgstr "Felhasználóprofil"
+msgstr "Felhasználói profil"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "User profile"
-msgstr "Felhasználóprofil"
+msgstr "Felhasználói profil"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "for"
@@ -326,7 +326,7 @@ msgstr "(nincs más e-mail)"
 
 #: templates/django_mailman3/profile/profile.html:45
 msgid "Link another address"
-msgstr "Más cím kapcsolása"
+msgstr "Más cím hozzákapcsolása"
 
 #: templates/django_mailman3/profile/profile.html:53
 msgid "Avatar:"
@@ -338,7 +338,7 @@ msgstr "Csatlakozva:"
 
 #: templates/django_mailman3/profile/profile.html:72
 msgid "cancel"
-msgstr "mégsem"
+msgstr "mégse"
 
 #: templates/openid/login.html:10
 msgid "OpenID Sign In"
