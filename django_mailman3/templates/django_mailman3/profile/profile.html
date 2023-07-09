@@ -25,15 +25,15 @@
         <div class="col-md-6 offset-md-1">
             {% bootstrap_form_horizontal form 3 9 fold_class='md' %}
             <div class="form-group row">
-                <label class="col-sm-3 control-label">{% trans 'Primary email:' %}</label>
+                <label class="col-sm-3 control-label fw-bold">{% trans 'Primary email:' %}</label>
                 <div class="col-sm-9">
                     <p class="form-control-static">{{ user.email}}</p>
                 </div>
             </div>
             <div class="form-group row">
-                <label class="col-sm-3 control-label">{% trans 'Other emails:' %}</label>
+                <label class="col-sm-3 control-label fw-bold">{% trans 'Other emails:' %}</label>
                 <div class="col-sm-9">
-                        <ul class="form-control-static list-unstyled">
+                    <ul class="form-control-static list-unstyled">
                         {% for address in other_addresses %}
                             <li>{{ address }}</li>
                         {% empty %}
@@ -45,12 +45,12 @@
                                     {% trans "Link another address" %}
                                 </a>
                             </li>
-                        </ul>
+                    </ul>
                 </div>
             </div>
             <div class="form-group d-md-none row">
               {% if gravatar_url is not None %}
-                <label class="col-md-3 control-label">{% trans 'Avatar:' %}</label>
+                <label class="col-md-3 control-label fw-bold">{% trans 'Avatar:' %}</label>
                 <div class="col-md-9">
                     <p class="form-control-static">
                         <a href="{{ gravatar_url }}">{% gravatar user.email 60 %}</a>
@@ -60,7 +60,7 @@
              {% endif %}
             </div>
             <div class="form-group row">
-                <label class="col-md-3 control-label">{% trans 'Joined on:' %}</label>
+                <label class="col-md-3 control-label fw-bold">{% trans 'Joined on:' %}</label>
                 <div class="col-md-9">
                     <p class="form-control-static">{{ user.date_joined|date:"N j Y, H:i" }}</p>
                 </div>
