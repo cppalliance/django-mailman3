@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2021-11-24 12:52+0000\n"
+"PO-Revision-Date: 2023-07-09 17:17+0000\n"
 "Last-Translator: Ecron <ecron_89@hotmail.com>\n"
 "Language-Team: Catalan <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ca/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.10-dev\n"
+"X-Generator: Weblate 5.0-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -155,6 +155,11 @@ msgid ""
 "link your third party accounts via the Account Connections tab on your user\n"
 "profile page."
 msgstr ""
+"Si teniu un compte %(site_name)s\n"
+"que encara no heu enllaçat a cap compte de tercers, cal que inicieu sessió\n"
+"amb l'adreça de correu i contrasenya del vostre compte i, una vegada dins,\n"
+"podreu enllaçar amb els comptes de tercers a través de la pestanya de\n"
+"Connexions del compte, a la pàgina del vostre perfil d'usuari."
 
 #: templates/account/login.html:28 templates/account/signup.html:17
 #, python-format
@@ -166,6 +171,9 @@ msgid ""
 "third\n"
 "party account."
 msgstr ""
+"Si no teniu cap compte \n"
+"%(site_name)s, però teniu un d'aquests comptes de tercers, podeu crear-ne\n"
+"un i iniciar la sessió en una sola passa, fent clic al compte de tercers."
 
 #: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
@@ -405,4 +413,4 @@ msgstr "No s'han detectat canvis."
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr "El compte s'ha suprimit"
+msgstr "Compte suprimit correctament"
