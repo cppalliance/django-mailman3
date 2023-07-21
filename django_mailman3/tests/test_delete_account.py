@@ -50,8 +50,8 @@ class AccountDeletionTests(TestCase):
         self.assertTrue(Profile.objects.filter(user_id=user_id).exists())
         response = self.client.post(
             reverse('mm_user_account_delete'), {})
-        self.assertEquals(response.url, '/')
-        self.assertEquals(response.status_code, 302)
+        self.assertEqual(response.url, '/')
+        self.assertEqual(response.status_code, 302)
         self.assertFalse(User.objects.filter(id=user_id).exists())
         self.assertFalse(Profile.objects.filter(user_id=user_id).exists())
         self.mm_user.delete.assert_called()
