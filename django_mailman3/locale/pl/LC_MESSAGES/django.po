@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2023-07-22 13:06+0000\n"
+"PO-Revision-Date: 2023-07-23 14:07+0000\n"
 "Last-Translator: Eryk Michalak <gnu.ewm@protonmail.com>\n"
 "Language-Team: Polish <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/pl/>\n"
@@ -27,15 +27,15 @@ msgstr "Nazwa uzytkownika"
 
 #: forms.py:33
 msgid "First name"
-msgstr ""
+msgstr "Imię"
 
 #: forms.py:34
 msgid "Last name"
-msgstr ""
+msgstr "Nazwisko"
 
 #: forms.py:36
 msgid "Time zone"
-msgstr ""
+msgstr "Strefa czasowa"
 
 #: forms.py:43
 msgid "A user with that username already exists."
