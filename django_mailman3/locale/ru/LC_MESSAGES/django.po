@@ -6,20 +6,20 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2022-11-25 11:46+0000\n"
-"Last-Translator: Alexander Ryazanov (alryaz) <alryaz@xavux.com>\n"
+"PO-Revision-Date: 2023-08-26 13:52+0000\n"
+"Last-Translator: a <xxx_xxx_xxxxxxxxx@mail.ru>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ru/>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
-"X-Generator: Weblate 4.15-dev\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || ("
+"n%100>=11 && n%100<=14)? 2 : 3);\n"
+"X-Generator: Weblate 5.0.1-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -146,7 +146,7 @@ msgstr ""
 "учетную запись для %(site_name)s и войдите ниже:"
 
 #: templates/account/login.html:22
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "If you have a %(site_name)s\n"
 "account that you haven't yet linked to any third party account, you must "
@@ -156,9 +156,17 @@ msgid ""
 "link your third party accounts via the Account Connections tab on your user\n"
 "profile page."
 msgstr ""
+"Если у вас есть учетная запись %(имя_сайта)\n"
+", которую вы еще не привязали к какой-либо сторонней учетной записи, вы "
+"должны войти\n"
+"в систему, указав адрес электронной почты и пароль своей учетной записи, и "
+"после входа в систему вы сможете\n"
+"связать свои сторонние учетные записи через вкладку Подключения учетной "
+"записи на\n"
+"странице вашего профиля пользователя."
 
 #: templates/account/login.html:28 templates/account/signup.html:17
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "If you do not have a\n"
 "%(site_name)s account but you have one of these third party accounts, you "
@@ -167,6 +175,11 @@ msgid ""
 "third\n"
 "party account."
 msgstr ""
+"Если у вас нет\n"
+"учетной записи %(имя_сайта), но у вас есть одна из этих сторонних учетных "
+"записей, вы можете\n"
+"создать учетную запись %(имя_сайта) и войти в систему за один шаг, щелкнув\n"
+"стороннюю учетную запись."
 
 #: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
