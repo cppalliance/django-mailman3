@@ -31,6 +31,8 @@ ADMINS = ()
 # See https://docs.djangoproject.com/en/1.8/ref/settings/#allowed-hosts
 ALLOWED_HOSTS = []
 
+SITE_ID = 1
+
 # Mailman API credentials
 MAILMAN_REST_API_URL = 'http://localhost:8001'
 MAILMAN_REST_API_USER = 'restadmin'
