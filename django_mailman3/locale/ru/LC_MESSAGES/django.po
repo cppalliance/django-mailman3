@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2023-08-26 13:52+0000\n"
-"Last-Translator: a <xxx_xxx_xxxxxxxxx@mail.ru>\n"
+"PO-Revision-Date: 2023-09-05 17:06+0000\n"
+"Last-Translator: Aliaksandr Astrouski <aostrovsky87@gmail.com>\n"
 "Language-Team: Russian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ru/>\n"
 "Language: ru\n"
@@ -130,7 +130,7 @@ msgstr ""
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:59
 msgid "Sign In"
-msgstr "Войти"
+msgstr "Вход"
 
 #: templates/account/login.html:18
 #, python-format
@@ -146,7 +146,7 @@ msgstr ""
 "учетную запись для %(site_name)s и войдите ниже:"
 
 #: templates/account/login.html:22
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you have a %(site_name)s\n"
 "account that you haven't yet linked to any third party account, you must "
@@ -156,7 +156,7 @@ msgid ""
 "link your third party accounts via the Account Connections tab on your user\n"
 "profile page."
 msgstr ""
-"Если у вас есть учетная запись %(имя_сайта)\n"
+"Если у вас есть учетная запись %(site_name)s\n"
 ", которую вы еще не привязали к какой-либо сторонней учетной записи, вы "
 "должны войти\n"
 "в систему, указав адрес электронной почты и пароль своей учетной записи, и "
@@ -166,7 +166,7 @@ msgstr ""
 "странице вашего профиля пользователя."
 
 #: templates/account/login.html:28 templates/account/signup.html:17
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "If you do not have a\n"
 "%(site_name)s account but you have one of these third party accounts, you "
@@ -176,9 +176,9 @@ msgid ""
 "party account."
 msgstr ""
 "Если у вас нет\n"
-"учетной записи %(имя_сайта), но у вас есть одна из этих сторонних учетных "
+"учетной записи %(site_name)s, но у вас есть одна из этих сторонних учетных "
 "записей, вы можете\n"
-"создать учетную запись %(имя_сайта) и войти в систему за один шаг, щелкнув\n"
+"создать учетную запись %(site_name)s и войти в систему за один шаг, щелкнув\n"
 "стороннюю учетную запись."
 
 #: templates/account/login.html:41 templates/account/signup.html:30
@@ -202,7 +202,7 @@ msgstr "Забыли пароль?"
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr "Выйти"
+msgstr "Выход"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
@@ -267,7 +267,7 @@ msgstr "Установить Пароль"
 
 #: templates/account/signup.html:7 templates/socialaccount/signup.html:6
 msgid "Signup"
-msgstr "Регистрация"
+msgstr "Зарегистрировать"
 
 #: templates/account/signup.html:10 templates/account/signup.html:42
 #: templates/socialaccount/signup.html:9 templates/socialaccount/signup.html:21
@@ -318,7 +318,7 @@ msgstr "Подключения Учетной Записи"
 #: templates/django_mailman3/profile/base.html:35
 #: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
-msgstr "Удалить аккаунт"
+msgstr "Удалить учетную запись"
 
 #: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
@@ -418,4 +418,4 @@ msgstr "Изменений не обнаружено."
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr "Успешно удален аккаунт"
+msgstr "Учетная запись успешно удалена"
