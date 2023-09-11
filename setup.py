@@ -40,7 +40,7 @@ setup(
     install_requires=[
         'django>=3.2,<4.3',
         'mailmanclient>=3.3.3',
-        'django-allauth',
+        'django-allauth>=0.56',
         'django-gravatar2 >= 1.0.6',
         'pytz'
     ],
