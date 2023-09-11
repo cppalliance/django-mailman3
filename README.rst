@@ -14,6 +14,19 @@ NEWS
 
 1.3.10
 ------
+
+Configuration
+-------------
+
+* **BREAKING CHANGE**: ``django_mailman3`` now requires django_allauth>=0.56.
+This requires the addition of ``allauth.account.middleware.AccountMiddleware``
+to ``MIDDLEWARE`` in your Django settings.  If your installation uses settings
+from ``mailman-web`` as `here <https://docs.mailman3.org/en/latest/install/virtualenv.html#initial-configuration>`_,
+upgrading mailman-web to 0.0.7 will do this.
+
+Other Changes
+-------------
+
 * Add support for Django 4.2
 * Migrate to Bootstrap 5. (See !188)
 * A11y: Group related radio buttons and Multi-CheckboxInput. (Fixes #65)
