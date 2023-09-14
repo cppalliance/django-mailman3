@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
 "PO-Revision-Date: 2023-09-14 03:21+0000\n"
-"Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
+"Last-Translator: GnuPGを使うべきだ <dieeeazpnnqbpddh@cock.email>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
 "Language: ja\n"
@@ -259,9 +259,8 @@ msgstr "登録"
 #, python-format
 msgid ""
 "Already have an account? Then please <a href=\"%(login_url)s\">sign in</a>."
-msgstr ""
-"既にアカウントを持っていますか？その場合は<a href=\"%(login_url)s\">サインイ"
-"ン</a>してください。"
+msgstr "既にアカウントを持っていますか？ そうであれば<a href=\"%(login_url)s\""
+">サインイン</a>してください。"
 
 #: templates/django_mailman3/paginator/pagination.html:45
 msgid "Jump to page:"
@@ -290,7 +289,7 @@ msgstr ""
 
 #: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
-msgstr "メールアドレス"
+msgstr "E-mailアドレス"
 
 #: templates/django_mailman3/profile/base.html:30
 msgid "Account Connections"
@@ -354,13 +353,12 @@ msgstr "以下のサードパーティのアカウントを使ってサインイ
 #: templates/socialaccount/connections.html:42
 msgid ""
 "You currently have no social network accounts connected to this account."
-msgstr ""
-"このアカウントに接続されているソーシャルネットワークアカウントは存在しませ"
-"ん。"
+msgstr "あなたは現在、このアカウントに接続されているソーシャルネットワークアカウント"
+"を持っていません。"
 
 #: templates/socialaccount/connections.html:45
 msgid "Add a 3rd Party Account"
-msgstr "サードパーティアカウントの追加"
+msgstr "サードパーティアカウントを追加"
 
 #: templates/socialaccount/signup.html:11
 #, python-format
