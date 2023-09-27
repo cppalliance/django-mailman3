@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2023-09-14 03:21+0000\n"
-"Last-Translator: GnuPGを使うべきだ <dieeeazpnnqbpddh@cock.email>\n"
+"PO-Revision-Date: 2023-09-27 22:21+0000\n"
+"Last-Translator: 総情バイト <cc-staff1.cc@mie-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
 "Language: ja\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.0.1-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -152,6 +152,13 @@ msgid ""
 "link your third party accounts via the Account Connections tab on your user\n"
 "profile page."
 msgstr ""
+"(サイト名)\n"
+"アカウントをお持ちで、まだサードパーティのアカウントとリンクしていない場合は"
+"、アカウントのメールアドレスとパスワードでログインする必要があります。\n"
+"アカウントの電子メールアドレスとパスワードでログインする必要があります。\n"
+"サード・パーティ・アカウントにリンクするには、ユーザ・プロフィール・"
+"ページのアカウント接続タブ\n"
+"をクリックします。"
 
 #: templates/account/login.html:28 templates/account/signup.html:17
 #, python-format
@@ -163,6 +170,12 @@ msgid ""
 "third\n"
 "party account."
 msgstr ""
+"もしあなたが\n"
+"(site_name)sアカウントは持っていないが、"
+"これらのサードパーティアカウントは持っている場合\n"
+"をクリックすることで、%(site_name) アカウントを作成し、1 "
+"ステップでサインインできます。\n"
+"をクリックします。"
 
 #: templates/account/login.html:41 templates/account/signup.html:30
 #: templates/django_mailman3/profile/profile.html:72
@@ -285,7 +298,7 @@ msgstr "ユーザープロフィール"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "for"
-msgstr ""
+msgstr "のために"
 
 #: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
@@ -395,4 +408,4 @@ msgstr "変更はありません。"
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr "アカウントは削除されました"
+msgstr "アカウントの削除に成功"
