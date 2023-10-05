@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2023-10-03 07:56+0000\n"
+"PO-Revision-Date: 2023-10-05 08:12+0000\n"
 "Last-Translator: Matsubara <matsubara.cc@mie-u.ac.jp>\n"
 "Language-Team: Japanese <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/ja/>\n"
@@ -294,7 +294,7 @@ msgstr "ユーザープロフィール"
 
 #: templates/django_mailman3/profile/base.html:13
 msgid "for"
-msgstr "のために"
+msgstr "For"
 
 #: templates/django_mailman3/profile/base.html:23
 msgid "E-mail Addresses"
