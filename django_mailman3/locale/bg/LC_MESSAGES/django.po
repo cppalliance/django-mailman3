@@ -6,9 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
+"Report-Msgid-Bugs-To: mailman-developers@python.org\n"
 "POT-Creation-Date: 2023-04-18 16:07+0000\n"
-"PO-Revision-Date: 2022-05-20 11:12+0000\n"
+"PO-Revision-Date: 2023-10-08 21:22+0000\n"
 "Last-Translator: Дилян Палаузов <dpa-weblate@aegee.org>\n"
 "Language-Team: Bulgarian <https://hosted.weblate.org/projects/gnu-mailman/"
 "django-mailman3/bg/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.13-dev\n"
+"X-Generator: Weblate 5.1-dev\n"
 
 #: forms.py:32
 msgid "Username"
@@ -125,7 +125,7 @@ msgstr ""
 #: templates/account/login.html:7 templates/account/login.html:11
 #: templates/account/login.html:59
 msgid "Sign In"
-msgstr "Вход"
+msgstr "Нова регистрация"
 
 #: templates/account/login.html:18
 #, python-format
@@ -180,7 +180,7 @@ msgstr "Забравена парола?"
 #: templates/account/logout.html:5 templates/account/logout.html:8
 #: templates/account/logout.html:17
 msgid "Sign Out"
-msgstr ""
+msgstr "Изход"
 
 #: templates/account/logout.html:10
 msgid "Are you sure you want to sign out?"
@@ -292,7 +292,7 @@ msgstr ""
 #: templates/django_mailman3/profile/base.html:35
 #: templates/django_mailman3/profile/delete_profile.html:16
 msgid "Delete Account"
-msgstr "Изтриване на регистрацията"
+msgstr "Изтрий регистрация"
 
 #: templates/django_mailman3/profile/delete_profile.html:11
 msgid ""
@@ -387,4 +387,4 @@ msgstr "Няма промени."
 
 #: views/profile.py:110
 msgid "Successfully deleted account"
-msgstr "Регистрацията е изтрита"
+msgstr "Успешно изтрих регистрацията"
