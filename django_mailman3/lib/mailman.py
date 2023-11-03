@@ -109,15 +109,15 @@ def get_mailman_user(user):
                     user.email, user.get_full_name())
                 # XXX The email is not set as verified, because we don't
                 # know if the registration that was used verified it.
-                logger.info("Created Mailman user for %s (%s)",
-                            user.username, user.email)
+                logger.info("Created Mailman user for PK=%s (%s)",
+                            user.pk, user.email)
             # Update the cache to avoid a lookup next time.
             cache.set(cache_key, mm_user.user_id, None)
         return mm_user
     except (HTTPError, MailmanConnectionError) as e:
         logger.warning(
-            "Error getting or creating the Mailman user of %s (%s): %s",
-            user.username, user.email, e)
+            "Error getting or creating the Mailman user of PK=%s (%s): %s",
+            user.pk, user.email, e)
         return None
 
 
@@ -152,12 +152,12 @@ def get_subscriptions(user):
 
 def add_address_to_mailman_user(user, address):
     """Associate a verified address with a Mailman user."""
-    logger.debug("Associating address %s with user %s in Mailman",
-                 address, user.username)
+    logger.debug("Associating address %s with user PK=%s in Mailman",
+                 address, user.pk)
     mm_user = get_mailman_user(user)
     if mm_user is None:
-        logger.info("Could not find or create a Mailman user for %s",
-                    user.username)
+        logger.info("Could not find or create a Mailman user for PK=%s",
+                    user.pk)
         return
     existing_addresses = [str(addr) for addr in mm_user.addresses]
     if address not in existing_addresses:
@@ -165,11 +165,11 @@ def add_address_to_mailman_user(user, address):
         try:
             mm_address = mm_user.add_address(address, absorb_existing=True)
             mm_address.verify()
-            logger.debug("Associated address %s with %s",
-                         address, user.username)
+            logger.debug("Associated address %s with PK=%s",
+                         address, user.pk)
         except HTTPError as e:
-            logger.warning("Can't add %s to %s: %s",
-                           address, user.username, e)
+            logger.warning("Can't add %s to PK=%s: %s",
+                           address, user.pk, e)
     else:
         # Already associated, just mark it verified.
         mm_address = get_mailman_client().get_address(address)
@@ -182,11 +182,11 @@ def sync_email_addresses(user):
     # an address is missing, it is added, no deletion is performed here.
     # For deletion, use the appropriate view/form. The 'verified' bit is also
     # sychronized.
-    logger.debug("Synchronizing email addresses for user %s", user.username)
+    logger.debug("Synchronizing email addresses for user PK=%s", user.pk)
     mm_user = get_mailman_user(user)
     if mm_user is None:
-        logger.info("Could not find or create a Mailman user for %s",
-                    user.username)
+        logger.info("Could not find or create a Mailman user for PK=%s",
+                    user.pk)
         return
 
     def check_verified(django_address, mm_address):
@@ -226,12 +226,12 @@ def update_preferred_address(user, to_email_address):
     This synchronizes the preferred address between Mailman Core and Django,
     although, it is a one-way sync.
     """
-    logger.debug("Synchronizing primary address for user %s", user.username)
+    logger.debug("Synchronizing primary address for user PK=%s", user.pk)
     mm_user = get_mailman_user(user)
 
     if mm_user is None:
         logger.info(
-            "Could not find or create a Mailman user for %s", user.username)
+            "Could not find or create a Mailman user for PK=%s", user.pk)
         return
     if not to_email_address.verified:
         return
@@ -247,5 +247,5 @@ def update_preferred_address(user, to_email_address):
     try:
         mm_user.preferred_address = to_email_address.email
     except HTTPError:
-        logger.error("Failed to update preferred address for %s in Core",
-                     user.username, exc_info=True)
+        logger.error("Failed to update preferred address for PK=%s in Core",
+                     user.pk, exc_info=True)

@@ -125,8 +125,8 @@ def on_user_signed_up(sender, **kwargs):
     # We want to add the user to Mailman with all its verified email addresses.
     for address in EmailAddress.objects.filter(user=user):
         if address.verified:
-            logger.debug("Adding email address %s to user %s",
-                         address.email, user.username)
+            logger.debug("Adding email address %s to user PK=%s",
+                         address.email, user.pk)
             add_address_to_mailman_user(user, address.email)
 
 
@@ -150,8 +150,8 @@ def on_email_confirmed(sender, **kwargs):
     # Sent after the email address in the db was updated and set to confirmed.
     # Associate it with the user and set it to verified in Mailman.
     email_address = kwargs["email_address"]
-    logger.debug("Confirmed email %s of user %s",
-                 email_address.email, email_address.user.username)
+    logger.debug("Confirmed email %s of user PK=%s",
+                 email_address.email, email_address.user.pk)
     add_address_to_mailman_user(email_address.user, email_address.email)
 
 
@@ -171,14 +171,14 @@ def on_social_account_added(sender, **kwargs):
     # Add to mailman emails that were marked as verified by the social account
     # provider.
     sociallogin = kwargs["sociallogin"]
-    logger.debug("Social account %s added for user %s",
-                 sociallogin.account, sociallogin.user.username)
+    logger.debug("Social account %s added for user PK=%s",
+                 sociallogin.account, sociallogin.user.pk)
     for address in sociallogin.email_addresses:
         if EmailAddress.objects.filter(email=address.email).exists():
             # TODO: should we do something if it belongs so another user?
             continue
-        logger.debug("Adding email address %s to user %s",
-                     address.email, sociallogin.user.username)
+        logger.debug("Adding email address %s to user PK=%s",
+                     address.email, sociallogin.user.pk)
         address.user = sociallogin.user
         address.primary = False  # There already is a primary address.
         address.save()

@@ -39,7 +39,7 @@ class Profile(models.Model):
     timezone = models.CharField(max_length=100, choices=TIMEZONES, default="")
 
     def __str__(self):
-        return '<Mailman profile for %s>' % self.user.username
+        return '<Mailman profile for PK=%s (%s)>' % (self.user.pk, self.user.email)
 
 
 class MailDomain(models.Model):
